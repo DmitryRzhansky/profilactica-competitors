@@ -162,13 +162,13 @@ table.data td.url-cell{font-family:ui-monospace,SFMono-Regular,Consolas,monospac
 .pager select{min-height:40px;padding:8px 10px;border:1px solid var(--border);border-radius:0;background:#fff;color:var(--text)}
 
 .silo-tree{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:8px}
-.tree-node{margin:0}
+.tree-node{margin:0 0 6px}
 .tree-toggle{display:flex;align-items:flex-start;gap:8px;width:100%;padding:7px 8px;border:0;background:transparent;text-align:left;cursor:pointer;border-radius:4px}
 .tree-toggle:hover{background:#f4f8fb}
 .tree-caret{flex:0 0 16px;margin-top:3px;color:var(--muted)}
 .tree-children{margin:0 0 0 18px;padding:0 0 4px;border-left:1px solid var(--border-soft)}
-.tree-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:4px 8px 4px 12px}
-.tree-row .mono{font-size:12px;color:var(--muted);word-break:break-all}
+.tree-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;padding:10px 8px 10px 12px}
+.tree-row .mono{display:block;width:100%;margin-top:2px;padding-left:24px;font-size:12px;color:var(--muted);word-break:break-all;line-height:1.4}
 .tree-row.is-parent{cursor:pointer}
 .tree-group > .tree-toggle{font-weight:600}
 .tree-page{font-weight:500}
@@ -187,7 +187,11 @@ table.data td.url-cell{font-family:ui-monospace,SFMono-Regular,Consolas,monospac
 
 .accordion{display:grid;gap:8px;margin:0 0 18px}
 .accordion details{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)}
-.accordion summary{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;padding:10px 14px;cursor:pointer;font-weight:600}
+.accordion summary{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;padding:10px 14px;cursor:pointer;font-weight:600;list-style:none}
+.accordion summary::-webkit-details-marker{display:none}
+.accordion__meta{display:inline-flex;align-items:center;gap:10px;flex:0 0 auto}
+.accordion__icon{color:var(--muted);font-size:13px;width:1em;text-align:center}
+.accordion details[open] > summary .accordion__icon.fa-plus::before{content:"\f068"}
 .accordion .chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 14px}
 .chip{padding:4px 8px;background:var(--band);border:1px solid var(--border-soft);border-radius:4px;font-size:12.5px}
 

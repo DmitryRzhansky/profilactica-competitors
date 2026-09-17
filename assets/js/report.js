@@ -111,32 +111,6 @@
     });
   }
 
-  function copyText(value, btn) {
-    const done = () => {
-      if (!btn) return;
-      const prev = btn.textContent;
-      btn.textContent = "Скопировано";
-      setTimeout(() => {
-        btn.textContent = prev;
-      }, 1200);
-    };
-    if (navigator.clipboard?.writeText) {
-      navigator.clipboard.writeText(value).then(done).catch(() => fallbackCopy(value, done));
-    } else {
-      fallbackCopy(value, done);
-    }
-  }
-
-  function fallbackCopy(value, done) {
-    const ta = document.createElement("textarea");
-    ta.value = value;
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand("copy");
-    ta.remove();
-    done();
-  }
-
   function badgePriority(p) {
     const cls = p === "P0" ? "badge-p0" : p === "P1" ? "badge-p1" : "badge-p2";
     return `<span class="badge ${cls}">${p}</span>`;
@@ -423,6 +397,7 @@
   function renderSilo(architecture) {
     const bySilo = new Map();
     architecture.forEach((row, idx) => {
+      if (/^trust\s*\/\s*выбор$/i.test((row.silo || "").trim())) return;
       if (!bySilo.has(row.silo)) bySilo.set(row.silo, []);
       bySilo.get(row.silo).push({ ...row, idx });
     });
@@ -452,7 +427,6 @@
                   ${badgePriority(node.priority)}
                   ${hasGeo(node.geo_policy) ? '<span class="badge badge-geo">ГЕО</span>' : ""}
                   <span class="mono">${esc(node.url)}</span>
-                  <button class="copy-btn" type="button" data-copy="${encodeURIComponent(node.url)}" aria-label="Скопировать ${esc(node.url)}">Копировать URL</button>
                 </div>
                 ${inner}
               </div>`;
@@ -467,11 +441,6 @@
     tree.innerHTML = html;
 
     tree.addEventListener("click", (e) => {
-      const copy = e.target.closest("[data-copy]");
-      if (copy) {
-        copyText(decodeURIComponent(copy.dataset.copy), copy);
-        return;
-      }
       const caret = e.target.closest(".tree-caret.icon-btn");
       if (caret) {
         const node = caret.closest(".tree-node");
@@ -722,7 +691,7 @@
     init().catch((err) => {
       console.error(err);
       const hero = $("#hero-kpi");
-      if (hero) hero.innerHTML = `<p class="note">Не удалось загрузить данные отчёта.</p>`;
+      if (hero) hero.innerHTML = `<p class="note">Не удалось загрузить данные отчета.</p>`;
     });
   };
   document.addEventListener("DOMContentLoaded", start);
