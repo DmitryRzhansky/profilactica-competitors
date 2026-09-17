@@ -521,33 +521,50 @@
     $("#mo-count").textContent = mo.length;
   }
 
+  function pageWindow(current, total) {
+    if (total <= 7) return Array.from({ length: total }, (_, i) => i + 1);
+    const pages = new Set([1, total, current, current - 1, current + 1]);
+    if (current <= 3) [2, 3, 4].forEach((n) => pages.add(n));
+    if (current >= total - 2) [total - 3, total - 2, total - 1].forEach((n) => pages.add(n));
+    return [...pages].filter((n) => n >= 1 && n <= total).sort((a, b) => a - b);
+  }
+
   function renderGeoCatalog(geoPages) {
     const services = [...new Set(geoPages.map((r) => r.service_name))];
     const types = [...new Set(geoPages.map((r) => r.geo_type))];
-    const tiers = [...new Set(geoPages.map((r) => r.tier))];
     $("#geo-filter-service").innerHTML =
       '<option value="">Все услуги</option>' + services.map((s) => `<option value="${esc(s)}">${esc(s)}</option>`).join("");
     $("#geo-filter-type").innerHTML =
       '<option value="">Все типы ГЕО</option>' + types.map((s) => `<option value="${esc(s)}">${esc(s)}</option>`).join("");
-    $("#geo-filter-tier").innerHTML =
-      '<option value="">Все tier</option>' + tiers.map((s) => `<option value="${esc(s)}">${esc(s)}</option>`).join("");
 
-    const state = { service: "", type: "", tier: "", q: "", page: 1, per: 50 };
+    const state = { service: "", type: "", q: "", page: 1, per: 50 };
     const tbody = $("#geo-catalog-body");
-    const meta = $("#geo-catalog-meta");
+    const nav = $("#geo-pager-nav");
 
     const filtered = () => {
       const q = state.q.trim().toLowerCase();
       return geoPages.filter((r) => {
         if (state.service && r.service_name !== state.service) return false;
         if (state.type && r.geo_type !== state.type) return false;
-        if (state.tier && r.tier !== state.tier) return false;
         if (q) {
           const blob = `${r.service_name} ${r.geo_name} ${r.geo_slug} ${r.proposed_url}`.toLowerCase();
           if (!blob.includes(q)) return false;
         }
         return true;
       });
+    };
+
+    const paintPager = (pages) => {
+      const nums = pageWindow(state.page, pages);
+      let html = `<button class="pager__btn" type="button" data-page="${state.page - 1}" ${state.page <= 1 ? "disabled" : ""} aria-label="Предыдущая страница">‹</button>`;
+      let prev = 0;
+      nums.forEach((n) => {
+        if (prev && n - prev > 1) html += `<span class="pager__ellipsis" aria-hidden="true">…</span>`;
+        html += `<button class="pager__btn ${n === state.page ? "is-active" : ""}" type="button" data-page="${n}" ${n === state.page ? 'aria-current="page"' : ""}>${n}</button>`;
+        prev = n;
+      });
+      html += `<button class="pager__btn" type="button" data-page="${state.page + 1}" ${state.page >= pages ? "disabled" : ""} aria-label="Следующая страница">›</button>`;
+      nav.innerHTML = html;
     };
 
     const paint = () => {
@@ -562,16 +579,11 @@
             <td>${esc(r.service_name)}</td>
             <td>${esc(r.geo_type)}</td>
             <td>${esc(r.geo_name)}</td>
-            <td>${esc(r.tier)}</td>
-            <td>${badgePriority(r.priority)}</td>
-            <td class="url-cell">${esc(r.proposed_url)} <button class="copy-btn" type="button" data-copy="${encodeURIComponent(r.proposed_url)}" aria-label="Скопировать ${esc(r.proposed_url)}">Копировать</button></td>
+            <td class="url-cell">${esc(r.proposed_url)}</td>
           </tr>`
         )
         .join("");
-      meta.textContent = `Показано ${slice.length ? start + 1 : 0}–${start + slice.length} из ${rows.length}`;
-      $("#geo-page-label").textContent = `${state.page} / ${pages}`;
-      $("#geo-prev").disabled = state.page <= 1;
-      $("#geo-next").disabled = state.page >= pages;
+      paintPager(pages);
     };
 
     $("#geo-filter-service").addEventListener("change", (e) => {
@@ -581,11 +593,6 @@
     });
     $("#geo-filter-type").addEventListener("change", (e) => {
       state.type = e.target.value;
-      state.page = 1;
-      paint();
-    });
-    $("#geo-filter-tier").addEventListener("change", (e) => {
-      state.tier = e.target.value;
       state.page = 1;
       paint();
     });
@@ -599,17 +606,14 @@
       state.page = 1;
       paint();
     });
-    $("#geo-prev").addEventListener("click", () => {
-      state.page -= 1;
+    nav.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-page]");
+      if (!btn || btn.disabled) return;
+      const page = Number(btn.dataset.page);
+      if (!page || page === state.page) return;
+      state.page = page;
       paint();
-    });
-    $("#geo-next").addEventListener("click", () => {
-      state.page += 1;
-      paint();
-    });
-    tbody.addEventListener("click", (e) => {
-      const btn = e.target.closest("[data-copy]");
-      if (btn) copyText(decodeURIComponent(btn.dataset.copy), btn);
+      tbody.closest(".table-wrap")?.scrollIntoView({ behavior: "smooth", block: "start" });
     });
     paint();
   }

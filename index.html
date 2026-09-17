@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
   <link rel="preload" href="./assets/vendor/inter/inter-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./assets/vendor/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="./assets/css/report.css?v=8">
+  <link rel="stylesheet" href="./assets/css/report.css?v=12">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Перейти к содержанию</a>
@@ -44,7 +44,6 @@
         <a href="#trust"><span class="nav-num" aria-hidden="true">12</span>Доверие</a>
         <a href="#priorities"><span class="nav-num" aria-hidden="true">13</span>Приоритеты</a>
       </nav>
-      <p class="sidebar__meta">Срез данных: 17 сентября 2026</p>
     </aside>
     <button class="drawer-backdrop" id="drawer-backdrop" type="button" aria-label="Закрыть меню" hidden></button>
 
@@ -363,7 +362,6 @@
 
       <section class="report-section" id="silo" aria-labelledby="silo-title">
         <h2 id="silo-title">Финальная SILO-архитектура</h2>
-        <p>Архитектура содержит <strong>175 страниц</strong>: 79 P0, 84 P1 и 12 условных P2. Ниже — интерактивное дерево и базовый каркас URL.</p>
         <div class="read-more" id="silo-readmore">
           <div class="read-more__body" id="silo-readmore-body">
         <article class="panel">
@@ -472,8 +470,6 @@
           </div>
           <button class="read-more__btn" type="button" aria-expanded="false" aria-controls="silo-readmore-body">Читать далее</button>
         </div>
-        <h3>Главный принцип</h3>
-        <p>Один запрос — один основной URL. Синонимы и модификаторы не являются основанием для второй страницы. Новая страница появляется, когда меняется сама услуга, формат, метод, группа пациентов, вещество или самостоятельная задача пользователя.</p>
       </section>
 
       <section class="report-section" id="new-pages" aria-labelledby="new-pages-title">
@@ -558,8 +554,6 @@
           <select id="geo-filter-service"></select>
           <label class="visually-hidden" for="geo-filter-type">Тип ГЕО</label>
           <select id="geo-filter-type"></select>
-          <label class="visually-hidden" for="geo-filter-tier">Tier</label>
-          <select id="geo-filter-tier"></select>
           <label class="visually-hidden" for="geo-filter-search">Поиск по названию</label>
           <input id="geo-filter-search" type="search" placeholder="Поиск по названию локации">
         </div>
@@ -570,26 +564,21 @@
                 <th>Услуга</th>
                 <th>Тип</th>
                 <th>Локация</th>
-                <th>Tier</th>
-                <th>Приоритет</th>
                 <th>URL</th>
               </tr>
             </thead>
             <tbody id="geo-catalog-body"></tbody>
           </table>
         </div>
-        <div class="pager">
-          <button class="icon-btn" id="geo-prev" type="button">Назад</button>
-          <span id="geo-page-label"></span>
-          <button class="icon-btn" id="geo-next" type="button">Вперёд</button>
-          <label>Строк
+        <div class="pager" id="geo-pager" aria-label="Пагинация каталога ГЕО">
+          <div class="pager__nav" id="geo-pager-nav"></div>
+          <label class="pager__per">Строк на странице
             <select id="geo-per-page">
               <option value="50">50</option>
               <option value="100">100</option>
             </select>
           </label>
         </div>
-        <p class="table-meta" id="geo-catalog-meta"></p>
 
         <h3>Что делать со старыми мелкими локациями</h3>
         <p>Существующие посёлки, малые населённые пункты и другие legacy-страницы <strong>не надо автоматически удалять и не надо размножать на новые услуги</strong>.</p>
@@ -812,6 +801,6 @@
   <script src="./assets/vendor/chartjs/chart.umd.min.js"></script>
   <script src="./assets/js/chart-global.js?v=2"></script>
   <script src="./assets/data/embedded.js?v=2"></script>
-  <script src="./assets/js/report.js?v=4"></script>
+  <script src="./assets/js/report.js?v=9"></script>
 </body>
 </html>

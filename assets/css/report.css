@@ -123,6 +123,7 @@ pre.panel code{display:block;padding:0;background:none;border:0;color:inherit;fo
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .list-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px}
 .list-card h3{margin:0 0 10px}
+.do,.dont{border-radius:0}
 .do{border-top:3px solid var(--ok)}
 .dont{border-top:3px solid #a24b4b}
 
@@ -134,13 +135,13 @@ pre.panel code{display:block;padding:0;background:none;border:0;color:inherit;fo
 .badge-nogeo{background:#f3f4f6;color:#6a7380}
 
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
-.filters input,.filters select,.pager select{min-height:40px;padding:8px 10px;border:1px solid var(--border);border-radius:4px;background:#fff;color:var(--text)}
+.filters input,.filters select{min-height:40px;padding:8px 10px;border:1px solid var(--border);border-radius:4px;background:#fff;color:var(--text)}
 .filters input{min-width:min(100%,220px);flex:1}
 .icon-btn,.copy-btn{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding:6px 8px;border:1px solid var(--border);border-radius:4px;background:#fff;color:var(--text);cursor:pointer}
 .copy-btn{font-size:12px}
 .copy-btn:hover,.icon-btn:hover{border-color:var(--accent);color:var(--accent-dark)}
 
-.table-wrap{overflow:auto;border:1px solid var(--border);border-radius:var(--radius);background:#fff;max-width:100%}
+.table-wrap{overflow:auto;border:1px solid var(--border);border-radius:var(--radius);background:#fff;max-width:100%;margin:0 0 18px}
 table.data{width:100%;border-collapse:collapse;font-size:13.5px}
 table.data th,table.data td{padding:8px 10px;border-bottom:1px solid var(--border-soft);text-align:left;vertical-align:top}
 table.data th{position:sticky;top:0;background:#f4f7fa;font-size:11px;letter-spacing:.03em;text-transform:uppercase;color:var(--muted);white-space:nowrap;z-index:1}
@@ -149,8 +150,16 @@ table.data tr.is-flash td,.tree-row.is-flash{background:#e7f2fa}
 table.data td.url-cell{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12px;word-break:break-all}
 .parent-link{background:none;border:0;padding:0;color:var(--accent-dark);text-decoration:underline;cursor:pointer;text-align:left}
 .table-meta{margin:8px 0 0;font-size:13px;color:var(--muted)}
-.pager{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:10px}
-.pager button{min-width:44px;min-height:40px}
+
+.pager{display:flex;flex-direction:column;align-items:center;gap:12px;margin:14px 0 8px}
+.pager__nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px}
+.pager__btn{display:inline-flex;align-items:center;justify-content:center;min-width:40px;min-height:40px;padding:0 10px;border:1px solid var(--border);border-radius:0;background:#fff;color:var(--text);cursor:pointer;font-size:14px;line-height:1}
+.pager__btn:hover:not(:disabled):not(.is-active){border-color:var(--accent);color:var(--accent-dark)}
+.pager__btn.is-active{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600;cursor:default}
+.pager__btn:disabled{opacity:.4;cursor:not-allowed}
+.pager__ellipsis{display:inline-flex;align-items:center;justify-content:center;min-width:28px;color:var(--muted);user-select:none}
+.pager__per{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:var(--muted)}
+.pager select{min-height:40px;padding:8px 10px;border:1px solid var(--border);border-radius:0;background:#fff;color:var(--text)}
 
 .silo-tree{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:8px}
 .tree-node{margin:0}
@@ -176,7 +185,7 @@ table.data td.url-cell{font-family:ui-monospace,SFMono-Regular,Consolas,monospac
 .matrix{max-width:760px}
 .matrix td,.matrix th{white-space:nowrap}
 
-.accordion{display:grid;gap:8px}
+.accordion{display:grid;gap:8px;margin:0 0 18px}
 .accordion details{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)}
 .accordion summary{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;padding:10px 14px;cursor:pointer;font-weight:600}
 .accordion .chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 14px}
