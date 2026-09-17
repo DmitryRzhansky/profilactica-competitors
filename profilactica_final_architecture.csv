@@ -1,0 +1,176 @@
+﻿silo,page,url,parent,priority,status,geo_policy,notes
+Наркологическая помощь,Наркологическая помощь,/uslugi/narkologicheskaya-pomosh/,/uslugi/,P0,Сделать/перенести,Нет,
+Наркологическая помощь,Нарколог на дом,/uslugi/narkologicheskaya-pomosh/narkolog-na-dom/,/uslugi/narkologicheskaya-pomosh/,P0,Сделать/перенести,Массовое ГЕО: метро + округа + 50 городов МО,
+Наркологическая помощь,Консультация нарколога,/uslugi/narkologicheskaya-pomosh/konsultaciya-narkologa/,/uslugi/narkologicheskaya-pomosh/,P0,Сделать/перенести,Нет,
+Наркологическая помощь,Приём психиатра-нарколога,/uslugi/narkologicheskaya-pomosh/psihiatr-narkolog/,/uslugi/narkologicheskaya-pomosh/,P1,Сделать/перенести,Нет,
+Наркологическая помощь,Онлайн-консультация психиатра-нарколога,/uslugi/narkologicheskaya-pomosh/onlajn-konsultaciya/,/uslugi/narkologicheskaya-pomosh/,P1,Сделать/перенести,Нет,
+Наркологическая помощь,Наркологический стационар,/uslugi/narkologicheskaya-pomosh/stacionar/,/uslugi/narkologicheskaya-pomosh/,P0,Сделать/перенести,Нет,
+Наркологическая помощь,Госпитализация в стационар,/uslugi/narkologicheskaya-pomosh/gospitalizaciya/,/uslugi/narkologicheskaya-pomosh/,P1,Сделать/перенести,Нет,
+Наркологическая помощь,Частный вытрезвитель,/uslugi/narkologicheskaya-pomosh/chastnyj-vytrezvitel/,/uslugi/narkologicheskaya-pomosh/,P1,Сделать/перенести,Нет,
+Наркологическая помощь,Срочная наркологическая помощь,/uslugi/narkologicheskaya-pomosh/srochnaya-pomosh/,/uslugi/narkologicheskaya-pomosh/,P1,Сделать/перенести,Нет,Не использовать юридически нагруженное «скорая» без подтверждения лицензии/статуса.
+Лечение алкоголизма,Лечение алкоголизма,/uslugi/lechenie-alkogolizma/,/uslugi/,P0,Сделать/перенести,Нет,
+Лечение алкоголизма,Лечение алкоголизма на дому,/uslugi/lechenie-alkogolizma/na-domu/,/uslugi/lechenie-alkogolizma/,P1,Сделать/перенести,30 городов МО,
+Лечение алкоголизма,Лечение алкоголизма в стационаре,/uslugi/lechenie-alkogolizma/v-stacionare/,/uslugi/lechenie-alkogolizma/,P0,Сделать/перенести,Нет,
+Лечение алкоголизма,Амбулаторное лечение алкоголизма,/uslugi/lechenie-alkogolizma/ambulatorno/,/uslugi/lechenie-alkogolizma/,P0,Сделать/перенести,Нет,
+Лечение алкоголизма,Лечение женского алкоголизма,/uslugi/lechenie-alkogolizma/zhenskij-alkogolizm/,/uslugi/lechenie-alkogolizma/,P0,Сделать/перенести,Нет,
+Лечение алкоголизма,Лечение мужского алкоголизма,/uslugi/lechenie-alkogolizma/muzhskoj-alkogolizm/,/uslugi/lechenie-alkogolizma/,P1,Сделать/перенести,Нет,
+Лечение алкоголизма,Лечение пивного алкоголизма,/uslugi/lechenie-alkogolizma/pivnoj-alkogolizm/,/uslugi/lechenie-alkogolizma/,P0,Сделать/перенести,Нет,
+Лечение алкоголизма,Лечение хронического алкоголизма,/uslugi/lechenie-alkogolizma/hronicheskij-alkogolizm/,/uslugi/lechenie-alkogolizma/,P1,Сделать/перенести,Нет,
+Лечение алкоголизма,Лечение алкоголизма у пожилых,/uslugi/lechenie-alkogolizma/u-pozhilyh/,/uslugi/lechenie-alkogolizma/,P1,Сделать/перенести,Нет,
+Лечение алкоголизма,Лечение алкоголизма без кодирования,/uslugi/lechenie-alkogolizma/bez-kodirovaniya/,/uslugi/lechenie-alkogolizma/,P1,Сделать/перенести,Нет,
+Лечение алкоголизма,Лечение подросткового алкоголизма,/uslugi/lechenie-alkogolizma/podrostkovyj/,/uslugi/lechenie-alkogolizma/,P2,После подтверждения,Нет,Только если клиника реально работает с несовершеннолетними и это покрыто лицензией/штатом.
+Лечение алкоголизма,Помощь при алкогольном делирии,/uslugi/lechenie-alkogolizma/alkogolnyj-delirij/,/uslugi/lechenie-alkogolizma/,P2,После медицинской проверки,Нет,Высокорисковая медицинская тема; не обещать домашнее лечение.
+Лечение алкоголизма,Вывод из запоя,/uslugi/lechenie-alkogolizma/vyvod-iz-zapoya/,/uslugi/lechenie-alkogolizma/,P0,Сделать/перенести,Нет,
+Лечение алкоголизма,Вывод из запоя на дому,/uslugi/lechenie-alkogolizma/vyvod-iz-zapoya/na-domu/,/uslugi/lechenie-alkogolizma/vyvod-iz-zapoya/,P0,Сделать/перенести,Массовое ГЕО: метро + округа + 50 городов МО,
+Лечение алкоголизма,Вывод из запоя в стационаре,/uslugi/lechenie-alkogolizma/vyvod-iz-zapoya/v-stacionare/,/uslugi/lechenie-alkogolizma/vyvod-iz-zapoya/,P0,Сделать/перенести,Нет,
+Лечение алкоголизма,Вывод из запоя + дальнейшее лечение,/uslugi/lechenie-alkogolizma/vyvod-iz-zapoya/s-dalnejshim-lecheniem/,/uslugi/lechenie-alkogolizma/vyvod-iz-zapoya/,P1,Сделать/перенести,Нет,
+Лечение алкоголизма,Капельницы и детокс,/uslugi/lechenie-alkogolizma/kapelnicy-i-detoks/,/uslugi/lechenie-alkogolizma/,P0,Сделать/перенести,Нет,
+Лечение алкоголизма,Капельница на дому,/uslugi/lechenie-alkogolizma/kapelnicy-i-detoks/kapelnica-na-domu/,/uslugi/lechenie-alkogolizma/kapelnicy-i-detoks/,P0,Сделать/перенести,Массовое ГЕО: метро + округа + 50 городов МО,
+Лечение алкоголизма,Капельница от запоя,/uslugi/lechenie-alkogolizma/kapelnicy-i-detoks/kapelnica-ot-zapoya/,/uslugi/lechenie-alkogolizma/kapelnicy-i-detoks/,P0,Сделать/перенести,Нет отдельной ГЕО-матрицы,
+Лечение алкоголизма,Капельница от похмелья,/uslugi/lechenie-alkogolizma/kapelnicy-i-detoks/kapelnica-ot-pohmelya/,/uslugi/lechenie-alkogolizma/kapelnicy-i-detoks/,P0,Сделать/перенести,Нет отдельной ГЕО-матрицы,
+Лечение алкоголизма,Капельница от алкоголя,/uslugi/lechenie-alkogolizma/kapelnicy-i-detoks/kapelnica-ot-alkogolya/,/uslugi/lechenie-alkogolizma/kapelnicy-i-detoks/,P1,Сделать/перенести,Нет отдельной ГЕО-матрицы,
+Лечение алкоголизма,Алкогольная детоксикация,/uslugi/lechenie-alkogolizma/kapelnicy-i-detoks/detoksikaciya/,/uslugi/lechenie-alkogolizma/kapelnicy-i-detoks/,P1,Сделать/перенести,Нет,
+Лечение алкоголизма,Алкогольная интоксикация,/uslugi/lechenie-alkogolizma/kapelnicy-i-detoks/alkogolnaya-intoksikaciya/,/uslugi/lechenie-alkogolizma/kapelnicy-i-detoks/,P1,Сделать/перенести,Нет,
+Лечение алкоголизма,Алкогольный абстинентный синдром,/uslugi/lechenie-alkogolizma/kapelnicy-i-detoks/abstinentnyj-sindrom/,/uslugi/lechenie-alkogolizma/kapelnicy-i-detoks/,P1,Сделать/перенести,Нет,
+Лечение алкоголизма,Кодирование от алкоголизма,/uslugi/lechenie-alkogolizma/kodirovanie/,/uslugi/lechenie-alkogolizma/,P0,Сделать/перенести,Массовое ГЕО только для общего кодирования: метро + округа + 50 городов МО,
+Лечение алкоголизма,Кодирование на дому,/uslugi/lechenie-alkogolizma/kodirovanie/na-domu/,/uslugi/lechenie-alkogolizma/kodirovanie/,P0,Сделать/перенести,Нет,
+Лечение алкоголизма,Кодирование в клинике,/uslugi/lechenie-alkogolizma/kodirovanie/v-klinike/,/uslugi/lechenie-alkogolizma/kodirovanie/,P1,Сделать/перенести,Нет,
+Лечение алкоголизма,Медикаментозное кодирование,/uslugi/lechenie-alkogolizma/kodirovanie/medikamentoznoe/,/uslugi/lechenie-alkogolizma/kodirovanie/,P0,Сделать/перенести,Нет,
+Лечение алкоголизма,Кодирование по методу Довженко,/uslugi/lechenie-alkogolizma/kodirovanie/metod-dovzhenko/,/uslugi/lechenie-alkogolizma/kodirovanie/,P0,Сделать/перенести,Нет,
+Лечение алкоголизма,Кодирование гипнозом,/uslugi/lechenie-alkogolizma/kodirovanie/gipnoz/,/uslugi/lechenie-alkogolizma/kodirovanie/,P0,Сделать/перенести,Нет,
+Лечение алкоголизма,Кодирование уколом,/uslugi/lechenie-alkogolizma/kodirovanie/ukol/,/uslugi/lechenie-alkogolizma/kodirovanie/,P0,Сделать/перенести,Нет,
+Лечение алкоголизма,Вшивание / подшивка,/uslugi/lechenie-alkogolizma/kodirovanie/vshivanie/,/uslugi/lechenie-alkogolizma/kodirovanie/,P0,Сделать/перенести,Нет,
+Лечение алкоголизма,Двойной блок,/uslugi/lechenie-alkogolizma/kodirovanie/dvojnoj-blok/,/uslugi/lechenie-alkogolizma/kodirovanie/,P0,Сделать/перенести,Нет,
+Лечение алкоголизма,Кодирование с провокацией,/uslugi/lechenie-alkogolizma/kodirovanie/s-provokaciej/,/uslugi/lechenie-alkogolizma/kodirovanie/,P1,Сделать/перенести,Нет,
+Лечение алкоголизма,Препараты для кодирования,/uslugi/lechenie-alkogolizma/kodirovanie/preparaty/,/uslugi/lechenie-alkogolizma/kodirovanie/,P1,Сделать/перенести,Нет,
+Лечение алкоголизма,Кодирование: Эспераль,/uslugi/lechenie-alkogolizma/kodirovanie/preparaty/esperal/,/uslugi/lechenie-alkogolizma/kodirovanie/preparaty/,P1,Сделать/перенести,Нет,Публиковать только если метод/препарат реально используется клиникой; не размножать по ГЕО.
+Лечение алкоголизма,Кодирование: Аквилонг,/uslugi/lechenie-alkogolizma/kodirovanie/preparaty/akvilong/,/uslugi/lechenie-alkogolizma/kodirovanie/preparaty/,P1,Сделать/перенести,Нет,Публиковать только если метод/препарат реально используется клиникой; не размножать по ГЕО.
+Лечение алкоголизма,Кодирование: Алгоминал,/uslugi/lechenie-alkogolizma/kodirovanie/preparaty/algominal/,/uslugi/lechenie-alkogolizma/kodirovanie/preparaty/,P1,Сделать/перенести,Нет,Публиковать только если метод/препарат реально используется клиникой; не размножать по ГЕО.
+Лечение алкоголизма,Кодирование: Дисульфирам,/uslugi/lechenie-alkogolizma/kodirovanie/preparaty/disulfiram/,/uslugi/lechenie-alkogolizma/kodirovanie/preparaty/,P1,Сделать/перенести,Нет,Публиковать только если метод/препарат реально используется клиникой; не размножать по ГЕО.
+Лечение алкоголизма,Кодирование: Налтрексон,/uslugi/lechenie-alkogolizma/kodirovanie/preparaty/naltrekson/,/uslugi/lechenie-alkogolizma/kodirovanie/preparaty/,P1,Сделать/перенести,Нет,Публиковать только если метод/препарат реально используется клиникой; не размножать по ГЕО.
+Лечение алкоголизма,Кодирование: Вивитрол,/uslugi/lechenie-alkogolizma/kodirovanie/preparaty/vivitrol/,/uslugi/lechenie-alkogolizma/kodirovanie/preparaty/,P1,Сделать/перенести,Нет,Публиковать только если метод/препарат реально используется клиникой; не размножать по ГЕО.
+Лечение алкоголизма,Кодирование: Торпедо,/uslugi/lechenie-alkogolizma/kodirovanie/preparaty/torpedo/,/uslugi/lechenie-alkogolizma/kodirovanie/preparaty/,P1,Сделать/перенести,Нет,Публиковать только если метод/препарат реально используется клиникой; не размножать по ГЕО.
+Лечение алкоголизма,Раскодирование,/uslugi/lechenie-alkogolizma/kodirovanie/raskodirovanie/,/uslugi/lechenie-alkogolizma/kodirovanie/,P1,Сделать/перенести,Нет,
+Лечение наркомании,Лечение наркомании,/uslugi/lechenie-narkomanii/,/uslugi/,P0,Сделать/перенести,Нет,
+Лечение наркомании,Лечение наркомании в стационаре,/uslugi/lechenie-narkomanii/v-stacionare/,/uslugi/lechenie-narkomanii/,P0,Сделать/перенести,Нет,
+Лечение наркомании,Лечение наркомании на дому,/uslugi/lechenie-narkomanii/na-domu/,/uslugi/lechenie-narkomanii/,P1,Сделать/перенести,Нет массового ГЕО,
+Лечение наркомании,Амбулаторное лечение наркомании,/uslugi/lechenie-narkomanii/ambulatorno/,/uslugi/lechenie-narkomanii/,P1,Сделать/перенести,Нет,
+Лечение наркомании,Медикаментозное лечение наркомании,/uslugi/lechenie-narkomanii/medikamentoznoe/,/uslugi/lechenie-narkomanii/,P1,Сделать/перенести,Нет,
+Лечение наркомании,Снятие ломки,/uslugi/lechenie-narkomanii/snyatie-lomki/,/uslugi/lechenie-narkomanii/,P0,Сделать/перенести,Нет,
+Лечение наркомании,Снятие ломки на дому,/uslugi/lechenie-narkomanii/snyatie-lomki/na-domu/,/uslugi/lechenie-narkomanii/snyatie-lomki/,P1,Сделать/перенести,Нет,
+Лечение наркомании,Снятие ломки в стационаре,/uslugi/lechenie-narkomanii/snyatie-lomki/v-stacionare/,/uslugi/lechenie-narkomanii/snyatie-lomki/,P0,Сделать/перенести,Нет,
+Лечение наркомании,Детоксикация от наркотиков,/uslugi/lechenie-narkomanii/detoksikaciya/,/uslugi/lechenie-narkomanii/,P0,Сделать/перенести,Нет,
+Лечение наркомании,УБОД,/uslugi/lechenie-narkomanii/detoksikaciya/ubod/,/uslugi/lechenie-narkomanii/detoksikaciya/,P0,Сделать/перенести,Нет,Только если реально оказывается и есть соответствующие условия/специалисты.
+Лечение наркомании,Капельница при наркотической интоксикации,/uslugi/lechenie-narkomanii/detoksikaciya/kapelnica/,/uslugi/lechenie-narkomanii/detoksikaciya/,P1,Сделать/перенести,Нет,
+Лечение наркомании,Лечение наркомании по городам МО,/uslugi/lechenie-narkomanii/mo/,/uslugi/lechenie-narkomanii/,P1,Сделать/перенести,30 крупнейших городов МО; без метро,
+Лечение наркомании,Лечение героиновой зависимости,/uslugi/lechenie-narkomanii/geroin/,/uslugi/lechenie-narkomanii/,P0,Сделать/перенести,Нет,Без ГЕО. Отдельный URL только под самостоятельный кластер вещества.
+Лечение наркомании,Лечение метадоновой зависимости,/uslugi/lechenie-narkomanii/metadon/,/uslugi/lechenie-narkomanii/,P0,Сделать/перенести,Нет,Без ГЕО. Отдельный URL только под самостоятельный кластер вещества.
+Лечение наркомании,Лечение мефедроновой зависимости,/uslugi/lechenie-narkomanii/mefedron/,/uslugi/lechenie-narkomanii/,P0,Сделать/перенести,Нет,Без ГЕО. Отдельный URL только под самостоятельный кластер вещества.
+Лечение наркомании,Лечение кокаиновой зависимости,/uslugi/lechenie-narkomanii/kokain/,/uslugi/lechenie-narkomanii/,P0,Сделать/перенести,Нет,Без ГЕО. Отдельный URL только под самостоятельный кластер вещества.
+Лечение наркомании,Лечение амфетаминовой зависимости,/uslugi/lechenie-narkomanii/amfetamin/,/uslugi/lechenie-narkomanii/,P0,Сделать/перенести,Нет,Без ГЕО. Отдельный URL только под самостоятельный кластер вещества.
+Лечение наркомании,Лечение метамфетаминовой зависимости,/uslugi/lechenie-narkomanii/metamfetamin/,/uslugi/lechenie-narkomanii/,P1,Сделать/перенести,Нет,Без ГЕО. Отдельный URL только под самостоятельный кластер вещества.
+Лечение наркомании,Лечение зависимости от спайса,/uslugi/lechenie-narkomanii/spajs/,/uslugi/lechenie-narkomanii/,P0,Сделать/перенести,Нет,Без ГЕО. Отдельный URL только под самостоятельный кластер вещества.
+Лечение наркомании,Лечение зависимости от гашиша,/uslugi/lechenie-narkomanii/gashish/,/uslugi/lechenie-narkomanii/,P0,Сделать/перенести,Нет,Без ГЕО. Отдельный URL только под самостоятельный кластер вещества.
+Лечение наркомании,Лечение зависимости от марихуаны,/uslugi/lechenie-narkomanii/marihuana/,/uslugi/lechenie-narkomanii/,P0,Сделать/перенести,Нет,Без ГЕО. Отдельный URL только под самостоятельный кластер вещества.
+Лечение наркомании,Лечение зависимости от солей,/uslugi/lechenie-narkomanii/soli/,/uslugi/lechenie-narkomanii/,P0,Сделать/перенести,Нет,Без ГЕО. Отдельный URL только под самостоятельный кластер вещества.
+Лечение наркомании,Лечение зависимости от Альфа-PVP,/uslugi/lechenie-narkomanii/alfa-pvp/,/uslugi/lechenie-narkomanii/,P1,Сделать/перенести,Нет,Без ГЕО. Отдельный URL только под самостоятельный кластер вещества.
+Лечение наркомании,Лечение зависимости от бутирата,/uslugi/lechenie-narkomanii/butirat/,/uslugi/lechenie-narkomanii/,P1,Сделать/перенести,Нет,Без ГЕО. Отдельный URL только под самостоятельный кластер вещества.
+Другие зависимости,Другие зависимости,/uslugi/drugie-zavisimosti/,/uslugi/,P1,Сделать/перенести,Нет,
+Другие зависимости,Игромания / лудомания,/uslugi/drugie-zavisimosti/igromaniya/,/uslugi/drugie-zavisimosti/,P0,Сделать/перенести,Нет,
+Другие зависимости,Зависимость от ставок,/uslugi/drugie-zavisimosti/stavki/,/uslugi/drugie-zavisimosti/,P1,Сделать/перенести,Нет,
+Другие зависимости,Компьютерная зависимость,/uslugi/drugie-zavisimosti/kompyuternaya/,/uslugi/drugie-zavisimosti/,P1,Сделать/перенести,Нет,
+Другие зависимости,Интернет-зависимость,/uslugi/drugie-zavisimosti/internet/,/uslugi/drugie-zavisimosti/,P1,Сделать/перенести,Нет,
+Другие зависимости,Никотиновая зависимость,/uslugi/drugie-zavisimosti/nikotinovaya/,/uslugi/drugie-zavisimosti/,P1,Сделать/перенести,Нет,
+Другие зависимости,Токсикомания,/uslugi/drugie-zavisimosti/toksikomaniya/,/uslugi/drugie-zavisimosti/,P0,Сделать/перенести,Нет,
+Другие зависимости,Лекарственная зависимость,/uslugi/drugie-zavisimosti/lekarstvennaya/,/uslugi/drugie-zavisimosti/,P0,Сделать/перенести,Нет,
+Другие зависимости,Прегабалин / Лирика,/uslugi/drugie-zavisimosti/lekarstvennaya/pregabalin/,/uslugi/drugie-zavisimosti/lekarstvennaya/,P0,Сделать/перенести,Нет,Формулировку «зависимость» использовать только после медицинской проверки конкретного вещества/сценария.
+Другие зависимости,Бензодиазепины,/uslugi/drugie-zavisimosti/lekarstvennaya/benzodiazepiny/,/uslugi/drugie-zavisimosti/lekarstvennaya/,P1,Сделать/перенести,Нет,Формулировку «зависимость» использовать только после медицинской проверки конкретного вещества/сценария.
+Другие зависимости,Феназепам,/uslugi/drugie-zavisimosti/lekarstvennaya/fenazepam/,/uslugi/drugie-zavisimosti/lekarstvennaya/,P1,Сделать/перенести,Нет,Формулировку «зависимость» использовать только после медицинской проверки конкретного вещества/сценария.
+Другие зависимости,Трамадол,/uslugi/drugie-zavisimosti/lekarstvennaya/tramadol/,/uslugi/drugie-zavisimosti/lekarstvennaya/,P1,Сделать/перенести,Нет,Формулировку «зависимость» использовать только после медицинской проверки конкретного вещества/сценария.
+Другие зависимости,Кодеин,/uslugi/drugie-zavisimosti/lekarstvennaya/kodein/,/uslugi/drugie-zavisimosti/lekarstvennaya/,P1,Сделать/перенести,Нет,Формулировку «зависимость» использовать только после медицинской проверки конкретного вещества/сценария.
+Другие зависимости,Габапентин,/uslugi/drugie-zavisimosti/lekarstvennaya/gabapentin/,/uslugi/drugie-zavisimosti/lekarstvennaya/,P2,Сделать/перенести,Нет,Формулировку «зависимость» использовать только после медицинской проверки конкретного вещества/сценария.
+Другие зависимости,Антидепрессанты: сопровождение отмены,/uslugi/drugie-zavisimosti/lekarstvennaya/antidepressanty/,/uslugi/drugie-zavisimosti/lekarstvennaya/,P1,Сделать/перенести,Нет,Формулировку «зависимость» использовать только после медицинской проверки конкретного вещества/сценария.
+Реабилитация,Реабилитация зависимых,/uslugi/reabilitaciya/,/uslugi/,P0,Сделать/перенести,Нет,
+Реабилитация,Реабилитация при алкоголизме,/uslugi/reabilitaciya/alkogolizm/,/uslugi/reabilitaciya/,P0,Сделать/перенести,Нет,
+Реабилитация,Реабилитация при наркомании,/uslugi/reabilitaciya/narkomaniya/,/uslugi/reabilitaciya/,P0,Сделать/перенести,Нет,
+Реабилитация,Реабилитация при игромании,/uslugi/reabilitaciya/igromaniya/,/uslugi/reabilitaciya/,P1,Сделать/перенести,Нет,
+Реабилитация,Медико-социальная реабилитация,/uslugi/reabilitaciya/mediko-socialnaya/,/uslugi/reabilitaciya/,P0,Сделать/перенести,Нет,
+Реабилитация,Программа «12 шагов»,/uslugi/reabilitaciya/12-shagov/,/uslugi/reabilitaciya/,P0,Сделать/перенести,Нет,
+Реабилитация,Метод Шичко,/uslugi/reabilitaciya/metod-shichko/,/uslugi/reabilitaciya/,P0,Сделать/перенести,Нет,
+Реабилитация,Ресоциализация,/uslugi/reabilitaciya/resocializaciya/,/uslugi/reabilitaciya/,P1,Сделать/перенести,Нет,
+Реабилитация,Реабилитация по городам МО,/uslugi/reabilitaciya/mo/,/uslugi/reabilitaciya/,P1,Сделать/перенести,30 крупнейших городов МО; только при реальном маршруте/трансфере,
+Психиатрия,Психиатрическая помощь,/uslugi/psihiatriya/,/uslugi/,P0,Сделать/перенести,Нет,
+Психиатрия,Консультация психиатра,/uslugi/psihiatriya/konsultaciya/,/uslugi/psihiatriya/,P0,Сделать/перенести,Нет,
+Психиатрия,Психиатр на дом,/uslugi/psihiatriya/psihiatr-na-dom/,/uslugi/psihiatriya/,P0,Сделать/перенести,Округа + 50 городов МО; метро не запускать на первом этапе,
+Психиатрия,Онлайн-консультация психиатра,/uslugi/psihiatriya/onlajn/,/uslugi/psihiatriya/,P1,Сделать/перенести,Нет,
+Психиатрия,Психиатрический стационар,/uslugi/psihiatriya/stacionar/,/uslugi/psihiatriya/,P1,Сделать/перенести,Нет,
+Психиатрия,Тревожные и стрессовые расстройства,/uslugi/psihiatriya/trevozhnye-i-stressovye-rasstrojstva/,/uslugi/psihiatriya/,P0,Сделать/перенести,Нет,
+Психиатрия,Паническое расстройство и панические атаки,/uslugi/psihiatriya/trevozhnye-i-stressovye-rasstrojstva/panicheskoe/,/uslugi/psihiatriya/trevozhnye-i-stressovye-rasstrojstva/,P0,Сделать/перенести,Нет,
+Психиатрия,ОКР,/uslugi/psihiatriya/trevozhnye-i-stressovye-rasstrojstva/okr/,/uslugi/psihiatriya/trevozhnye-i-stressovye-rasstrojstva/,P0,Сделать/перенести,Нет,
+Психиатрия,ПТСР,/uslugi/psihiatriya/trevozhnye-i-stressovye-rasstrojstva/ptsr/,/uslugi/psihiatriya/trevozhnye-i-stressovye-rasstrojstva/,P0,Сделать/перенести,Нет,
+Психиатрия,Фобии,/uslugi/psihiatriya/trevozhnye-i-stressovye-rasstrojstva/fobii/,/uslugi/psihiatriya/trevozhnye-i-stressovye-rasstrojstva/,P0,Сделать/перенести,Нет,
+Психиатрия,Генерализованное тревожное расстройство,/uslugi/psihiatriya/trevozhnye-i-stressovye-rasstrojstva/generalizovannoe-trevozhnoe/,/uslugi/psihiatriya/trevozhnye-i-stressovye-rasstrojstva/,P1,Сделать/перенести,Нет,
+Психиатрия,Социофобия,/uslugi/psihiatriya/trevozhnye-i-stressovye-rasstrojstva/sociofobiya/,/uslugi/psihiatriya/trevozhnye-i-stressovye-rasstrojstva/,P1,Сделать/перенести,Нет,
+Психиатрия,Агорафобия,/uslugi/psihiatriya/trevozhnye-i-stressovye-rasstrojstva/agorafobiya/,/uslugi/psihiatriya/trevozhnye-i-stressovye-rasstrojstva/,P1,Сделать/перенести,Нет,
+Психиатрия,Неврозы,/uslugi/psihiatriya/trevozhnye-i-stressovye-rasstrojstva/nevroz/,/uslugi/psihiatriya/trevozhnye-i-stressovye-rasstrojstva/,P1,Сделать/перенести,Нет,
+Психиатрия,Расстройства настроения,/uslugi/psihiatriya/rasstrojstva-nastroeniya/,/uslugi/psihiatriya/,P0,Сделать/перенести,Нет,
+Психиатрия,Депрессия,/uslugi/psihiatriya/rasstrojstva-nastroeniya/depressiya/,/uslugi/psihiatriya/rasstrojstva-nastroeniya/,P0,Сделать/перенести,Нет,
+Психиатрия,Биполярное расстройство,/uslugi/psihiatriya/rasstrojstva-nastroeniya/bipolyarnoe/,/uslugi/psihiatriya/rasstrojstva-nastroeniya/,P0,Сделать/перенести,Нет,
+Психиатрия,Послеродовая депрессия,/uslugi/psihiatriya/rasstrojstva-nastroeniya/poslerodovaya-depressiya/,/uslugi/psihiatriya/rasstrojstva-nastroeniya/,P1,Сделать/перенести,Нет,
+Психиатрия,Дистимия,/uslugi/psihiatriya/rasstrojstva-nastroeniya/distimiya/,/uslugi/psihiatriya/rasstrojstva-nastroeniya/,P1,Сделать/перенести,Нет,
+Психиатрия,Психотические расстройства,/uslugi/psihiatriya/psihoticheskie-rasstrojstva/,/uslugi/psihiatriya/,P0,Сделать/перенести,Нет,
+Психиатрия,Шизофрения,/uslugi/psihiatriya/psihoticheskie-rasstrojstva/shizofreniya/,/uslugi/psihiatriya/psihoticheskie-rasstrojstva/,P0,Сделать/перенести,Нет,
+Психиатрия,Шизоаффективное расстройство,/uslugi/psihiatriya/psihoticheskie-rasstrojstva/shizoaffektivnoe/,/uslugi/psihiatriya/psihoticheskie-rasstrojstva/,P1,Сделать/перенести,Нет,
+Психиатрия,Шизотипическое расстройство,/uslugi/psihiatriya/psihoticheskie-rasstrojstva/shizotipicheskoe/,/uslugi/psihiatriya/psihoticheskie-rasstrojstva/,P1,Сделать/перенести,Нет,
+Психиатрия,Психоз,/uslugi/psihiatriya/psihoticheskie-rasstrojstva/psihoz/,/uslugi/psihiatriya/psihoticheskie-rasstrojstva/,P0,Сделать/перенести,Нет,
+Психиатрия,Бредовое расстройство,/uslugi/psihiatriya/psihoticheskie-rasstrojstva/bredovoe/,/uslugi/psihiatriya/psihoticheskie-rasstrojstva/,P1,Сделать/перенести,Нет,
+Психиатрия,Расстройства личности и поведения,/uslugi/psihiatriya/rasstrojstva-lichnosti-i-povedeniya/,/uslugi/psihiatriya/,P1,Сделать/перенести,Нет,
+Психиатрия,Пограничное расстройство личности,/uslugi/psihiatriya/rasstrojstva-lichnosti-i-povedeniya/pogranichnoe/,/uslugi/psihiatriya/rasstrojstva-lichnosti-i-povedeniya/,P1,Сделать/перенести,Нет,
+Психиатрия,Нарциссическое расстройство личности,/uslugi/psihiatriya/rasstrojstva-lichnosti-i-povedeniya/narcissicheskoe/,/uslugi/psihiatriya/rasstrojstva-lichnosti-i-povedeniya/,P1,Сделать/перенести,Нет,
+Психиатрия,Шизоидное расстройство личности,/uslugi/psihiatriya/rasstrojstva-lichnosti-i-povedeniya/shizoidnoe/,/uslugi/psihiatriya/rasstrojstva-lichnosti-i-povedeniya/,P1,Сделать/перенести,Нет,
+Психиатрия,Параноидное расстройство личности,/uslugi/psihiatriya/rasstrojstva-lichnosti-i-povedeniya/paranoidnoe/,/uslugi/psihiatriya/rasstrojstva-lichnosti-i-povedeniya/,P1,Сделать/перенести,Нет,
+Психиатрия,Избегающее расстройство личности,/uslugi/psihiatriya/rasstrojstva-lichnosti-i-povedeniya/izbegayushchee/,/uslugi/psihiatriya/rasstrojstva-lichnosti-i-povedeniya/,P1,Сделать/перенести,Нет,
+Психиатрия,Зависимое расстройство личности,/uslugi/psihiatriya/rasstrojstva-lichnosti-i-povedeniya/zavisimoe/,/uslugi/psihiatriya/rasstrojstva-lichnosti-i-povedeniya/,P1,Сделать/перенести,Нет,
+Психиатрия,Расстройства пищевого поведения,/uslugi/psihiatriya/rasstrojstva-pishchevogo-povedeniya/,/uslugi/psihiatriya/,P1,Сделать/перенести,Нет,
+Психиатрия,Нервная анорексия,/uslugi/psihiatriya/rasstrojstva-pishchevogo-povedeniya/anoreksiya/,/uslugi/psihiatriya/rasstrojstva-pishchevogo-povedeniya/,P0,Сделать/перенести,Нет,
+Психиатрия,Нервная булимия,/uslugi/psihiatriya/rasstrojstva-pishchevogo-povedeniya/bulimiya/,/uslugi/psihiatriya/rasstrojstva-pishchevogo-povedeniya/,P0,Сделать/перенести,Нет,
+Психиатрия,Компульсивное переедание,/uslugi/psihiatriya/rasstrojstva-pishchevogo-povedeniya/kompulsivnoe-pereedanie/,/uslugi/psihiatriya/rasstrojstva-pishchevogo-povedeniya/,P1,Сделать/перенести,Нет,
+Психиатрия,Когнитивные и органические расстройства,/uslugi/psihiatriya/kognitivnye-i-organicheskie/,/uslugi/psihiatriya/,P1,Сделать/перенести,Нет,
+Психиатрия,Деменция,/uslugi/psihiatriya/kognitivnye-i-organicheskie/demenciya/,/uslugi/psihiatriya/kognitivnye-i-organicheskie/,P0,Сделать/перенести,Нет,
+Психиатрия,Болезнь Альцгеймера,/uslugi/psihiatriya/kognitivnye-i-organicheskie/alcgejmer/,/uslugi/psihiatriya/kognitivnye-i-organicheskie/,P1,Сделать/перенести,Нет,
+Психиатрия,Сосудистая деменция,/uslugi/psihiatriya/kognitivnye-i-organicheskie/sosudistaya-demenciya/,/uslugi/psihiatriya/kognitivnye-i-organicheskie/,P1,Сделать/перенести,Нет,
+Психиатрия,Расстройства сна,/uslugi/psihiatriya/rasstrojstva-sna/,/uslugi/psihiatriya/,P1,Сделать/перенести,Нет,
+Психиатрия,Бессонница,/uslugi/psihiatriya/rasstrojstva-sna/bessonnica/,/uslugi/psihiatriya/rasstrojstva-sna/,P0,Сделать/перенести,Нет,
+Психиатрия,Нарколепсия,/uslugi/psihiatriya/rasstrojstva-sna/narkolepsiya/,/uslugi/psihiatriya/rasstrojstva-sna/,P2,Сделать/перенести,Нет,
+Психиатрия,Лунатизм,/uslugi/psihiatriya/rasstrojstva-sna/lunatizm/,/uslugi/psihiatriya/rasstrojstva-sna/,P2,Сделать/перенести,Нет,
+Психотерапия и психология,Психотерапия и психология,/uslugi/psihoterapiya-i-psihologiya/,/uslugi/,P1,Сделать/перенести,Нет,
+Психотерапия и психология,Консультация психотерапевта,/uslugi/psihoterapiya-i-psihologiya/psihoterapevt/,/uslugi/psihoterapiya-i-psihologiya/,P0,Сделать/перенести,Нет,
+Психотерапия и психология,Индивидуальная психотерапия,/uslugi/psihoterapiya-i-psihologiya/individualnaya/,/uslugi/psihoterapiya-i-psihologiya/,P1,Сделать/перенести,Нет,
+Психотерапия и психология,Семейная психотерапия,/uslugi/psihoterapiya-i-psihologiya/semejnaya/,/uslugi/psihoterapiya-i-psihologiya/,P1,Сделать/перенести,Нет,
+Психотерапия и психология,Консультация психолога,/uslugi/psihoterapiya-i-psihologiya/psiholog/,/uslugi/psihoterapiya-i-psihologiya/,P0,Сделать/перенести,Нет,
+Психотерапия и психология,Семейный психолог,/uslugi/psihoterapiya-i-psihologiya/semejnyj-psiholog/,/uslugi/psihoterapiya-i-psihologiya/,P1,Сделать/перенести,Нет,
+Помощь родственникам,Помощь родственникам зависимого,/uslugi/pomoshch-rodstvennikam/,/uslugi/,P0,Сделать/перенести,Нет,
+Помощь родственникам,Мотивация на лечение / интервенция,/uslugi/pomoshch-rodstvennikam/motivaciya-na-lechenie/,/uslugi/pomoshch-rodstvennikam/,P0,Сделать/перенести,Нет,
+Помощь родственникам,Помощь при созависимости,/uslugi/pomoshch-rodstvennikam/sozavisimost/,/uslugi/pomoshch-rodstvennikam/,P0,Сделать/перенести,Нет,
+Помощь родственникам,Консультация родственника без пациента,/uslugi/pomoshch-rodstvennikam/konsultaciya-bez-pacienta/,/uslugi/pomoshch-rodstvennikam/,P1,Сделать/перенести,Нет,
+Помощь родственникам,Бесплатная группа для созависимых,/uslugi/pomoshch-rodstvennikam/gruppa-sozavisimyh/,/uslugi/pomoshch-rodstvennikam/,P1,Сделать/перенести,Нет,
+Диагностика,Диагностика,/uslugi/diagnostika/,/uslugi/,P1,Сделать/перенести,Нет,
+Диагностика,Анализы на наркотики,/uslugi/diagnostika/analizy-na-narkotiki/,/uslugi/diagnostika/,P0,Сделать/перенести,Нет,
+Восстановительная терапия,Восстановительная терапия,/uslugi/vosstanovitelnaya-terapiya/,/uslugi/,P2,После подтверждения оборудования/лицензии,Нет,
+Восстановительная терапия,ВЛОК,/uslugi/vosstanovitelnaya-terapiya/vlok/,/uslugi/vosstanovitelnaya-terapiya/,P2,После подтверждения оборудования/лицензии,Нет,
+Восстановительная терапия,Плазмаферез,/uslugi/vosstanovitelnaya-terapiya/plazmaferez/,/uslugi/vosstanovitelnaya-terapiya/,P2,После подтверждения оборудования/лицензии,Нет,
+Восстановительная терапия,Барокамера / ГБО,/uslugi/vosstanovitelnaya-terapiya/barokamera/,/uslugi/vosstanovitelnaya-terapiya/,P2,После подтверждения оборудования/лицензии,Нет,
+Восстановительная терапия,Озонотерапия,/uslugi/vosstanovitelnaya-terapiya/ozonoterapiya/,/uslugi/vosstanovitelnaya-terapiya/,P2,После подтверждения оборудования/лицензии,Нет,
+Восстановительная терапия,Электросон,/uslugi/vosstanovitelnaya-terapiya/elektroson/,/uslugi/vosstanovitelnaya-terapiya/,P2,После подтверждения оборудования/лицензии,Нет,
+Восстановительная терапия,Иглорефлексотерапия,/uslugi/vosstanovitelnaya-terapiya/iglorefleksoterapiya/,/uslugi/vosstanovitelnaya-terapiya/,P2,После подтверждения оборудования/лицензии,Нет,
+Trust / выбор,Как проверить наркологическую клинику,/o-klinike/kak-proverit-kliniku/,/,P0,Сделать/перенести,Нет,"Это не «статья ради НЧ», а страница выбора/доверия; отдельный URL оставлять только если семантика и SERP подтверждают самостоятельную задачу."
+Trust / выбор,Лицензия и документы,/o-klinike/licenziya-i-dokumenty/,/,P0,Сделать/перенести,Нет,"Это не «статья ради НЧ», а страница выбора/доверия; отдельный URL оставлять только если семантика и SERP подтверждают самостоятельную задачу."
+Trust / выбор,Специалисты,/vrachi/,/,P0,Сделать/перенести,Нет,"Это не «статья ради НЧ», а страница выбора/доверия; отдельный URL оставлять только если семантика и SERP подтверждают самостоятельную задачу."
+Trust / выбор,Цены и что входит в стоимость,/ceny/,/,P0,Сделать/перенести,Нет,"Это не «статья ради НЧ», а страница выбора/доверия; отдельный URL оставлять только если семантика и SERP подтверждают самостоятельную задачу."
+Trust / выбор,Что делать после вывода из запоя,/pomoshch/posle-vyvoda-iz-zapoya/,/,P1,Сделать/перенести,Нет,"Это не «статья ради НЧ», а страница выбора/доверия; отдельный URL оставлять только если семантика и SERP подтверждают самостоятельную задачу."
+Trust / выбор,Повторный запой,/pomoshch/povtornyj-zapoj/,/,P1,Сделать/перенести,Нет,"Это не «статья ради НЧ», а страница выбора/доверия; отдельный URL оставлять только если семантика и SERP подтверждают самостоятельную задачу."
+Trust / выбор,Срыв после кодирования,/pomoshch/sryv-posle-kodirovaniya/,/,P1,Сделать/перенести,Нет,"Это не «статья ради НЧ», а страница выбора/доверия; отдельный URL оставлять только если семантика и SERP подтверждают самостоятельную задачу."
+Trust / выбор,Если близкий не хочет лечиться,/pomoshch/esli-ne-hochet-lechitsya/,/,P0,Сделать/перенести,Нет,"Это не «статья ради НЧ», а страница выбора/доверия; отдельный URL оставлять только если семантика и SERP подтверждают самостоятельную задачу."
+Trust / выбор,Дом или стационар,/pomoshch/dom-ili-stacionar/,/,P1,Сделать/перенести,Нет,"Это не «статья ради НЧ», а страница выбора/доверия; отдельный URL оставлять только если семантика и SERP подтверждают самостоятельную задачу."
+Trust / выбор,Кто приезжает на вызов,/pomoshch/kto-priezzhaet-na-vyzov/,/,P0,Сделать/перенести,Нет,"Это не «статья ради НЧ», а страница выбора/доверия; отдельный URL оставлять только если семантика и SERP подтверждают самостоятельную задачу."
+Trust / выбор,Наркологический учёт / диспансерное наблюдение,/pomoshch/dispanzernoe-nablyudenie/,/,P1,Сделать/перенести,Нет,"Это не «статья ради НЧ», а страница выбора/доверия; отдельный URL оставлять только если семантика и SERP подтверждают самостоятельную задачу."

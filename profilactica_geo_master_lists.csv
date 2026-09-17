@@ -1,0 +1,278 @@
+﻿geo_type,name,slug,tier
+metro,Аэропорт,aeroport,core-215
+metro,Александровский сад,aleksandrovskij-sad,core-215
+metro,Алексеевская,alekseevskaya,core-215
+metro,Алма-Атинская,alma-atinskaya,core-215
+metro,Алтуфьево,altufevo,core-215
+metro,Андроновка,andronovka,core-215
+metro,Аннино,annino,core-215
+metro,Арбатская,arbatskaya,core-215
+metro,Авиамоторная,aviamotornaya,core-215
+metro,Автозаводская,avtozavodskaya,core-215
+metro,Бабушкинская,babushkinskaya,core-215
+metro,Багратионовская,bagrationovskaya,core-215
+metro,Балтийская,baltijskaya,core-215
+metro,Баррикадная,barrikadnaya,core-215
+metro,Бауманская,baumanskaya,core-215
+metro,Беговая,begovaya,core-215
+metro,Белокаменная,belokamennaya,core-215
+metro,Белорусская,belorusskaya,core-215
+metro,Беляево,belyaevo,core-215
+metro,Бибирево,bibirevo,core-215
+metro,Библиотека имени Ленина,biblioteka-imeni-lenina,core-215
+metro,Битцевский парк,bitcevskij-park,core-215
+metro,Борисово,borisovo,core-215
+metro,Боровицкая,borovickaya,core-215
+metro,Ботанический сад,botanicheskij-sad,core-215
+metro,Братиславская,bratislavskaya,core-215
+metro,Бульвар Адмирала Ушакова,bulvar-admirala-ushakova,core-215
+metro,Бульвар Рокоссовского,bulvar-rokossovskogo,core-215
+metro,Бунинская аллея,buninskaya-alleya,core-215
+metro,Бутырская,butyrskaya,core-215
+metro,Чеховская,chehovskaya,core-215
+metro,Черкизовская,cherkizovskaya,core-215
+metro,Чертановская,chertanovskaya,core-215
+metro,Чистые пруды,chistye-prudy,core-215
+metro,Чкаловская,chkalovskaya,core-215
+metro,Царицыно,caricyno,core-215
+metro,ЦСКА,cska,core-215
+metro,Цветной бульвар,cvetnoj-bulvar,core-215
+metro,Деловой центр,delovoj-centr,core-215
+metro,Динамо,dinamo,core-215
+metro,Дмитровская,dmitrovskaya,core-215
+metro,Добрынинская,dobryninskaya,core-215
+metro,Домодедовская,domodedovskaya,core-215
+metro,Достоевская,dostoevskaya,core-215
+metro,Электрозаводская,elektrozavodskaya,core-215
+metro,Филёвский парк,filevskij-park,core-215
+metro,Фили,fili,core-215
+metro,Фонвизинская,fonvizinskaya,core-215
+metro,Фрунзенская,frunzenskaya,core-215
+metro,Хорошёвская,horoshevskaya,core-215
+metro,Ховрино,hovrino,core-215
+metro,Измайловская,izmajlovskaya,core-215
+metro,Каховская,kahovskaya,core-215
+metro,Калужская,kaluzhskaya,core-215
+metro,Кантемировская,kantemirovskaya,core-215
+metro,Каширская,kashirskaya,core-215
+metro,Киевская,kievskaya,core-215
+metro,Китай-город,kitaj-gorod,core-215
+metro,Коломенская,kolomenskaya,core-215
+metro,Комсомольская,komsomolskaya,core-215
+metro,Коньково,konkovo,core-215
+metro,Коптево,koptevo,core-215
+metro,Котельники,kotelniki,core-215
+metro,Кожуховская,kozhuhovskaya,core-215
+metro,Красногвардейская,krasnogvardejskaya,core-215
+metro,Краснопресненская,krasnopresnenskaya,core-215
+metro,Красносельская,krasnoselskaya,core-215
+metro,Красные ворота,krasnye-vorota,core-215
+metro,Крестьянская застава,krestyanskaya-zastava,core-215
+metro,Кропоткинская,kropotkinskaya,core-215
+metro,Крылатское,krylatskoe,core-215
+metro,Крымская,krymskaya,core-215
+metro,Кунцевская,kuncevskaya,core-215
+metro,Курская,kurskaya,core-215
+metro,Кутузовская,kutuzovskaya,core-215
+metro,Кузьминки,kuzminki,core-215
+metro,Кузнецкий мост,kuzneckij-most,core-215
+metro,Ленинский проспект,leninskij-prospekt,core-215
+metro,Лермонтовский проспект,lermontovskij-prospekt,core-215
+metro,Лесопарковая,lesoparkovaya,core-215
+metro,Лихоборы,lihobory,core-215
+metro,Локомотив,lokomotiv,core-215
+metro,Ломоносовский проспект,lomonosovskij-prospekt,core-215
+metro,Лубянка,lubyanka,core-215
+metro,Лужники,luzhniki,core-215
+metro,Люблино,lyublino,core-215
+metro,Марьино,marino,core-215
+metro,Марьина Роща,marina-roshcha,core-215
+metro,Марксистская,marksistskaya,core-215
+metro,Маяковская,mayakovskaya,core-215
+metro,Медведково,medvedkovo,core-215
+metro,Менделеевская,mendeleevskaya,core-215
+metro,Международная,mezhdunarodnaya,core-215
+metro,Минская,minskaya,core-215
+metro,Молодёжная,molodezhnaya,core-215
+metro,Мякинино,myakinino,core-215
+metro,Нагатинская,nagatinskaya,core-215
+metro,Нагорная,nagornaya,core-215
+metro,Нахимовский проспект,nahimovskij-prospekt,core-215
+metro,Нижегородская,nizhegorodskaya,core-215
+metro,Новогиреево,novogireevo,core-215
+metro,Новохохловская,novohohlovskaya,core-215
+metro,Новокосино,novokosino,core-215
+metro,Новокузнецкая,novokuzneckaya,core-215
+metro,Новослободская,novoslobodskaya,core-215
+metro,Новоясеневская,novoyasenevskaya,core-215
+metro,Новые Черёмушки,novye-cheremushki,core-215
+metro,Охотный Ряд,ohotnyj-ryad,core-215
+metro,Окружная,okruzhnaya,core-215
+metro,Октябрьское Поле,oktyabrskoe-pole,core-215
+metro,Октябрьская,oktyabrskaya,core-215
+metro,Орехово,orehovo,core-215
+metro,Отрадное,otradnoe,core-215
+metro,Панфиловская,panfilovskaya,core-215
+metro,Парк культуры,park-kultury,core-215
+metro,Парк Победы,park-pobedy,core-215
+metro,Партизанская,partizanskaya,core-215
+metro,Павелецкая,paveleckaya,core-215
+metro,Печатники,pechatniki,core-215
+metro,Перово,perovo,core-215
+metro,Первомайская,pervomajskaya,core-215
+metro,Петровский парк,petrovskij-park,core-215
+metro,Петровско-Разумовская,petrovsko-razumovskaya,core-215
+metro,Пионерская,pionerskaya,core-215
+metro,Планерная,planernaya,core-215
+metro,Площадь Гагарина,ploshchad-gagarina,core-215
+metro,Площадь Ильича,ploshchad-ilicha,core-215
+metro,Площадь Революции,ploshchad-revolyucii,core-215
+metro,Полежаевская,polezhaevskaya,core-215
+metro,Полянка,polyanka,core-215
+metro,Пражская,prazhskaya,core-215
+metro,Преображенская площадь,preobrazhenskaya-ploshchad,core-215
+metro,Профсоюзная,profsoyuznaya,core-215
+metro,Пролетарская,proletarskaya,core-215
+metro,Проспект Мира,prospekt-mira,core-215
+metro,Проспект Вернадского,prospekt-vernadskogo,core-215
+metro,Пушкинская,pushkinskaya,core-215
+metro,Пятницкое шоссе,pyatnickoe-shosse,core-215
+metro,Раменки,ramenki,core-215
+metro,Речной вокзал,rechnoj-vokzal,core-215
+metro,Римская,rimskaya,core-215
+metro,Рижская,rizhskaya,core-215
+metro,Ростокино,rostokino,core-215
+metro,Румянцево,rumyancevo,core-215
+metro,Рязанский проспект,ryazanskij-prospekt,core-215
+metro,Саларьево,salarevo,core-215
+metro,Савёловская,savelovskaya,core-215
+metro,Селигерская,seligerskaya,core-215
+metro,Семёновская,semenovskaya,core-215
+metro,Серпуховская,serpuhovskaya,core-215
+metro,Севастопольская,sevastopolskaya,core-215
+metro,Шаболовская,shabolovskaya,core-215
+metro,Шелепиха,shelepiha,core-215
+metro,Щукинская,shchukinskaya,core-215
+metro,Щёлковская,shchelkovskaya,core-215
+metro,Шипиловская,shipilovskaya,core-215
+metro,Сходненская,shodnenskaya,core-215
+metro,Шоссе Энтузиастов,shosse-entuziastov,core-215
+metro,Улица Скобелевская,ulica-skobelevskaya,core-215
+metro,Славянский бульвар,slavyanskij-bulvar,core-215
+metro,Смоленская,smolenskaya,core-215
+metro,Сокол,sokol,core-215
+metro,Соколиная гора,sokolinaya-gora,core-215
+metro,Спартак,spartak,core-215
+metro,Спортивная,sportivnaya,core-215
+metro,Сретенский бульвар,sretenskij-bulvar,core-215
+metro,Стрешнево,streshnevo,core-215
+metro,Строгино,strogino,core-215
+metro,Студенческая,studencheskaya,core-215
+metro,Сухаревская,suharevskaya,core-215
+metro,Свиблово,sviblovo,core-215
+metro,Таганская,taganskaya,core-215
+metro,Театральная,teatralnaya,core-215
+metro,Технопарк,tehnopark,core-215
+metro,Текстильщики,tekstilshchiki,core-215
+metro,Телецентр,telecentr,core-215
+metro,Тёплый Стан,teplyj-stan,core-215
+metro,Тимирязевская,timiryazevskaya,core-215
+metro,Третьяковская,tretyakovskaya,core-215
+metro,Тропарёво,troparevo,core-215
+metro,Трубная,trubnaya,core-215
+metro,Тульская,tulskaya,core-215
+metro,Тургеневская,turgenevskaya,core-215
+metro,Тушинская,tushinskaya,core-215
+metro,Тверская,tverskaya,core-215
+metro,Угрешская,ugreshskaya,core-215
+metro,Улица 1905 года,ulica-1905-goda,core-215
+metro,Улица Академика Королёва,ulica-akademika-koroleva,core-215
+metro,Улица Академика Янгеля,ulica-akademika-yangelya,core-215
+metro,Улица Горчакова,ulica-gorchakova,core-215
+metro,Улица Милашенкова,ulica-milashenkova,core-215
+metro,Улица Сергея Эйзенштейна,ulica-sergeya-ejzenshtejna,core-215
+metro,Улица Старокачаловская,ulica-starokachalovskaya,core-215
+metro,Университет,universitet,core-215
+metro,Варшавская,varshavskaya,core-215
+metro,ВДНХ,vdnh,core-215
+metro,Верхние Котлы,verhnie-kotly,core-215
+metro,Верхние Лихоборы,verhnie-lihobory,core-215
+metro,Владыкино,vladykino,core-215
+metro,Водный стадион,vodnyj-stadion,core-215
+metro,Войковская,vojkovskaya,core-215
+metro,Волгоградский проспект,volgogradskij-prospekt,core-215
+metro,Волоколамская,volokolamskaya,core-215
+metro,Волжская,volzhskaya,core-215
+metro,Воробьёвы горы,vorobevy-gory,core-215
+metro,Выхино,vyhino,core-215
+metro,Выставочная,vystavochnaya,core-215
+metro,Выставочный центр,vystavochnyj-centr,core-215
+metro,Ясенево,yasenevo,core-215
+metro,Юго-Западная,yugo-zapadnaya,core-215
+metro,Южная,yuzhnaya,core-215
+metro,Жулебино,zhulebino,core-215
+metro,ЗИЛ,zil,core-215
+metro,Зорге,zorge,core-215
+metro,Зябликово,zyablikovo,core-215
+okrug,ЦАО,cao,core-12
+okrug,САО,sao,core-12
+okrug,СВАО,svao,core-12
+okrug,ВАО,vao,core-12
+okrug,ЮВАО,yuvao,core-12
+okrug,ЮАО,yuao,core-12
+okrug,ЮЗАО,yuzao,core-12
+okrug,ЗАО,zao,core-12
+okrug,СЗАО,szao,core-12
+okrug,ЗелАО,zelao,core-12
+okrug,НАО,nao,core-12
+okrug,ТАО,tao,core-12
+mo,Балашиха,balashiha,tier-1
+mo,Подольск,podolsk,tier-1
+mo,Химки,himki,tier-1
+mo,Мытищи,mytishchi,tier-1
+mo,Королёв,korolev,tier-1
+mo,Люберцы,lyubertsy,tier-1
+mo,Красногорск,krasnogorsk,tier-1
+mo,Электросталь,elektrostal,tier-1
+mo,Коломна,kolomna,tier-1
+mo,Одинцово,odincovo,tier-1
+mo,Домодедово,domodedovo,tier-1
+mo,Щёлково,shchelkovo,tier-1
+mo,Серпухов,serpuhov,tier-1
+mo,Раменское,ramenskoe,tier-1
+mo,Долгопрудный,dolgoprudnyj,tier-1
+mo,Пушкино,pushkino,tier-1
+mo,Реутов,reutov,tier-1
+mo,Жуковский,zhukovskij,tier-1
+mo,Ногинск,noginsk,tier-1
+mo,Сергиев Посад,sergiev-posad,tier-1
+mo,Воскресенск,voskresensk,tier-1
+mo,Орехово-Зуево,orehovo-zuevo,tier-1
+mo,Павловский Посад,pavlovskij-posad,tier-1
+mo,Лобня,lobnya,tier-1
+mo,Ивантеевка,ivanteevka,tier-1
+mo,Клин,klin,tier-1
+mo,Егорьевск,egorevsk,tier-1
+mo,Дмитров,dmitrov,tier-1
+mo,Чехов,chehov,tier-1
+mo,Наро-Фоминск,naro-fominsk,tier-1
+mo,Ступино,stupino,tier-2
+mo,Видное,vidnoe,tier-2
+mo,Фрязино,fryazino,tier-2
+mo,Лыткарино,lytkarino,tier-2
+mo,Дзержинский,dzerzhinskij,tier-2
+mo,Котельники,kotelniki,tier-2
+mo,Истра,istra,tier-2
+mo,Дедовск,dedovsk,tier-2
+mo,Солнечногорск,solnechnogorsk,tier-2
+mo,Апрелевка,aprelevka,tier-2
+mo,Кубинка,kubinka,tier-2
+mo,Руза,ruza,tier-2
+mo,Звенигород,zvenigorod,tier-2
+mo,Можайск,mozhajsk,tier-2
+mo,Луховицы,luhovicy,tier-2
+mo,Кашира,kashira,tier-2
+mo,Протвино,protvino,tier-2
+mo,Дубна,dubna,tier-2
+mo,Черноголовка,chernogolovka,tier-2
+mo,Волоколамск,volokolamsk,tier-2
