@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
   <link rel="preload" href="./assets/vendor/inter/inter-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./assets/vendor/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="./assets/css/report.css?v=2">
+  <link rel="stylesheet" href="./assets/css/report.css?v=8">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Перейти к содержанию</a>
@@ -43,7 +43,6 @@
         <a href="#money-page"><span class="nav-num" aria-hidden="true">11</span>Шаблон money-page</a>
         <a href="#trust"><span class="nav-num" aria-hidden="true">12</span>Доверие</a>
         <a href="#priorities"><span class="nav-num" aria-hidden="true">13</span>Приоритеты</a>
-        <a href="#data"><span class="nav-num" aria-hidden="true">14</span>Данные</a>
       </nav>
       <p class="sidebar__meta">Срез данных: 17 сентября 2026</p>
     </aside>
@@ -364,10 +363,12 @@
 
       <section class="report-section" id="silo" aria-labelledby="silo-title">
         <h2 id="silo-title">Финальная SILO-архитектура</h2>
-        <p>Полная таблица содержит <strong>175 страниц</strong>: 79 P0, 84 P1 и 12 условных P2. Ниже — интерактивное дерево и фильтруемая таблица из CSV.</p>
+        <p>Архитектура содержит <strong>175 страниц</strong>: 79 P0, 84 P1 и 12 условных P2. Ниже — интерактивное дерево и базовый каркас URL.</p>
+        <div class="read-more" id="silo-readmore">
+          <div class="read-more__body" id="silo-readmore-body">
         <article class="panel">
           <h3>Интерактивное дерево</h3>
-          <p>Группировка по SILO и родителю. Клик по названию страницы прокручивает к строке таблицы.</p>
+          <p>Группировка по SILO и родителю. У каждой страницы можно скопировать URL.</p>
           <div id="silo-tree" class="silo-tree"></div>
         </article>
         <h3>Базовый каркас</h3>
@@ -468,44 +469,9 @@
 ├── pomoshch-rodstvennikam/
 ├── diagnostika/
 └── vosstanovitelnaya-terapiya/</code></pre>
-        <h3>Полная таблица архитектуры</h3>
-        <div class="filters">
-          <label class="visually-hidden" for="filter-silo">SILO</label>
-          <select id="filter-silo"></select>
-          <label class="visually-hidden" for="filter-priority">Приоритет</label>
-          <select id="filter-priority">
-            <option value="">Все приоритеты</option>
-            <option value="P0">P0</option>
-            <option value="P1">P1</option>
-            <option value="P2">P2</option>
-          </select>
-          <label class="visually-hidden" for="filter-geo">ГЕО</label>
-          <select id="filter-geo">
-            <option value="">ГЕО: все</option>
-            <option value="yes">Есть ГЕО</option>
-            <option value="no">Нет ГЕО</option>
-          </select>
-          <label class="visually-hidden" for="filter-search">Поиск</label>
-          <input id="filter-search" type="search" placeholder="Поиск по странице, URL, примечанию">
+          </div>
+          <button class="read-more__btn" type="button" aria-expanded="false" aria-controls="silo-readmore-body">Читать далее</button>
         </div>
-        <div class="table-wrap">
-          <table class="data" id="architecture-table">
-            <thead>
-              <tr>
-                <th>SILO</th>
-                <th>Страница</th>
-                <th>URL</th>
-                <th>Родитель</th>
-                <th>Приоритет</th>
-                <th>Статус</th>
-                <th>ГЕО</th>
-                <th>Примечание</th>
-              </tr>
-            </thead>
-            <tbody id="architecture-body"></tbody>
-          </table>
-        </div>
-        <p class="table-meta" id="architecture-meta"></p>
         <h3>Главный принцип</h3>
         <p>Один запрос — один основной URL. Синонимы и модификаторы не являются основанием для второй страницы. Новая страница появляется, когда меняется сама услуга, формат, метод, группа пациентов, вещество или самостоятельная задача пользователя.</p>
       </section>
@@ -840,24 +806,12 @@
           <li>новые страницы можно добавлять в CMS без ручной правки сотен шаблонов.</li>
         </ul>
       </section>
-
-      <section class="report-section" id="data" aria-labelledby="data-title">
-        <h2 id="data-title">Файлы данных</h2>
-        <p>Эти файлы являются частью отчёта: списки не перепечатываются вручную, а отрисовываются из данных.</p>
-        <div class="file-list">
-          <a href="./assets/data/architecture.csv"><span>Финальная коммерческая и служебная архитектура</span><code>architecture.csv</code></a>
-          <a href="./assets/data/geo-pages.csv"><span>Все запланированные ГЕО URL</span><code>geo-pages.csv</code></a>
-          <a href="./assets/data/geo-master.csv"><span>Метро/узлы, округа, города МО</span><code>geo-master.csv</code></a>
-          <a href="./assets/data/report-data.json"><span>Готовые данные для графиков</span><code>report-data.json</code></a>
-        </div>
-        <p class="note">Конкурентная выборка собрана по доменам, встречающимся в коммерческой выдаче. URL-выгрузка показывает архитектуру и покрытие, но сама по себе не является матрицей позиций, частотностей и трафика.</p>
-      </section>
     </main>
   </div>
 
   <script src="./assets/vendor/chartjs/chart.umd.min.js"></script>
   <script src="./assets/js/chart-global.js?v=2"></script>
   <script src="./assets/data/embedded.js?v=2"></script>
-  <script src="./assets/js/report.js?v=2"></script>
+  <script src="./assets/js/report.js?v=4"></script>
 </body>
 </html>

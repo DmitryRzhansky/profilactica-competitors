@@ -448,7 +448,7 @@
               return `<div class="tree-node" data-url="${encodeURIComponent(node.url)}">
                 <div class="tree-row ${children.length ? "is-parent" : ""}" data-row="${node.idx}">
                   ${caret}
-                  <button class="parent-link" type="button" data-scroll-row="${node.idx}">${esc(node.page)}</button>
+                  <span class="tree-page">${esc(node.page)}</span>
                   ${badgePriority(node.priority)}
                   ${hasGeo(node.geo_policy) ? '<span class="badge badge-geo">ГЕО</span>' : ""}
                   <span class="mono">${esc(node.url)}</span>
@@ -488,78 +488,23 @@
         groupBtn.setAttribute("aria-expanded", String(!open));
         const kids = groupBtn.nextElementSibling;
         if (kids) kids.hidden = open;
-        return;
-      }
-      const scrollBtn = e.target.closest("[data-scroll-row]");
-      if (scrollBtn) {
-        const target = document.getElementById(`arch-row-${scrollBtn.dataset.scrollRow}`);
-        target?.scrollIntoView({ behavior: "smooth", block: "center" });
-        target?.classList.add("is-flash");
       }
     });
   }
 
-  function renderArchitectureTable(architecture) {
-    const silos = [...new Set(architecture.map((r) => r.silo))];
-    $("#filter-silo").innerHTML =
-      '<option value="">Все SILO</option>' + silos.map((s) => `<option value="${esc(s)}">${esc(s)}</option>`).join("");
-
-    const state = { silo: "", priority: "", geo: "", q: "" };
-    const tbody = $("#architecture-body");
-    const meta = $("#architecture-meta");
-
-    const paint = () => {
-      const q = state.q.trim().toLowerCase();
-      const rows = architecture.filter((r) => {
-        if (state.silo && r.silo !== state.silo) return false;
-        if (state.priority && r.priority !== state.priority) return false;
-        if (state.geo === "yes" && !hasGeo(r.geo_policy)) return false;
-        if (state.geo === "no" && hasGeo(r.geo_policy)) return false;
-        if (q) {
-          const blob = `${r.silo} ${r.page} ${r.url} ${r.parent} ${r.status} ${r.geo_policy} ${r.notes}`.toLowerCase();
-          if (!blob.includes(q)) return false;
-        }
-        return true;
+  function setupReadMore() {
+    $$(".read-more").forEach((wrap) => {
+      const btn = wrap.querySelector(".read-more__btn");
+      if (!btn) return;
+      btn.addEventListener("click", () => {
+        const keep = wrap.getBoundingClientRect().top;
+        const open = wrap.classList.toggle("is-open");
+        btn.setAttribute("aria-expanded", String(open));
+        btn.textContent = open ? "Свернуть" : "Читать далее";
+        const delta = wrap.getBoundingClientRect().top - keep;
+        if (delta) window.scrollBy(0, delta);
       });
-      tbody.innerHTML = rows
-        .map((r, i) => {
-          const idx = architecture.indexOf(r);
-          return `<tr id="arch-row-${idx}">
-            <td>${esc(r.silo)}</td>
-            <td>${esc(r.page)}</td>
-            <td class="url-cell">${esc(r.url)} <button class="copy-btn" type="button" data-copy="${encodeURIComponent(r.url)}" aria-label="Скопировать ${esc(r.url)}">Копировать</button></td>
-            <td class="url-cell">${esc(r.parent)}</td>
-            <td>${badgePriority(r.priority)}</td>
-            <td>${esc(r.status)}</td>
-            <td>${hasGeo(r.geo_policy) ? `<span class="badge badge-geo">${esc(r.geo_policy)}</span>` : '<span class="badge badge-nogeo">Нет</span>'}</td>
-            <td>${esc(r.notes) || "—"}</td>
-          </tr>`;
-        })
-        .join("");
-      meta.textContent = `Показано ${rows.length} из ${architecture.length}`;
-    };
-
-    $("#filter-silo").addEventListener("change", (e) => {
-      state.silo = e.target.value;
-      paint();
     });
-    $("#filter-priority").addEventListener("change", (e) => {
-      state.priority = e.target.value;
-      paint();
-    });
-    $("#filter-geo").addEventListener("change", (e) => {
-      state.geo = e.target.value;
-      paint();
-    });
-    $("#filter-search").addEventListener("input", (e) => {
-      state.q = e.target.value;
-      paint();
-    });
-    tbody.addEventListener("click", (e) => {
-      const btn = e.target.closest("[data-copy]");
-      if (btn) copyText(decodeURIComponent(btn.dataset.copy), btn);
-    });
-    paint();
   }
 
   function renderGeoLists(master) {
@@ -705,6 +650,7 @@
   async function init() {
     setupNav();
     setupScreenshots();
+    setupReadMore();
     await waitForChart();
     const [jsonText, archText, masterText] = await Promise.all([
       loadText("./assets/data/report-data.json"),
@@ -724,7 +670,6 @@
 
     const composition = renderKpis(data, architecture, { length: data.planned_geo.core_geo_pages }, master);
     renderSilo(architecture);
-    renderArchitectureTable(architecture);
     renderGeoLists(master);
     makeStaticCharts(data, composition);
 
