@@ -247,9 +247,9 @@ AlcoMed опасен не размером сайта, а тем, что сое�
 │   ├── vyvod-iz-zapoya/
 │   │   ├── na-domu/
 │   │   └── v-stacionare/
-│   ├── kapelnicy-i-detoks/
-│   │   ├── kapelnica-ot-zapoya-i-alkogolya-na-domu/
-│   │   ├── kapelnica-ot-pohmelya/
+│   ├── kapelnitsy/
+│   │   ├── ot-zapoya-i-alkogolya/
+│   │   ├── ot-pohmelya/
 │   │   └── abstinentnyj-sindrom/
 │   ├── kodirovanie/
 │   │   ├── na-domu/
