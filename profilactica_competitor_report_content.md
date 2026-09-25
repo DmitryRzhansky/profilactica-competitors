@@ -260,6 +260,13 @@ AlcoMed опасен не размером сайта, а тем, что сое�
 │   │   ├── dvojnoj-blok/
 │   │   ├── preparaty/
 │   │   └── raskodirovanie/
+│   │       ├── esperal/
+│   │       ├── akvilong/
+│   │       ├── algominal/
+│   │       ├── disulfiram/
+│   │       ├── naltrekson/
+│   │       ├── vivitrol/
+│   │       └── torpedo/
 │   ├── v-stacionare/
 │   ├── ambulatorno/
 │   ├── zhenskij-alkogolizm/

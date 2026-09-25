@@ -1,0 +1,54 @@
+total lines 2678
+391|│   │   ├── dvojnoj-blok/
+392|│   │   ├── preparaty/
+393|│   │   └── raskodirovanie/
+394|│   │       ├── esperal/
+395|│   │       ├── akvilong/
+396|│   │       ├── algominal/
+397|│   │       ├── disulfiram/
+398|│   │       ├── naltrekson/
+399|│   │       ├── vivitrol/
+400|│   │       └── torpedo/
+401|│   ├── v-stacionare/
+402|│   ├── ambulatorno/
+403|│   ├── zhenskij-alkogolizm/
+404|│   ├── muzhskoj-alkogolizm/
+405|│   ├── pivnoj-alkogolizm/
+406|│   ├── hronicheskij-alkogolizm/
+407|│   ├── u-pozhilyh/
+408|│   └── bez-kodirovaniya/
+409|│
+410|├── lechenie-narkomanii/
+--- catalog ---
+530|| Лечение алкоголизма | Раскодирование | /uslugi/lechenie-alkogolizma/kodirovanie/raskodirovanie/ | /uslugi/lechenie-alkogolizma/kodirovanie/ | P1 | Сделать/перенести | Нет |  |
+531|| Лечение алкоголизма | Раскодирование от Эспераль | /uslugi/lechenie-alkogolizma/kodirovanie/raskodirovanie/esperal/ | /uslugi/lechenie-alkogolizma/kodirovanie/raskodirovanie/ | P1 | Сделать/перенести | Нет | Публиковать только если препарат реально используется клиникой; не размножать по ГЕО. Парная перелинковка с /kodirovanie/preparaty/esperal/. |
+532|| Лечение алкоголизма | Раскодирование от Аквилонг | /uslugi/lechenie-alkogolizma/kodirovanie/raskodirovanie/akvilong/ | /uslugi/lechenie-alkogolizma/kodirovanie/raskodirovanie/ | P1 | Сделать/перенести | Нет | Публиковать только если препарат реально используется клиникой; не размножать по ГЕО. Парная перелинковка с /kodirovanie/preparaty/akvilong/. |
+533|| Лечение алкоголизма | Раскодирование от Алгоминал | /uslugi/lechenie-alkogolizma/kodirovanie/raskodirovanie/algominal/ | /uslugi/lechenie-alkogolizma/kodirovanie/raskodirovanie/ | P1 | Сделать/перенести | Нет | Публиковать только если препарат реально используется клиникой; не размножать по ГЕО. Парная перелинковка с /kodirovanie/preparaty/algominal/. |
+534|| Лечение алкоголизма | Раскодирование от Дисульфирам | /uslugi/lechenie-alkogolizma/kodirovanie/raskodirovanie/disulfiram/ | /uslugi/lechenie-alkogolizma/kodirovanie/raskodirovanie/ | P1 | Сделать/перенести | Нет | Публиковать только если препарат реально используется клиникой; не размножать по ГЕО. Парная перелинковка с /kodirovanie/preparaty/disulfiram/. |
+535|| Лечение алкоголизма | Раскодирование от Налтрексон | /uslugi/lechenie-alkogolizma/kodirovanie/raskodirovanie/naltrekson/ | /uslugi/lechenie-alkogolizma/kodirovanie/raskodirovanie/ | P1 | Сделать/перенести | Нет | Публиковать только если препарат реально используется клиникой; не размножать по ГЕО. Парная перелинковка с /kodirovanie/preparaty/naltrekson/. |
+536|| Лечение алкоголизма | Раскодирование от Вивитрол | /uslugi/lechenie-alkogolizma/kodirovanie/raskodirovanie/vivitrol/ | /uslugi/lechenie-alkogolizma/kodirovanie/raskodirovanie/ | P1 | Сделать/перенести | Нет | Публиковать только если препарат реально используется клиникой; не размножать по ГЕО. Парная перелинковка с /kodirovanie/preparaty/vivitrol/. |
+537|| Лечение алкоголизма | Раскодирование от Торпедо | /uslugi/lechenie-alkogolizma/kodirovanie/raskodirovanie/torpedo/ | /uslugi/lechenie-alkogolizma/kodirovanie/raskodirovanie/ | P1 | Сделать/перенести | Нет | Публиковать только если препарат реально используется клиникой; не размножать по ГЕО. Парная перелинковка с /kodirovanie/preparaty/torpedo/. |
+--- tree esperal ---
+394|│   │       ├── esperal/
+523|| Лечение алкоголизма | Кодирование: Эспераль | /uslugi/lechenie-alkogolizma/kodirovanie/preparaty/esperal/ | /uslugi/lechenie-alkogolizma/kodirovanie/preparaty/ | P1 | Сделать/перенести | Нет | Публиковать только если метод/препарат реально используется клиникой; не размножать по ГЕО. Парная ссылка на /kodirovanie/raskodirovanie/esperal/. |
+531|| Лечение алкоголизма | Раскодирование от Эспераль | /uslugi/lechenie-alkogolizma/kodirovanie/raskodirovanie/esperal/ | /uslugi/lechenie-alkogolizma/kodirovanie/raskodirovanie/ | P1 | Сделать/перенести | Нет | Публиковать только если препарат реально используется клиникой; не размножать по ГЕО. Парная перелинковка с /kodirovanie/preparaty/esperal/. |
+--- section 6 blocks ---
+1240|## 6. Кодирование
+1241|
+1242|Хаб → форматы, методы, препараты, раскодирование.
+1243|
+1244|Любой метод/препарат → хаб кодирования + 3–5 альтернативных методов + парное `раскодирование от {тот же препарат}` (если есть) + `лечение алкоголизма` + `реабилитация` + `срыв после кодирования` + `цены` + профиль врача. Методные страницы не получают ГЕО-сетку.
+1245|
+1246|`Раскодирование` (хаб) → все дочерние `раскодирование от Эспераль / Аквилонг / Алгоминал / Дисульфирам / Налтрексон / Вивитрол / Торпедо` + хаб кодирования + `срыв после кодирования` + цены + врач.
+1247|
+1248|Каждая страница `раскодирование от X` → родитель `раскодирование` + парное `кодирование: X` + 2–3 соседних раскодирования по другим препаратам + `срыв после кодирования` + `лечение алкоголизма` + цены + врач. Без ГЕО-матрицы и без ссылок на все препараты сразу.
+1249|
+1250|ГЕО кодирования → общий хаб кодирования + другие acute-услуги этой локации; не ссылаться на десятки препаратов и не размножать раскодирование по метро/городам.
+1251|
+1252|## 7. Лечение алкоголизма
+1253|
+1254|Сегментные страницы (`женский`, `пивной`, `мужской`, `хронический`, `без кодирования`) → общий хаб + `стационар/амбулаторно` + `кодирование` + `реабилитация` + профиль врача. Между сегментными страницами максимум 2–4 действительно близких ссылки.
+1255|
+1256|## 8. Лечение наркомании
+1257|
+=====
