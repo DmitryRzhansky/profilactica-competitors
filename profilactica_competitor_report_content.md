@@ -316,7 +316,6 @@ AlcoMed опасен не размером сайта, а тем, что сое�
 │   ├── alkogolizm/
 │   ├── narkomaniya/
 │   ├── igromaniya/
-│   ├── mediko-socialnaya/
 │   ├── 12-shagov/
 │   ├── metod-shichko/
 │   └── resocializaciya/
