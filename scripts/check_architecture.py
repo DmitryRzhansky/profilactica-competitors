@@ -11,7 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 FORBIDDEN = re.compile(r"/(?:metro|okrug|mo)(?:/|$)")
-MOSKVA_LOCATION = re.compile(r"^/uslugi(?:/[a-z0-9-]+)+/moskva/[a-z0-9-]+/$")
+MOSKVA_SEGMENT = re.compile(r"/moskva(?:/|$)")
 MO_LOCATION = re.compile(r"^/uslugi(?:/[a-z0-9-]+)+/moskovskaya-oblast/[a-z0-9-]+/$")
 SITE_URL = re.compile(r"/(?:uslugi|o-klinike|pomoshch|ceny|vrachi)/[a-z0-9\-/]*")
 FENCE = re.compile(r"```text\n(.*?)```", re.S)
@@ -82,10 +82,14 @@ def check():
             fail(errors, f"forbidden segment in new_url: {row['new_url']}")
         if FORBIDDEN.search(row["new_url"]):
             fail(errors, f"forbidden segment in canonical url: {row['new_url']}")
+        if MOSKVA_SEGMENT.search(row["new_url"]) or MOSKVA_SEGMENT.search(row["new_parent"]):
+            fail(errors, f"moscow hub segment in map: {row['new_url']}")
 
     for row in arch:
         if FORBIDDEN.search(row["url"]) or FORBIDDEN.search(row["parent"]):
             fail(errors, f"forbidden segment in architecture: {row['url']} parent {row['parent']}")
+        if MOSKVA_SEGMENT.search(row["url"]) or MOSKVA_SEGMENT.search(row["parent"]):
+            fail(errors, f"moscow hub segment in architecture: {row['url']}")
     for row in geo:
         if FORBIDDEN.search(row["proposed_url"]):
             fail(errors, f"forbidden segment in geo: {row['proposed_url']}")
@@ -98,9 +102,9 @@ def check():
 
     for row in geo:
         url = row["proposed_url"]
+        if MOSKVA_SEGMENT.search(url):
+            fail(errors, f"moscow hub segment is not allowed: {url}")
         if row["geo_type"] in {"metro", "okrug"}:
-            if not MOSKVA_LOCATION.match(url):
-                fail(errors, f"moscow geo not under /moskva/: {url}")
             slug = url.rstrip("/").split("/")[-1]
             if row["geo_type"] == "metro" and slug not in metro_slugs:
                 fail(errors, f"unknown metro slug: {url}")
@@ -145,12 +149,22 @@ def check():
             fail(errors, f"station okrug count {slug}: {owners}")
 
     arch_urls = {row["url"] for row in arch}
+    child_slugs = defaultdict(set)
+    for row in arch:
+        if row["parent"]:
+            child_slugs[row["parent"]].add(row["url"].rstrip("/").split("/")[-1])
+    for row in geo:
+        if row["geo_type"] not in {"metro", "okrug"}:
+            continue
+        parent = mapping_parent(mapping, row["proposed_url"])
+        if row["geo_slug"] in child_slugs[parent]:
+            fail(errors, f"geo slug collides with a service page: {row['proposed_url']}")
     for row in geo:
         parent = mapping_parent(mapping, row["proposed_url"])
         if parent not in arch_urls:
             fail(errors, f"geo parent is not an architecture page: {row['proposed_url']} -> {parent}")
-        if row["geo_type"] in {"metro", "okrug"} and not parent.endswith("/moskva/"):
-            fail(errors, f"moscow page parent is not moskva hub: {row['proposed_url']}")
+        if row["geo_type"] in {"metro", "okrug"} and row["proposed_url"] != parent + row["geo_slug"] + "/":
+            fail(errors, f"moscow page is not a direct child of the service: {row['proposed_url']} -> {parent}")
         if row["geo_type"] == "mo" and not parent.endswith("/moskovskaya-oblast/"):
             fail(errors, f"city parent is not oblast hub: {row['proposed_url']}")
 
@@ -197,8 +211,14 @@ def check():
 
     required = [
         "/uslugi/vyvod-iz-zapoya/",
-        "/uslugi/vyvod-iz-zapoya/na-domu/moskva/belorusskaya/",
-        "/uslugi/vyvod-iz-zapoya/na-domu/moskva/vao/",
+        "/uslugi/kodirovanie/",
+        "/uslugi/kodirovanie/belorusskaya/",
+        "/uslugi/kodirovanie/vao/",
+        "/uslugi/kodirovanie/cao/",
+        "/uslugi/kodirovanie/moskovskaya-oblast/",
+        "/uslugi/kodirovanie/moskovskaya-oblast/himki/",
+        "/uslugi/vyvod-iz-zapoya/na-domu/belorusskaya/",
+        "/uslugi/vyvod-iz-zapoya/na-domu/vao/",
         "/uslugi/vyvod-iz-zapoya/na-domu/moskovskaya-oblast/himki/",
         "/uslugi/kodirovanie/ukol/",
         "/uslugi/kodirovanie/preparaty/esperal/",
@@ -213,7 +233,9 @@ def check():
 
     services_with_moscow = {row["service"] for row in geo if row["geo_type"] in {"metro", "okrug"}}
     services_with_mo = {row["service"] for row in geo if row["geo_type"] == "mo"}
-    hub_urls = {row["url"] for row in arch if row["url"].rstrip("/").endswith("/moskva") or row["url"].rstrip("/").endswith("/moskovskaya-oblast")}
+    hub_urls = {row["url"] for row in arch}
+    if any(url.rstrip("/").endswith("/moskva") for url in hub_urls):
+        fail(errors, "architecture still contains a /moskva/ hub")
     for service, spec in {
         "narkolog-na-dom": "/uslugi/narkolog-na-dom/",
         "vyvod-iz-zapoya": "/uslugi/vyvod-iz-zapoya/na-domu/",
@@ -221,15 +243,13 @@ def check():
         "kodirovanie": "/uslugi/kodirovanie/",
         "psihiatr-na-dom": "/uslugi/psihiatriya/psihiatr-na-dom/",
     }.items():
-        if service in services_with_moscow and spec + "moskva/" not in hub_urls:
-            fail(errors, f"missing moscow hub: {service}")
+        if service in services_with_moscow and spec not in hub_urls:
+            fail(errors, f"missing service parent for Moscow geo: {service}")
     for service, spec in {
         "lechenie-alkogolizma": "/uslugi/lechenie-alkogolizma/na-domu/",
         "lechenie-narkomanii": "/uslugi/lechenie-narkomanii/",
         "reabilitaciya": "/uslugi/reabilitaciya/",
     }.items():
-        if spec + "moskva/" in hub_urls:
-            fail(errors, f"unexpected moscow hub: {service}")
         if service in services_with_mo and spec + "moskovskaya-oblast/" not in hub_urls:
             fail(errors, f"missing oblast hub: {service}")
 

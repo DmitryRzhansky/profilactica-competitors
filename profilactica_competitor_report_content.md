@@ -228,7 +228,7 @@ AlcoMed опасен не размером сайта, а тем, что сое�
 
 # 6. Финальная SILO-архитектура
 
-Полная таблица содержит **189 страниц**: 86 P0, 91 P1 и 12 условных P2. Она приложена отдельным CSV и должна быть показана на сайте как интерактивное дерево и фильтруемая таблица.
+Полная таблица содержит **184 страниц**: 81 P0, 91 P1 и 12 условных P2. Она приложена отдельным CSV и должна быть показана на сайте как интерактивное дерево и фильтруемая таблица.
 
 <!-- PH:SILO-TREE id="final-silo" source="profilactica_final_architecture.csv" -->
 <!-- PH:TABLE id="architecture-table" source="profilactica_final_architecture.csv" filters="silo,priority,status,geo_policy" searchable="true" -->
@@ -245,24 +245,28 @@ AlcoMed опасен не размером сайта, а тем, что сое�
 │   └── chastnyj-vytrezvitel/
 │
 ├── narkolog-na-dom/
-│   ├── moskva/
+│   ├── belorusskaya/
+│   ├── vao/
 │   └── moskovskaya-oblast/
 │
 ├── vyvod-iz-zapoya/
 │   ├── na-domu/
-│   │   ├── moskva/
+│   │   ├── belorusskaya/
+│   │   ├── vao/
 │   │   └── moskovskaya-oblast/
 │   └── v-stacionare/
 │
 ├── kapelnitsy/
 │   ├── ot-zapoya-i-alkogolya/
-│   │   ├── moskva/
+│   │   ├── belorusskaya/
+│   │   ├── vao/
 │   │   └── moskovskaya-oblast/
 │   ├── ot-pohmelya/
 │   └── abstinentnyj-sindrom/
 │
 ├── kodirovanie/
-│   ├── moskva/
+│   ├── belorusskaya/
+│   ├── vao/
 │   ├── moskovskaya-oblast/
 │   ├── na-domu/
 │   ├── metod-dovzhenko/
@@ -316,7 +320,7 @@ AlcoMed опасен не размером сайта, а тем, что сое�
 ├── psihiatriya/
 │   ├── konsultaciya/
 │   ├── psihiatr-na-dom/
-│   │   ├── moskva/
+│   │   ├── vao/
 │   │   └── moskovskaya-oblast/
 │   ├── stacionar/
 │   ├── trevozhnye-i-stressovye-rasstrojstva/
@@ -401,15 +405,17 @@ AlcoMed опасен не размером сайта, а тем, что сое�
 Пример:
 
 ```text
-/uslugi/vyvod-iz-zapoya/na-domu/
-/uslugi/vyvod-iz-zapoya/na-domu/moskva/
-/uslugi/vyvod-iz-zapoya/na-domu/moskva/belorusskaya/
-/uslugi/vyvod-iz-zapoya/na-domu/moskva/vao/
-/uslugi/vyvod-iz-zapoya/na-domu/moskovskaya-oblast/
+/uslugi/kodirovanie/
+/uslugi/kodirovanie/belorusskaya/
+/uslugi/kodirovanie/vao/
+/uslugi/kodirovanie/moskovskaya-oblast/
+/uslugi/kodirovanie/moskovskaya-oblast/himki/
+/uslugi/vyvod-iz-zapoya/na-domu/belorusskaya/
+/uslugi/vyvod-iz-zapoya/na-domu/vao/
 /uslugi/vyvod-iz-zapoya/na-domu/moskovskaya-oblast/himki/
 ```
 
-Станция метро и административный округ стоят непосредственно под хабом Москвы. Город Московской области стоит под хабом области. В хлебных крошках нет пунктов «Метро», «Округа» и «Города». Хаб Москвы создаётся только если у услуги есть станции или округа. У лечения алкоголизма на дому, лечения наркомании и реабилитации есть только хаб Московской области.
+Станции метро и округа Москвы — прямые дочерние страницы услуги, без отдельного хаба Москвы. Города Московской области стоят под хабом области. В хлебных крошках нет пунктов «Метро», «Округа», «Города» и «Москва». У лечения алкоголизма на дому, лечения наркомании и реабилитации есть только хаб Московской области, потому что метро и округа для них не предусмотрены.
 
 ## Основная матрица — 4 услуги
 

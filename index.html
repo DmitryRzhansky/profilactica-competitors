@@ -375,24 +375,28 @@
 │   └── chastnyj-vytrezvitel/
 │
 ├── narkolog-na-dom/
-│   ├── moskva/
+│   ├── belorusskaya/
+│   ├── vao/
 │   └── moskovskaya-oblast/
 │
 ├── vyvod-iz-zapoya/
 │   ├── na-domu/
-│   │   ├── moskva/
+│   │   ├── belorusskaya/
+│   │   ├── vao/
 │   │   └── moskovskaya-oblast/
 │   └── v-stacionare/
 │
 ├── kapelnitsy/
 │   ├── ot-zapoya-i-alkogolya/
-│   │   ├── moskva/
+│   │   ├── belorusskaya/
+│   │   ├── vao/
 │   │   └── moskovskaya-oblast/
 │   ├── ot-pohmelya/
 │   └── abstinentnyj-sindrom/
 │
 ├── kodirovanie/
-│   ├── moskva/
+│   ├── belorusskaya/
+│   ├── vao/
 │   ├── moskovskaya-oblast/
 │   ├── na-domu/
 │   ├── metod-dovzhenko/
@@ -446,7 +450,7 @@
 ├── psihiatriya/
 │   ├── konsultaciya/
 │   ├── psihiatr-na-dom/
-│   │   ├── moskva/
+│   │   ├── vao/
 │   │   └── moskovskaya-oblast/
 │   ├── stacionar/
 │   ├── trevozhnye-i-stressovye-rasstrojstva/
@@ -508,14 +512,16 @@
       <section class="report-section" id="geo" aria-labelledby="geo-title">
         <h2 id="geo-title">Финальная ГЕО-модель</h2>
         <p>ГЕО - не отдельный верхний раздел, а дочерний слой конкретной услуги.</p>
-        <pre class="panel"><code>/uslugi/vyvod-iz-zapoya/na-domu/
-/uslugi/vyvod-iz-zapoya/na-domu/moskva/
-/uslugi/vyvod-iz-zapoya/na-domu/moskva/belorusskaya/
-/uslugi/vyvod-iz-zapoya/na-domu/moskva/vao/
-/uslugi/vyvod-iz-zapoya/na-domu/moskovskaya-oblast/
+        <pre class="panel"><code>/uslugi/kodirovanie/
+/uslugi/kodirovanie/belorusskaya/
+/uslugi/kodirovanie/vao/
+/uslugi/kodirovanie/moskovskaya-oblast/
+/uslugi/kodirovanie/moskovskaya-oblast/himki/
+/uslugi/vyvod-iz-zapoya/na-domu/belorusskaya/
+/uslugi/vyvod-iz-zapoya/na-domu/vao/
 /uslugi/vyvod-iz-zapoya/na-domu/moskovskaya-oblast/himki/</code></pre>
         <div class="kpi-grid" id="geo-kpi" aria-label="Показатели ГЕО-матрицы"></div>
-        Станция метро и административный округ стоят непосредственно под хабом Москвы. Город Московской области стоит под хабом области. В хлебных крошках нет пунктов «Метро», «Округа» и «Города». Хаб Москвы создаётся только если у услуги есть станции или округа. У лечения алкоголизма на дому, лечения наркомании и реабилитации есть только хаб Московской области.
+        Станции метро и округа Москвы — прямые дочерние страницы услуги, без отдельного хаба Москвы. Города Московской области стоят под хабом области. В хлебных крошках нет пунктов «Метро», «Округа», «Города» и «Москва». У лечения алкоголизма на дому, лечения наркомании и реабилитации есть только хаб Московской области, потому что метро и округа для них не предусмотрены.
 
 <h3>Основная матрица - 4 услуги</h3>
         <p>Каждая из четырех услуг получает 215 текущих станций/транспортных узлов, 12 административных округов Москвы и 50 основных городов Московской области. То есть <strong>277 ГЕО на одну услугу</strong>.</p>

@@ -362,7 +362,7 @@ AlcoMed опасен не размером сайта, а тем, что сое�
 
 # 6. Финальная SILO-архитектура
 
-Полная таблица содержит **189 страниц**: 86 P0, 91 P1 и 12 условных P2. Ниже — базовый каркас, затем полный каталог всех страниц.
+Полная таблица содержит **184 страниц**: 81 P0, 91 P1 и 12 условных P2. Ниже — базовый каркас, затем полный каталог всех страниц.
 
 Базовый каркас:
 
@@ -376,24 +376,28 @@ AlcoMed опасен не размером сайта, а тем, что сое�
 │   └── chastnyj-vytrezvitel/
 │
 ├── narkolog-na-dom/
-│   ├── moskva/
+│   ├── belorusskaya/
+│   ├── vao/
 │   └── moskovskaya-oblast/
 │
 ├── vyvod-iz-zapoya/
 │   ├── na-domu/
-│   │   ├── moskva/
+│   │   ├── belorusskaya/
+│   │   ├── vao/
 │   │   └── moskovskaya-oblast/
 │   └── v-stacionare/
 │
 ├── kapelnitsy/
 │   ├── ot-zapoya-i-alkogolya/
-│   │   ├── moskva/
+│   │   ├── belorusskaya/
+│   │   ├── vao/
 │   │   └── moskovskaya-oblast/
 │   ├── ot-pohmelya/
 │   └── abstinentnyj-sindrom/
 │
 ├── kodirovanie/
-│   ├── moskva/
+│   ├── belorusskaya/
+│   ├── vao/
 │   ├── moskovskaya-oblast/
 │   ├── na-domu/
 │   ├── metod-dovzhenko/
@@ -447,7 +451,7 @@ AlcoMed опасен не размером сайта, а тем, что сое�
 ├── psihiatriya/
 │   ├── konsultaciya/
 │   ├── psihiatr-na-dom/
-│   │   ├── moskva/
+│   │   ├── vao/
 │   │   └── moskovskaya-oblast/
 │   ├── stacionar/
 │   ├── trevozhnye-i-stressovye-rasstrojstva/
@@ -480,25 +484,21 @@ AlcoMed опасен не размером сайта, а тем, что сое�
 | Наркологическая помощь | Госпитализация в стационар | /uslugi/narkologicheskaya-pomosh/gospitalizaciya/ | /uslugi/narkologicheskaya-pomosh/ | P1 | Сделать/перенести | Нет |  |
 | Наркологическая помощь | Частный вытрезвитель | /uslugi/narkologicheskaya-pomosh/chastnyj-vytrezvitel/ | /uslugi/narkologicheskaya-pomosh/ | P1 | Сделать/перенести | Нет |  |
 | Наркологическая помощь | Срочная наркологическая помощь | /uslugi/narkologicheskaya-pomosh/srochnaya-pomosh/ | /uslugi/narkologicheskaya-pomosh/ | P1 | Сделать/перенести | Нет | Не использовать юридически нагруженное «скорая» без подтверждения лицензии/статуса. |
-| Нарколог на дом | Нарколог на дом | /uslugi/narkolog-na-dom/ | /uslugi/ | P0 | Сделать/перенести | Массовое ГЕО: метро + округа + 50 городов МО | Самостоятельная пользовательская задача: выезд нарколога. Это не формат хаба «Наркологическая помощь» и не дубль вывода из запоя, капельницы или кодирования. |
-| Нарколог на дом | Нарколог на дом — Москва | /uslugi/narkolog-na-dom/moskva/ | /uslugi/narkolog-na-dom/ | P0 | Сделать/перенести | Хаб ГЕО: Москва | Индексируемый GEO-хаб. Родитель станций метро и административных округов. Станция и округ — параллельные URL, округ не становится родителем станции. |
+| Нарколог на дом | Нарколог на дом | /uslugi/narkolog-na-dom/ | /uslugi/ | P0 | Сделать/перенести | Массовое ГЕО: метро + округа + 50 городов МО | Самостоятельная пользовательская задача: выезд нарколога. Это не формат хаба «Наркологическая помощь» и не дубль вывода из запоя, капельницы или кодирования. Эта страница — родитель станций метро и округов Москвы. Отдельная страница Москвы не создаётся. Города Московской области стоят под moskovskaya-oblast. |
 | Нарколог на дом | Нарколог на дом — Московская область | /uslugi/narkolog-na-dom/moskovskaya-oblast/ | /uslugi/narkolog-na-dom/ | P0 | Сделать/перенести | Хаб ГЕО: Московская область | Индексируемый GEO-хаб. Родитель городов Московской области. Станции метро и округа Москвы сюда не входят. |
 | Вывод из запоя | Вывод из запоя | /uslugi/vyvod-iz-zapoya/ | /uslugi/ | P0 | Сделать/перенести | Нет | Самостоятельная острая задача, а не сегмент лечения алкоголизма. Форматы на дому и в стационаре остаются дочерними. |
-| Вывод из запоя | Вывод из запоя на дому | /uslugi/vyvod-iz-zapoya/na-domu/ | /uslugi/vyvod-iz-zapoya/ | P0 | Сделать/перенести | Массовое ГЕО: метро + округа + 50 городов МО |  |
-| Вывод из запоя | Вывод из запоя на дому — Москва | /uslugi/vyvod-iz-zapoya/na-domu/moskva/ | /uslugi/vyvod-iz-zapoya/na-domu/ | P0 | Сделать/перенести | Хаб ГЕО: Москва | Индексируемый GEO-хаб. Родитель станций метро и административных округов. Станция и округ — параллельные URL, округ не становится родителем станции. |
+| Вывод из запоя | Вывод из запоя на дому | /uslugi/vyvod-iz-zapoya/na-domu/ | /uslugi/vyvod-iz-zapoya/ | P0 | Сделать/перенести | Массовое ГЕО: метро + округа + 50 городов МО | Эта страница — родитель станций метро и округов Москвы. Отдельная страница Москвы не создаётся. Города Московской области стоят под moskovskaya-oblast. |
 | Вывод из запоя | Вывод из запоя на дому — Московская область | /uslugi/vyvod-iz-zapoya/na-domu/moskovskaya-oblast/ | /uslugi/vyvod-iz-zapoya/na-domu/ | P0 | Сделать/перенести | Хаб ГЕО: Московская область | Индексируемый GEO-хаб. Родитель городов Московской области. Станции метро и округа Москвы сюда не входят. |
 | Вывод из запоя | Вывод из запоя в стационаре | /uslugi/vyvod-iz-zapoya/v-stacionare/ | /uslugi/vyvod-iz-zapoya/ | P0 | Сделать/перенести | Нет |  |
 | Вывод из запоя | Вывод из запоя + дальнейшее лечение | /uslugi/vyvod-iz-zapoya/s-dalnejshim-lecheniem/ | /uslugi/vyvod-iz-zapoya/ | P1 | Сделать/перенести | Нет |  |
 | Капельницы и детокс | Капельницы и детокс | /uslugi/kapelnitsy/ | /uslugi/ | P0 | Сделать/перенести | Нет | Самостоятельная задача детокса и капельницы. Алкогольная детоксикация, похмелье и абстинентный синдром остаются внутри этого SILO. Детоксикация от наркотиков не переносится, чтобы не дублировать SILO. |
-| Капельницы и детокс | Капельница от запоя и алкоголя на дому | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/ | /uslugi/kapelnitsy/ | P0 | Сделать/перенести | Массовое ГЕО: метро + округа + 50 городов МО | Объединяет «от запоя», «от алкоголя» и «на дому»; 301 с /kapelnica-na-domu/, /kapelnica-ot-zapoya/, /kapelnica-ot-alkogolya/, /kapelnicy-i-detoks/kapelnica-na-domu/, /kapelnicy-i-detoks/kapelnica-ot-zapoya/, /kapelnicy-i-detoks/kapelnica-ot-alkogolya/. |
-| Капельницы и детокс | Капельница от запоя и алкоголя на дому — Москва | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/ | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/ | P0 | Сделать/перенести | Хаб ГЕО: Москва | Индексируемый GEO-хаб. Родитель станций метро и административных округов. Станция и округ — параллельные URL, округ не становится родителем станции. |
+| Капельницы и детокс | Капельница от запоя и алкоголя на дому | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/ | /uslugi/kapelnitsy/ | P0 | Сделать/перенести | Массовое ГЕО: метро + округа + 50 городов МО | Объединяет «от запоя», «от алкоголя» и «на дому»; 301 с /kapelnica-na-domu/, /kapelnica-ot-zapoya/, /kapelnica-ot-alkogolya/, /kapelnicy-i-detoks/kapelnica-na-domu/, /kapelnicy-i-detoks/kapelnica-ot-zapoya/, /kapelnicy-i-detoks/kapelnica-ot-alkogolya/. Эта страница — родитель станций метро и округов Москвы. Отдельная страница Москвы не создаётся. Города Московской области стоят под moskovskaya-oblast. |
 | Капельницы и детокс | Капельница от запоя и алкоголя на дому — Московская область | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskovskaya-oblast/ | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/ | P0 | Сделать/перенести | Хаб ГЕО: Московская область | Индексируемый GEO-хаб. Родитель городов Московской области. Станции метро и округа Москвы сюда не входят. |
 | Капельницы и детокс | Капельница от похмелья | /uslugi/kapelnitsy/ot-pohmelya/ | /uslugi/kapelnitsy/ | P0 | Сделать/перенести | Нет отдельной ГЕО-матрицы |  |
 | Капельницы и детокс | Алкогольная детоксикация | /uslugi/kapelnitsy/detoksikaciya/ | /uslugi/kapelnitsy/ | P1 | Сделать/перенести | Нет |  |
 | Капельницы и детокс | Алкогольная интоксикация | /uslugi/kapelnitsy/alkogolnaya-intoksikaciya/ | /uslugi/kapelnitsy/ | P1 | Сделать/перенести | Нет |  |
 | Капельницы и детокс | Алкогольный абстинентный синдром | /uslugi/kapelnitsy/abstinentnyj-sindrom/ | /uslugi/kapelnitsy/ | P1 | Сделать/перенести | Нет |  |
-| Кодирование | Кодирование от алкоголизма | /uslugi/kodirovanie/ | /uslugi/ | P0 | Сделать/перенести | Массовое ГЕО только для общего кодирования: метро + округа + 50 городов МО | Самостоятельная коммерческая задача. Методы, препараты и раскодирование остаются дочерними. ГЕО только у общего хаба кодирования. |
-| Кодирование | Кодирование от алкоголизма — Москва | /uslugi/kodirovanie/moskva/ | /uslugi/kodirovanie/ | P0 | Сделать/перенести | Хаб ГЕО: Москва | Индексируемый GEO-хаб. Родитель станций метро и административных округов. Станция и округ — параллельные URL, округ не становится родителем станции. |
+| Кодирование | Кодирование от алкоголизма | /uslugi/kodirovanie/ | /uslugi/ | P0 | Сделать/перенести | Массовое ГЕО только для общего кодирования: метро + округа + 50 городов МО | Самостоятельная коммерческая задача. Методы, препараты и раскодирование остаются дочерними. ГЕО только у общего хаба кодирования. Эта страница — родитель станций метро и округов Москвы. Отдельная страница Москвы не создаётся. Города Московской области стоят под moskovskaya-oblast. |
 | Кодирование | Кодирование от алкоголизма — Московская область | /uslugi/kodirovanie/moskovskaya-oblast/ | /uslugi/kodirovanie/ | P0 | Сделать/перенести | Хаб ГЕО: Московская область | Индексируемый GEO-хаб. Родитель городов Московской области. Станции метро и округа Москвы сюда не входят. |
 | Кодирование | Кодирование на дому | /uslugi/kodirovanie/na-domu/ | /uslugi/kodirovanie/ | P0 | Сделать/перенести | Нет |  |
 | Кодирование | Кодирование в клинике | /uslugi/kodirovanie/v-klinike/ | /uslugi/kodirovanie/ | P1 | Сделать/перенести | Нет |  |
@@ -586,8 +586,7 @@ AlcoMed опасен не размером сайта, а тем, что сое�
 | Реабилитация | Реабилитация — Московская область | /uslugi/reabilitaciya/moskovskaya-oblast/ | /uslugi/reabilitaciya/ | P1 | Сделать/перенести | 30 крупнейших городов МО; только при реальном маршруте/трансфере | Индексируемый GEO-хаб Московской области. Технический каталог области убран из URL. Это родитель городских страниц. |
 | Психиатрия | Психиатрическая помощь | /uslugi/psihiatriya/ | /uslugi/ | P0 | Сделать/перенести | Нет |  |
 | Психиатрия | Консультация психиатра | /uslugi/psihiatriya/konsultaciya/ | /uslugi/psihiatriya/ | P0 | Сделать/перенести | Нет |  |
-| Психиатрия | Психиатр на дом | /uslugi/psihiatriya/psihiatr-na-dom/ | /uslugi/psihiatriya/ | P0 | Сделать/перенести | Округа + 50 городов МО; метро не запускать на первом этапе |  |
-| Психиатрия | Психиатр на дом — Москва | /uslugi/psihiatriya/psihiatr-na-dom/moskva/ | /uslugi/psihiatriya/psihiatr-na-dom/ | P0 | Сделать/перенести | Хаб ГЕО: Москва | Индексируемый GEO-хаб. Родитель станций метро и административных округов. Станция и округ — параллельные URL, округ не становится родителем станции. |
+| Психиатрия | Психиатр на дом | /uslugi/psihiatriya/psihiatr-na-dom/ | /uslugi/psihiatriya/ | P0 | Сделать/перенести | Округа + 50 городов МО; метро не запускать на первом этапе | Эта страница — родитель округов Москвы. Отдельная страница Москвы не создаётся. Города Московской области стоят под moskovskaya-oblast. |
 | Психиатрия | Психиатр на дом — Московская область | /uslugi/psihiatriya/psihiatr-na-dom/moskovskaya-oblast/ | /uslugi/psihiatriya/psihiatr-na-dom/ | P0 | Сделать/перенести | Хаб ГЕО: Московская область | Индексируемый GEO-хаб. Родитель городов Московской области. Станции метро и округа Москвы сюда не входят. |
 | Психиатрия | Онлайн-консультация психиатра | /uslugi/psihiatriya/onlajn/ | /uslugi/psihiatriya/ | P1 | Сделать/перенести | Нет |  |
 | Психиатрия | Психиатрический стационар | /uslugi/psihiatriya/stacionar/ | /uslugi/psihiatriya/ | P1 | Сделать/перенести | Нет |  |
@@ -724,11 +723,13 @@ AlcoMed опасен не размером сайта, а тем, что сое�
 Пример:
 
 ```text
-/uslugi/vyvod-iz-zapoya/na-domu/
-/uslugi/vyvod-iz-zapoya/na-domu/moskva/
-/uslugi/vyvod-iz-zapoya/na-domu/moskva/belorusskaya/
-/uslugi/vyvod-iz-zapoya/na-domu/moskva/vao/
-/uslugi/vyvod-iz-zapoya/na-domu/moskovskaya-oblast/
+/uslugi/kodirovanie/
+/uslugi/kodirovanie/belorusskaya/
+/uslugi/kodirovanie/vao/
+/uslugi/kodirovanie/moskovskaya-oblast/
+/uslugi/kodirovanie/moskovskaya-oblast/himki/
+/uslugi/vyvod-iz-zapoya/na-domu/belorusskaya/
+/uslugi/vyvod-iz-zapoya/na-domu/vao/
 /uslugi/vyvod-iz-zapoya/na-domu/moskovskaya-oblast/himki/
 ```
 
@@ -739,7 +740,7 @@ AlcoMed опасен не размером сайта, а тем, что сое�
 | Городов МО | 50 |
 | URL в рабочей матрице | 1260 |
 
-Станция метро и административный округ стоят непосредственно под хабом Москвы. Город Московской области стоит под хабом области. В хлебных крошках нет пунктов «Метро», «Округа» и «Города». Хаб Москвы создаётся только если у услуги есть станции или округа. У лечения алкоголизма на дому, лечения наркомании и реабилитации есть только хаб Московской области.
+Станции метро и округа Москвы — прямые дочерние страницы услуги, без отдельного хаба Москвы. Города Московской области стоят под хабом области. В хлебных крошках нет пунктов «Метро», «Округа», «Города» и «Москва». У лечения алкоголизма на дому, лечения наркомании и реабилитации есть только хаб Московской области, потому что метро и округа для них не предусмотрены.
 
 ## Основная матрица — 4 услуги
 
@@ -1361,53 +1362,57 @@ SILO-хаб
 ```text
 Главная
 → Услуги
-→ Вывод из запоя
-→ На дому
-→ Москва
+→ Кодирование
 → Белорусская
 ```
 
 ```text
 Главная
 → Услуги
-→ Вывод из запоя
-→ На дому
-→ Москва
+→ Кодирование
 → ВАО
 ```
 
 ```text
 Главная
 → Услуги
-→ Вывод из запоя
-→ На дому
+→ Кодирование
 → Московская область
 → Химки
 ```
 
+То же правило у вложенной услуги. Для вывода из запоя на дому родитель Москвы — сама страница «на дому»:
+
+```text
+Главная
+→ Услуги
+→ Вывод из запоя
+→ На дому
+→ Белорусская
+```
+
 Соответствующие URL:
 
-- `/uslugi/vyvod-iz-zapoya/na-domu/`
-- `/uslugi/vyvod-iz-zapoya/na-domu/moskva/`
-- `/uslugi/vyvod-iz-zapoya/na-domu/moskva/belorusskaya/`
-- `/uslugi/vyvod-iz-zapoya/na-domu/moskva/vao/`
-- `/uslugi/vyvod-iz-zapoya/na-domu/moskovskaya-oblast/`
+- `/uslugi/kodirovanie/`
+- `/uslugi/kodirovanie/belorusskaya/`
+- `/uslugi/kodirovanie/vao/`
+- `/uslugi/kodirovanie/moskovskaya-oblast/`
+- `/uslugi/kodirovanie/moskovskaya-oblast/himki/`
+- `/uslugi/vyvod-iz-zapoya/na-domu/belorusskaya/`
+- `/uslugi/vyvod-iz-zapoya/na-domu/vao/`
 - `/uslugi/vyvod-iz-zapoya/na-domu/moskovskaya-oblast/himki/`
 
-Станция и округ — параллельные типы внутри Москвы. Связь станции с округом берётся только из `profilactica_geo_relationships.csv`. Не определять округ по строке URL или по названию станции.
+Станция и округ — прямые дочерние URL услуги. Связь станции с округом берётся только из `profilactica_geo_relationships.csv`. Не определять округ по строке URL или по названию станции.
 
 ### Москва
 
-`/moskva/` ссылается вверх на базовую услугу, на все округа Москвы, которые реально есть у этой услуги, и на станции метро этой услуги. Города Московской области на московский хаб не выводятся.
-
-Если у услуги нет станций и округов, хаб `/moskva/` не создаётся.
+Страница услуги, для которой разрешены метро и округа, сама является московским родителем. Например `/uslugi/kodirovanie/` ссылается на свои методы и форматы, на все округа Москвы этой услуги и на станции метро этой услуги. Города Московской области идут через `/uslugi/kodirovanie/moskovskaya-oblast/`.
 
 ### Округ
 
-Например `/uslugi/vyvod-iz-zapoya/na-domu/moskva/vao/`:
+Например `/uslugi/kodirovanie/vao/`:
 
-- хаб `/uslugi/vyvod-iz-zapoya/na-domu/moskva/`
-- базовая услуга `/uslugi/vyvod-iz-zapoya/na-domu/`
+- базовая услуга `/uslugi/kodirovanie/`
 - только станции, у которых в `profilactica_geo_relationships.csv` канонический округ `vao`
 - 2–4 соседних округа из `profilactica_geo_okrug_neighbors.csv`, и только если такие страницы есть у этой услуги
 - связанные услуги в ВАО только если их GEO URL реально существуют
@@ -1416,11 +1421,10 @@ SILO-хаб
 
 ### Метро
 
-Например `/uslugi/vyvod-iz-zapoya/na-domu/moskva/belorusskaya/`:
+Например `/uslugi/kodirovanie/belorusskaya/`:
 
-- хаб Москвы
-- канонический округ этой станции
-- базовая услуга
+- базовая услуга `/uslugi/kodirovanie/`
+- канонический округ этой станции: для Белорусской это `/uslugi/kodirovanie/cao/`
 - 4–6 соседних станций того же канонического округа
 - аналогичные услуги у этой станции только если их GEO URL есть
 
@@ -1430,11 +1434,11 @@ SILO-хаб
 
 ### Московская область
 
-`/moskovskaya-oblast/` ссылается на базовую услугу и на города, отобранные для этой услуги. Москва, метро и округа на этот хаб не выводятся.
+`/moskovskaya-oblast/` ссылается на базовую услугу и на города, отобранные для этой услуги. Станции метро и округа Москвы на этот хаб не выводятся.
 
 Страница города ссылается на хаб области, базовую услугу, 4–6 соседних городов этой же услуги и на страницы других услуг в этом городе только если они есть. Соседние города не выбираются по алфавиту. Не создавать ссылку, если городского URL другой услуги нет.
 
-У лечения алкоголизма на дому, лечения наркомании и реабилитации есть только областной хаб: московского хаба нет, потому что метро и округа для этих услуг не предусмотрены.
+У лечения алкоголизма на дому, лечения наркомании и реабилитации есть только областной хаб: метро и округа для этих услуг не предусмотрены.
 
 # 11. Обязательные блоки money-page
 
@@ -1539,239 +1543,239 @@ SILO-хаб
 
 # Приложения: полные каталоги
 
-Ниже вшиты все исходные списки отчёта: 189 страниц архитектуры уже приведены в разделе SILO; здесь — полный каталог 1260 запланированных ГЕО URL.
+Ниже вшиты все исходные списки отчёта: 184 страниц архитектуры уже приведены в разделе SILO; здесь — полный каталог 1260 запланированных ГЕО URL.
 
 ## Полный каталог запланированных ГЕО URL (1260 URL)
 
 | Услуга | Тип | Локация | Slug | Tier | Приоритет | Действие | URL |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Нарколог на дом | metro | Аэропорт | aeroport | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/aeroport/ |
-| Нарколог на дом | metro | Александровский сад | aleksandrovskij-sad | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/aleksandrovskij-sad/ |
-| Нарколог на дом | metro | Алексеевская | alekseevskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/alekseevskaya/ |
-| Нарколог на дом | metro | Алма-Атинская | alma-atinskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/alma-atinskaya/ |
-| Нарколог на дом | metro | Алтуфьево | altufevo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/altufevo/ |
-| Нарколог на дом | metro | Андроновка | andronovka | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/andronovka/ |
-| Нарколог на дом | metro | Аннино | annino | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/annino/ |
-| Нарколог на дом | metro | Арбатская | arbatskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/arbatskaya/ |
-| Нарколог на дом | metro | Авиамоторная | aviamotornaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/aviamotornaya/ |
-| Нарколог на дом | metro | Автозаводская | avtozavodskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/avtozavodskaya/ |
-| Нарколог на дом | metro | Бабушкинская | babushkinskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/babushkinskaya/ |
-| Нарколог на дом | metro | Багратионовская | bagrationovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/bagrationovskaya/ |
-| Нарколог на дом | metro | Балтийская | baltijskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/baltijskaya/ |
-| Нарколог на дом | metro | Баррикадная | barrikadnaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/barrikadnaya/ |
-| Нарколог на дом | metro | Бауманская | baumanskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/baumanskaya/ |
-| Нарколог на дом | metro | Беговая | begovaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/begovaya/ |
-| Нарколог на дом | metro | Белокаменная | belokamennaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/belokamennaya/ |
-| Нарколог на дом | metro | Белорусская | belorusskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/belorusskaya/ |
-| Нарколог на дом | metro | Беляево | belyaevo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/belyaevo/ |
-| Нарколог на дом | metro | Бибирево | bibirevo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/bibirevo/ |
-| Нарколог на дом | metro | Библиотека имени Ленина | biblioteka-imeni-lenina | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/biblioteka-imeni-lenina/ |
-| Нарколог на дом | metro | Битцевский парк | bitcevskij-park | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/bitcevskij-park/ |
-| Нарколог на дом | metro | Борисово | borisovo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/borisovo/ |
-| Нарколог на дом | metro | Боровицкая | borovickaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/borovickaya/ |
-| Нарколог на дом | metro | Ботанический сад | botanicheskij-sad | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/botanicheskij-sad/ |
-| Нарколог на дом | metro | Братиславская | bratislavskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/bratislavskaya/ |
-| Нарколог на дом | metro | Бульвар Адмирала Ушакова | bulvar-admirala-ushakova | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/bulvar-admirala-ushakova/ |
-| Нарколог на дом | metro | Бульвар Рокоссовского | bulvar-rokossovskogo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/bulvar-rokossovskogo/ |
-| Нарколог на дом | metro | Бунинская аллея | buninskaya-alleya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/buninskaya-alleya/ |
-| Нарколог на дом | metro | Бутырская | butyrskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/butyrskaya/ |
-| Нарколог на дом | metro | Чеховская | chehovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/chehovskaya/ |
-| Нарколог на дом | metro | Черкизовская | cherkizovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/cherkizovskaya/ |
-| Нарколог на дом | metro | Чертановская | chertanovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/chertanovskaya/ |
-| Нарколог на дом | metro | Чистые пруды | chistye-prudy | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/chistye-prudy/ |
-| Нарколог на дом | metro | Чкаловская | chkalovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/chkalovskaya/ |
-| Нарколог на дом | metro | Царицыно | caricyno | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/caricyno/ |
-| Нарколог на дом | metro | ЦСКА | cska | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/cska/ |
-| Нарколог на дом | metro | Цветной бульвар | cvetnoj-bulvar | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/cvetnoj-bulvar/ |
-| Нарколог на дом | metro | Деловой центр | delovoj-centr | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/delovoj-centr/ |
-| Нарколог на дом | metro | Динамо | dinamo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/dinamo/ |
-| Нарколог на дом | metro | Дмитровская | dmitrovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/dmitrovskaya/ |
-| Нарколог на дом | metro | Добрынинская | dobryninskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/dobryninskaya/ |
-| Нарколог на дом | metro | Домодедовская | domodedovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/domodedovskaya/ |
-| Нарколог на дом | metro | Достоевская | dostoevskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/dostoevskaya/ |
-| Нарколог на дом | metro | Электрозаводская | elektrozavodskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/elektrozavodskaya/ |
-| Нарколог на дом | metro | Филёвский парк | filevskij-park | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/filevskij-park/ |
-| Нарколог на дом | metro | Фили | fili | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/fili/ |
-| Нарколог на дом | metro | Фонвизинская | fonvizinskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/fonvizinskaya/ |
-| Нарколог на дом | metro | Фрунзенская | frunzenskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/frunzenskaya/ |
-| Нарколог на дом | metro | Хорошёвская | horoshevskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/horoshevskaya/ |
-| Нарколог на дом | metro | Ховрино | hovrino | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/hovrino/ |
-| Нарколог на дом | metro | Измайловская | izmajlovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/izmajlovskaya/ |
-| Нарколог на дом | metro | Каховская | kahovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/kahovskaya/ |
-| Нарколог на дом | metro | Калужская | kaluzhskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/kaluzhskaya/ |
-| Нарколог на дом | metro | Кантемировская | kantemirovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/kantemirovskaya/ |
-| Нарколог на дом | metro | Каширская | kashirskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/kashirskaya/ |
-| Нарколог на дом | metro | Киевская | kievskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/kievskaya/ |
-| Нарколог на дом | metro | Китай-город | kitaj-gorod | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/kitaj-gorod/ |
-| Нарколог на дом | metro | Коломенская | kolomenskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/kolomenskaya/ |
-| Нарколог на дом | metro | Комсомольская | komsomolskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/komsomolskaya/ |
-| Нарколог на дом | metro | Коньково | konkovo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/konkovo/ |
-| Нарколог на дом | metro | Коптево | koptevo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/koptevo/ |
-| Нарколог на дом | metro | Котельники | kotelniki | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/kotelniki/ |
-| Нарколог на дом | metro | Кожуховская | kozhuhovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/kozhuhovskaya/ |
-| Нарколог на дом | metro | Красногвардейская | krasnogvardejskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/krasnogvardejskaya/ |
-| Нарколог на дом | metro | Краснопресненская | krasnopresnenskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/krasnopresnenskaya/ |
-| Нарколог на дом | metro | Красносельская | krasnoselskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/krasnoselskaya/ |
-| Нарколог на дом | metro | Красные ворота | krasnye-vorota | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/krasnye-vorota/ |
-| Нарколог на дом | metro | Крестьянская застава | krestyanskaya-zastava | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/krestyanskaya-zastava/ |
-| Нарколог на дом | metro | Кропоткинская | kropotkinskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/kropotkinskaya/ |
-| Нарколог на дом | metro | Крылатское | krylatskoe | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/krylatskoe/ |
-| Нарколог на дом | metro | Крымская | krymskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/krymskaya/ |
-| Нарколог на дом | metro | Кунцевская | kuncevskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/kuncevskaya/ |
-| Нарколог на дом | metro | Курская | kurskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/kurskaya/ |
-| Нарколог на дом | metro | Кутузовская | kutuzovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/kutuzovskaya/ |
-| Нарколог на дом | metro | Кузьминки | kuzminki | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/kuzminki/ |
-| Нарколог на дом | metro | Кузнецкий мост | kuzneckij-most | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/kuzneckij-most/ |
-| Нарколог на дом | metro | Ленинский проспект | leninskij-prospekt | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/leninskij-prospekt/ |
-| Нарколог на дом | metro | Лермонтовский проспект | lermontovskij-prospekt | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/lermontovskij-prospekt/ |
-| Нарколог на дом | metro | Лесопарковая | lesoparkovaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/lesoparkovaya/ |
-| Нарколог на дом | metro | Лихоборы | lihobory | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/lihobory/ |
-| Нарколог на дом | metro | Локомотив | lokomotiv | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/lokomotiv/ |
-| Нарколог на дом | metro | Ломоносовский проспект | lomonosovskij-prospekt | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/lomonosovskij-prospekt/ |
-| Нарколог на дом | metro | Лубянка | lubyanka | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/lubyanka/ |
-| Нарколог на дом | metro | Лужники | luzhniki | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/luzhniki/ |
-| Нарколог на дом | metro | Люблино | lyublino | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/lyublino/ |
-| Нарколог на дом | metro | Марьино | marino | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/marino/ |
-| Нарколог на дом | metro | Марьина Роща | marina-roshcha | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/marina-roshcha/ |
-| Нарколог на дом | metro | Марксистская | marksistskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/marksistskaya/ |
-| Нарколог на дом | metro | Маяковская | mayakovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/mayakovskaya/ |
-| Нарколог на дом | metro | Медведково | medvedkovo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/medvedkovo/ |
-| Нарколог на дом | metro | Менделеевская | mendeleevskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/mendeleevskaya/ |
-| Нарколог на дом | metro | Международная | mezhdunarodnaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/mezhdunarodnaya/ |
-| Нарколог на дом | metro | Минская | minskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/minskaya/ |
-| Нарколог на дом | metro | Молодёжная | molodezhnaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/molodezhnaya/ |
-| Нарколог на дом | metro | Мякинино | myakinino | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/myakinino/ |
-| Нарколог на дом | metro | Нагатинская | nagatinskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/nagatinskaya/ |
-| Нарколог на дом | metro | Нагорная | nagornaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/nagornaya/ |
-| Нарколог на дом | metro | Нахимовский проспект | nahimovskij-prospekt | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/nahimovskij-prospekt/ |
-| Нарколог на дом | metro | Нижегородская | nizhegorodskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/nizhegorodskaya/ |
-| Нарколог на дом | metro | Новогиреево | novogireevo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/novogireevo/ |
-| Нарколог на дом | metro | Новохохловская | novohohlovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/novohohlovskaya/ |
-| Нарколог на дом | metro | Новокосино | novokosino | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/novokosino/ |
-| Нарколог на дом | metro | Новокузнецкая | novokuzneckaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/novokuzneckaya/ |
-| Нарколог на дом | metro | Новослободская | novoslobodskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/novoslobodskaya/ |
-| Нарколог на дом | metro | Новоясеневская | novoyasenevskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/novoyasenevskaya/ |
-| Нарколог на дом | metro | Новые Черёмушки | novye-cheremushki | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/novye-cheremushki/ |
-| Нарколог на дом | metro | Охотный Ряд | ohotnyj-ryad | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/ohotnyj-ryad/ |
-| Нарколог на дом | metro | Окружная | okruzhnaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/okruzhnaya/ |
-| Нарколог на дом | metro | Октябрьское Поле | oktyabrskoe-pole | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/oktyabrskoe-pole/ |
-| Нарколог на дом | metro | Октябрьская | oktyabrskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/oktyabrskaya/ |
-| Нарколог на дом | metro | Орехово | orehovo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/orehovo/ |
-| Нарколог на дом | metro | Отрадное | otradnoe | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/otradnoe/ |
-| Нарколог на дом | metro | Панфиловская | panfilovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/panfilovskaya/ |
-| Нарколог на дом | metro | Парк культуры | park-kultury | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/park-kultury/ |
-| Нарколог на дом | metro | Парк Победы | park-pobedy | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/park-pobedy/ |
-| Нарколог на дом | metro | Партизанская | partizanskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/partizanskaya/ |
-| Нарколог на дом | metro | Павелецкая | paveleckaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/paveleckaya/ |
-| Нарколог на дом | metro | Печатники | pechatniki | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/pechatniki/ |
-| Нарколог на дом | metro | Перово | perovo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/perovo/ |
-| Нарколог на дом | metro | Первомайская | pervomajskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/pervomajskaya/ |
-| Нарколог на дом | metro | Петровский парк | petrovskij-park | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/petrovskij-park/ |
-| Нарколог на дом | metro | Петровско-Разумовская | petrovsko-razumovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/petrovsko-razumovskaya/ |
-| Нарколог на дом | metro | Пионерская | pionerskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/pionerskaya/ |
-| Нарколог на дом | metro | Планерная | planernaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/planernaya/ |
-| Нарколог на дом | metro | Площадь Гагарина | ploshchad-gagarina | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/ploshchad-gagarina/ |
-| Нарколог на дом | metro | Площадь Ильича | ploshchad-ilicha | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/ploshchad-ilicha/ |
-| Нарколог на дом | metro | Площадь Революции | ploshchad-revolyucii | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/ploshchad-revolyucii/ |
-| Нарколог на дом | metro | Полежаевская | polezhaevskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/polezhaevskaya/ |
-| Нарколог на дом | metro | Полянка | polyanka | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/polyanka/ |
-| Нарколог на дом | metro | Пражская | prazhskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/prazhskaya/ |
-| Нарколог на дом | metro | Преображенская площадь | preobrazhenskaya-ploshchad | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/preobrazhenskaya-ploshchad/ |
-| Нарколог на дом | metro | Профсоюзная | profsoyuznaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/profsoyuznaya/ |
-| Нарколог на дом | metro | Пролетарская | proletarskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/proletarskaya/ |
-| Нарколог на дом | metro | Проспект Мира | prospekt-mira | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/prospekt-mira/ |
-| Нарколог на дом | metro | Проспект Вернадского | prospekt-vernadskogo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/prospekt-vernadskogo/ |
-| Нарколог на дом | metro | Пушкинская | pushkinskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/pushkinskaya/ |
-| Нарколог на дом | metro | Пятницкое шоссе | pyatnickoe-shosse | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/pyatnickoe-shosse/ |
-| Нарколог на дом | metro | Раменки | ramenki | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/ramenki/ |
-| Нарколог на дом | metro | Речной вокзал | rechnoj-vokzal | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/rechnoj-vokzal/ |
-| Нарколог на дом | metro | Римская | rimskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/rimskaya/ |
-| Нарколог на дом | metro | Рижская | rizhskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/rizhskaya/ |
-| Нарколог на дом | metro | Ростокино | rostokino | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/rostokino/ |
-| Нарколог на дом | metro | Румянцево | rumyancevo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/rumyancevo/ |
-| Нарколог на дом | metro | Рязанский проспект | ryazanskij-prospekt | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/ryazanskij-prospekt/ |
-| Нарколог на дом | metro | Саларьево | salarevo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/salarevo/ |
-| Нарколог на дом | metro | Савёловская | savelovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/savelovskaya/ |
-| Нарколог на дом | metro | Селигерская | seligerskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/seligerskaya/ |
-| Нарколог на дом | metro | Семёновская | semenovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/semenovskaya/ |
-| Нарколог на дом | metro | Серпуховская | serpuhovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/serpuhovskaya/ |
-| Нарколог на дом | metro | Севастопольская | sevastopolskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/sevastopolskaya/ |
-| Нарколог на дом | metro | Шаболовская | shabolovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/shabolovskaya/ |
-| Нарколог на дом | metro | Шелепиха | shelepiha | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/shelepiha/ |
-| Нарколог на дом | metro | Щукинская | shchukinskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/shchukinskaya/ |
-| Нарколог на дом | metro | Щёлковская | shchelkovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/shchelkovskaya/ |
-| Нарколог на дом | metro | Шипиловская | shipilovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/shipilovskaya/ |
-| Нарколог на дом | metro | Сходненская | shodnenskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/shodnenskaya/ |
-| Нарколог на дом | metro | Шоссе Энтузиастов | shosse-entuziastov | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/shosse-entuziastov/ |
-| Нарколог на дом | metro | Улица Скобелевская | ulica-skobelevskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/ulica-skobelevskaya/ |
-| Нарколог на дом | metro | Славянский бульвар | slavyanskij-bulvar | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/slavyanskij-bulvar/ |
-| Нарколог на дом | metro | Смоленская | smolenskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/smolenskaya/ |
-| Нарколог на дом | metro | Сокол | sokol | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/sokol/ |
-| Нарколог на дом | metro | Соколиная гора | sokolinaya-gora | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/sokolinaya-gora/ |
-| Нарколог на дом | metro | Спартак | spartak | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/spartak/ |
-| Нарколог на дом | metro | Спортивная | sportivnaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/sportivnaya/ |
-| Нарколог на дом | metro | Сретенский бульвар | sretenskij-bulvar | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/sretenskij-bulvar/ |
-| Нарколог на дом | metro | Стрешнево | streshnevo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/streshnevo/ |
-| Нарколог на дом | metro | Строгино | strogino | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/strogino/ |
-| Нарколог на дом | metro | Студенческая | studencheskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/studencheskaya/ |
-| Нарколог на дом | metro | Сухаревская | suharevskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/suharevskaya/ |
-| Нарколог на дом | metro | Свиблово | sviblovo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/sviblovo/ |
-| Нарколог на дом | metro | Таганская | taganskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/taganskaya/ |
-| Нарколог на дом | metro | Театральная | teatralnaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/teatralnaya/ |
-| Нарколог на дом | metro | Технопарк | tehnopark | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/tehnopark/ |
-| Нарколог на дом | metro | Текстильщики | tekstilshchiki | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/tekstilshchiki/ |
-| Нарколог на дом | metro | Телецентр | telecentr | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/telecentr/ |
-| Нарколог на дом | metro | Тёплый Стан | teplyj-stan | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/teplyj-stan/ |
-| Нарколог на дом | metro | Тимирязевская | timiryazevskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/timiryazevskaya/ |
-| Нарколог на дом | metro | Третьяковская | tretyakovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/tretyakovskaya/ |
-| Нарколог на дом | metro | Тропарёво | troparevo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/troparevo/ |
-| Нарколог на дом | metro | Трубная | trubnaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/trubnaya/ |
-| Нарколог на дом | metro | Тульская | tulskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/tulskaya/ |
-| Нарколог на дом | metro | Тургеневская | turgenevskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/turgenevskaya/ |
-| Нарколог на дом | metro | Тушинская | tushinskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/tushinskaya/ |
-| Нарколог на дом | metro | Тверская | tverskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/tverskaya/ |
-| Нарколог на дом | metro | Угрешская | ugreshskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/ugreshskaya/ |
-| Нарколог на дом | metro | Улица 1905 года | ulica-1905-goda | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/ulica-1905-goda/ |
-| Нарколог на дом | metro | Улица Академика Королёва | ulica-akademika-koroleva | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/ulica-akademika-koroleva/ |
-| Нарколог на дом | metro | Улица Академика Янгеля | ulica-akademika-yangelya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/ulica-akademika-yangelya/ |
-| Нарколог на дом | metro | Улица Горчакова | ulica-gorchakova | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/ulica-gorchakova/ |
-| Нарколог на дом | metro | Улица Милашенкова | ulica-milashenkova | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/ulica-milashenkova/ |
-| Нарколог на дом | metro | Улица Сергея Эйзенштейна | ulica-sergeya-ejzenshtejna | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/ulica-sergeya-ejzenshtejna/ |
-| Нарколог на дом | metro | Улица Старокачаловская | ulica-starokachalovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/ulica-starokachalovskaya/ |
-| Нарколог на дом | metro | Университет | universitet | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/universitet/ |
-| Нарколог на дом | metro | Варшавская | varshavskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/varshavskaya/ |
-| Нарколог на дом | metro | ВДНХ | vdnh | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/vdnh/ |
-| Нарколог на дом | metro | Верхние Котлы | verhnie-kotly | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/verhnie-kotly/ |
-| Нарколог на дом | metro | Верхние Лихоборы | verhnie-lihobory | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/verhnie-lihobory/ |
-| Нарколог на дом | metro | Владыкино | vladykino | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/vladykino/ |
-| Нарколог на дом | metro | Водный стадион | vodnyj-stadion | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/vodnyj-stadion/ |
-| Нарколог на дом | metro | Войковская | vojkovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/vojkovskaya/ |
-| Нарколог на дом | metro | Волгоградский проспект | volgogradskij-prospekt | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/volgogradskij-prospekt/ |
-| Нарколог на дом | metro | Волоколамская | volokolamskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/volokolamskaya/ |
-| Нарколог на дом | metro | Волжская | volzhskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/volzhskaya/ |
-| Нарколог на дом | metro | Воробьёвы горы | vorobevy-gory | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/vorobevy-gory/ |
-| Нарколог на дом | metro | Выхино | vyhino | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/vyhino/ |
-| Нарколог на дом | metro | Выставочная | vystavochnaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/vystavochnaya/ |
-| Нарколог на дом | metro | Выставочный центр | vystavochnyj-centr | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/vystavochnyj-centr/ |
-| Нарколог на дом | metro | Ясенево | yasenevo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/yasenevo/ |
-| Нарколог на дом | metro | Юго-Западная | yugo-zapadnaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/yugo-zapadnaya/ |
-| Нарколог на дом | metro | Южная | yuzhnaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/yuzhnaya/ |
-| Нарколог на дом | metro | Жулебино | zhulebino | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/zhulebino/ |
-| Нарколог на дом | metro | ЗИЛ | zil | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/zil/ |
-| Нарколог на дом | metro | Зорге | zorge | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/zorge/ |
-| Нарколог на дом | metro | Зябликово | zyablikovo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/zyablikovo/ |
-| Нарколог на дом | okrug | ЦАО | cao | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/cao/ |
-| Нарколог на дом | okrug | САО | sao | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/sao/ |
-| Нарколог на дом | okrug | СВАО | svao | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/svao/ |
-| Нарколог на дом | okrug | ВАО | vao | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/vao/ |
-| Нарколог на дом | okrug | ЮВАО | yuvao | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/yuvao/ |
-| Нарколог на дом | okrug | ЮАО | yuao | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/yuao/ |
-| Нарколог на дом | okrug | ЮЗАО | yuzao | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/yuzao/ |
-| Нарколог на дом | okrug | ЗАО | zao | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/zao/ |
-| Нарколог на дом | okrug | СЗАО | szao | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/szao/ |
-| Нарколог на дом | okrug | ЗелАО | zelao | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/zelao/ |
-| Нарколог на дом | okrug | НАО | nao | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/nao/ |
-| Нарколог на дом | okrug | ТАО | tao | core | P0 | migrate/create | /uslugi/narkolog-na-dom/moskva/tao/ |
+| Нарколог на дом | metro | Аэропорт | aeroport | core | P0 | migrate/create | /uslugi/narkolog-na-dom/aeroport/ |
+| Нарколог на дом | metro | Александровский сад | aleksandrovskij-sad | core | P0 | migrate/create | /uslugi/narkolog-na-dom/aleksandrovskij-sad/ |
+| Нарколог на дом | metro | Алексеевская | alekseevskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/alekseevskaya/ |
+| Нарколог на дом | metro | Алма-Атинская | alma-atinskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/alma-atinskaya/ |
+| Нарколог на дом | metro | Алтуфьево | altufevo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/altufevo/ |
+| Нарколог на дом | metro | Андроновка | andronovka | core | P0 | migrate/create | /uslugi/narkolog-na-dom/andronovka/ |
+| Нарколог на дом | metro | Аннино | annino | core | P0 | migrate/create | /uslugi/narkolog-na-dom/annino/ |
+| Нарколог на дом | metro | Арбатская | arbatskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/arbatskaya/ |
+| Нарколог на дом | metro | Авиамоторная | aviamotornaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/aviamotornaya/ |
+| Нарколог на дом | metro | Автозаводская | avtozavodskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/avtozavodskaya/ |
+| Нарколог на дом | metro | Бабушкинская | babushkinskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/babushkinskaya/ |
+| Нарколог на дом | metro | Багратионовская | bagrationovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/bagrationovskaya/ |
+| Нарколог на дом | metro | Балтийская | baltijskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/baltijskaya/ |
+| Нарколог на дом | metro | Баррикадная | barrikadnaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/barrikadnaya/ |
+| Нарколог на дом | metro | Бауманская | baumanskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/baumanskaya/ |
+| Нарколог на дом | metro | Беговая | begovaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/begovaya/ |
+| Нарколог на дом | metro | Белокаменная | belokamennaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/belokamennaya/ |
+| Нарколог на дом | metro | Белорусская | belorusskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/belorusskaya/ |
+| Нарколог на дом | metro | Беляево | belyaevo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/belyaevo/ |
+| Нарколог на дом | metro | Бибирево | bibirevo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/bibirevo/ |
+| Нарколог на дом | metro | Библиотека имени Ленина | biblioteka-imeni-lenina | core | P0 | migrate/create | /uslugi/narkolog-na-dom/biblioteka-imeni-lenina/ |
+| Нарколог на дом | metro | Битцевский парк | bitcevskij-park | core | P0 | migrate/create | /uslugi/narkolog-na-dom/bitcevskij-park/ |
+| Нарколог на дом | metro | Борисово | borisovo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/borisovo/ |
+| Нарколог на дом | metro | Боровицкая | borovickaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/borovickaya/ |
+| Нарколог на дом | metro | Ботанический сад | botanicheskij-sad | core | P0 | migrate/create | /uslugi/narkolog-na-dom/botanicheskij-sad/ |
+| Нарколог на дом | metro | Братиславская | bratislavskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/bratislavskaya/ |
+| Нарколог на дом | metro | Бульвар Адмирала Ушакова | bulvar-admirala-ushakova | core | P0 | migrate/create | /uslugi/narkolog-na-dom/bulvar-admirala-ushakova/ |
+| Нарколог на дом | metro | Бульвар Рокоссовского | bulvar-rokossovskogo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/bulvar-rokossovskogo/ |
+| Нарколог на дом | metro | Бунинская аллея | buninskaya-alleya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/buninskaya-alleya/ |
+| Нарколог на дом | metro | Бутырская | butyrskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/butyrskaya/ |
+| Нарколог на дом | metro | Чеховская | chehovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/chehovskaya/ |
+| Нарколог на дом | metro | Черкизовская | cherkizovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/cherkizovskaya/ |
+| Нарколог на дом | metro | Чертановская | chertanovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/chertanovskaya/ |
+| Нарколог на дом | metro | Чистые пруды | chistye-prudy | core | P0 | migrate/create | /uslugi/narkolog-na-dom/chistye-prudy/ |
+| Нарколог на дом | metro | Чкаловская | chkalovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/chkalovskaya/ |
+| Нарколог на дом | metro | Царицыно | caricyno | core | P0 | migrate/create | /uslugi/narkolog-na-dom/caricyno/ |
+| Нарколог на дом | metro | ЦСКА | cska | core | P0 | migrate/create | /uslugi/narkolog-na-dom/cska/ |
+| Нарколог на дом | metro | Цветной бульвар | cvetnoj-bulvar | core | P0 | migrate/create | /uslugi/narkolog-na-dom/cvetnoj-bulvar/ |
+| Нарколог на дом | metro | Деловой центр | delovoj-centr | core | P0 | migrate/create | /uslugi/narkolog-na-dom/delovoj-centr/ |
+| Нарколог на дом | metro | Динамо | dinamo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/dinamo/ |
+| Нарколог на дом | metro | Дмитровская | dmitrovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/dmitrovskaya/ |
+| Нарколог на дом | metro | Добрынинская | dobryninskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/dobryninskaya/ |
+| Нарколог на дом | metro | Домодедовская | domodedovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/domodedovskaya/ |
+| Нарколог на дом | metro | Достоевская | dostoevskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/dostoevskaya/ |
+| Нарколог на дом | metro | Электрозаводская | elektrozavodskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/elektrozavodskaya/ |
+| Нарколог на дом | metro | Филёвский парк | filevskij-park | core | P0 | migrate/create | /uslugi/narkolog-na-dom/filevskij-park/ |
+| Нарколог на дом | metro | Фили | fili | core | P0 | migrate/create | /uslugi/narkolog-na-dom/fili/ |
+| Нарколог на дом | metro | Фонвизинская | fonvizinskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/fonvizinskaya/ |
+| Нарколог на дом | metro | Фрунзенская | frunzenskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/frunzenskaya/ |
+| Нарколог на дом | metro | Хорошёвская | horoshevskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/horoshevskaya/ |
+| Нарколог на дом | metro | Ховрино | hovrino | core | P0 | migrate/create | /uslugi/narkolog-na-dom/hovrino/ |
+| Нарколог на дом | metro | Измайловская | izmajlovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/izmajlovskaya/ |
+| Нарколог на дом | metro | Каховская | kahovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/kahovskaya/ |
+| Нарколог на дом | metro | Калужская | kaluzhskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/kaluzhskaya/ |
+| Нарколог на дом | metro | Кантемировская | kantemirovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/kantemirovskaya/ |
+| Нарколог на дом | metro | Каширская | kashirskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/kashirskaya/ |
+| Нарколог на дом | metro | Киевская | kievskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/kievskaya/ |
+| Нарколог на дом | metro | Китай-город | kitaj-gorod | core | P0 | migrate/create | /uslugi/narkolog-na-dom/kitaj-gorod/ |
+| Нарколог на дом | metro | Коломенская | kolomenskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/kolomenskaya/ |
+| Нарколог на дом | metro | Комсомольская | komsomolskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/komsomolskaya/ |
+| Нарколог на дом | metro | Коньково | konkovo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/konkovo/ |
+| Нарколог на дом | metro | Коптево | koptevo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/koptevo/ |
+| Нарколог на дом | metro | Котельники | kotelniki | core | P0 | migrate/create | /uslugi/narkolog-na-dom/kotelniki/ |
+| Нарколог на дом | metro | Кожуховская | kozhuhovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/kozhuhovskaya/ |
+| Нарколог на дом | metro | Красногвардейская | krasnogvardejskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/krasnogvardejskaya/ |
+| Нарколог на дом | metro | Краснопресненская | krasnopresnenskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/krasnopresnenskaya/ |
+| Нарколог на дом | metro | Красносельская | krasnoselskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/krasnoselskaya/ |
+| Нарколог на дом | metro | Красные ворота | krasnye-vorota | core | P0 | migrate/create | /uslugi/narkolog-na-dom/krasnye-vorota/ |
+| Нарколог на дом | metro | Крестьянская застава | krestyanskaya-zastava | core | P0 | migrate/create | /uslugi/narkolog-na-dom/krestyanskaya-zastava/ |
+| Нарколог на дом | metro | Кропоткинская | kropotkinskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/kropotkinskaya/ |
+| Нарколог на дом | metro | Крылатское | krylatskoe | core | P0 | migrate/create | /uslugi/narkolog-na-dom/krylatskoe/ |
+| Нарколог на дом | metro | Крымская | krymskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/krymskaya/ |
+| Нарколог на дом | metro | Кунцевская | kuncevskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/kuncevskaya/ |
+| Нарколог на дом | metro | Курская | kurskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/kurskaya/ |
+| Нарколог на дом | metro | Кутузовская | kutuzovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/kutuzovskaya/ |
+| Нарколог на дом | metro | Кузьминки | kuzminki | core | P0 | migrate/create | /uslugi/narkolog-na-dom/kuzminki/ |
+| Нарколог на дом | metro | Кузнецкий мост | kuzneckij-most | core | P0 | migrate/create | /uslugi/narkolog-na-dom/kuzneckij-most/ |
+| Нарколог на дом | metro | Ленинский проспект | leninskij-prospekt | core | P0 | migrate/create | /uslugi/narkolog-na-dom/leninskij-prospekt/ |
+| Нарколог на дом | metro | Лермонтовский проспект | lermontovskij-prospekt | core | P0 | migrate/create | /uslugi/narkolog-na-dom/lermontovskij-prospekt/ |
+| Нарколог на дом | metro | Лесопарковая | lesoparkovaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/lesoparkovaya/ |
+| Нарколог на дом | metro | Лихоборы | lihobory | core | P0 | migrate/create | /uslugi/narkolog-na-dom/lihobory/ |
+| Нарколог на дом | metro | Локомотив | lokomotiv | core | P0 | migrate/create | /uslugi/narkolog-na-dom/lokomotiv/ |
+| Нарколог на дом | metro | Ломоносовский проспект | lomonosovskij-prospekt | core | P0 | migrate/create | /uslugi/narkolog-na-dom/lomonosovskij-prospekt/ |
+| Нарколог на дом | metro | Лубянка | lubyanka | core | P0 | migrate/create | /uslugi/narkolog-na-dom/lubyanka/ |
+| Нарколог на дом | metro | Лужники | luzhniki | core | P0 | migrate/create | /uslugi/narkolog-na-dom/luzhniki/ |
+| Нарколог на дом | metro | Люблино | lyublino | core | P0 | migrate/create | /uslugi/narkolog-na-dom/lyublino/ |
+| Нарколог на дом | metro | Марьино | marino | core | P0 | migrate/create | /uslugi/narkolog-na-dom/marino/ |
+| Нарколог на дом | metro | Марьина Роща | marina-roshcha | core | P0 | migrate/create | /uslugi/narkolog-na-dom/marina-roshcha/ |
+| Нарколог на дом | metro | Марксистская | marksistskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/marksistskaya/ |
+| Нарколог на дом | metro | Маяковская | mayakovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/mayakovskaya/ |
+| Нарколог на дом | metro | Медведково | medvedkovo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/medvedkovo/ |
+| Нарколог на дом | metro | Менделеевская | mendeleevskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/mendeleevskaya/ |
+| Нарколог на дом | metro | Международная | mezhdunarodnaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/mezhdunarodnaya/ |
+| Нарколог на дом | metro | Минская | minskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/minskaya/ |
+| Нарколог на дом | metro | Молодёжная | molodezhnaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/molodezhnaya/ |
+| Нарколог на дом | metro | Мякинино | myakinino | core | P0 | migrate/create | /uslugi/narkolog-na-dom/myakinino/ |
+| Нарколог на дом | metro | Нагатинская | nagatinskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/nagatinskaya/ |
+| Нарколог на дом | metro | Нагорная | nagornaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/nagornaya/ |
+| Нарколог на дом | metro | Нахимовский проспект | nahimovskij-prospekt | core | P0 | migrate/create | /uslugi/narkolog-na-dom/nahimovskij-prospekt/ |
+| Нарколог на дом | metro | Нижегородская | nizhegorodskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/nizhegorodskaya/ |
+| Нарколог на дом | metro | Новогиреево | novogireevo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/novogireevo/ |
+| Нарколог на дом | metro | Новохохловская | novohohlovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/novohohlovskaya/ |
+| Нарколог на дом | metro | Новокосино | novokosino | core | P0 | migrate/create | /uslugi/narkolog-na-dom/novokosino/ |
+| Нарколог на дом | metro | Новокузнецкая | novokuzneckaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/novokuzneckaya/ |
+| Нарколог на дом | metro | Новослободская | novoslobodskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/novoslobodskaya/ |
+| Нарколог на дом | metro | Новоясеневская | novoyasenevskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/novoyasenevskaya/ |
+| Нарколог на дом | metro | Новые Черёмушки | novye-cheremushki | core | P0 | migrate/create | /uslugi/narkolog-na-dom/novye-cheremushki/ |
+| Нарколог на дом | metro | Охотный Ряд | ohotnyj-ryad | core | P0 | migrate/create | /uslugi/narkolog-na-dom/ohotnyj-ryad/ |
+| Нарколог на дом | metro | Окружная | okruzhnaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/okruzhnaya/ |
+| Нарколог на дом | metro | Октябрьское Поле | oktyabrskoe-pole | core | P0 | migrate/create | /uslugi/narkolog-na-dom/oktyabrskoe-pole/ |
+| Нарколог на дом | metro | Октябрьская | oktyabrskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/oktyabrskaya/ |
+| Нарколог на дом | metro | Орехово | orehovo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/orehovo/ |
+| Нарколог на дом | metro | Отрадное | otradnoe | core | P0 | migrate/create | /uslugi/narkolog-na-dom/otradnoe/ |
+| Нарколог на дом | metro | Панфиловская | panfilovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/panfilovskaya/ |
+| Нарколог на дом | metro | Парк культуры | park-kultury | core | P0 | migrate/create | /uslugi/narkolog-na-dom/park-kultury/ |
+| Нарколог на дом | metro | Парк Победы | park-pobedy | core | P0 | migrate/create | /uslugi/narkolog-na-dom/park-pobedy/ |
+| Нарколог на дом | metro | Партизанская | partizanskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/partizanskaya/ |
+| Нарколог на дом | metro | Павелецкая | paveleckaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/paveleckaya/ |
+| Нарколог на дом | metro | Печатники | pechatniki | core | P0 | migrate/create | /uslugi/narkolog-na-dom/pechatniki/ |
+| Нарколог на дом | metro | Перово | perovo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/perovo/ |
+| Нарколог на дом | metro | Первомайская | pervomajskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/pervomajskaya/ |
+| Нарколог на дом | metro | Петровский парк | petrovskij-park | core | P0 | migrate/create | /uslugi/narkolog-na-dom/petrovskij-park/ |
+| Нарколог на дом | metro | Петровско-Разумовская | petrovsko-razumovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/petrovsko-razumovskaya/ |
+| Нарколог на дом | metro | Пионерская | pionerskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/pionerskaya/ |
+| Нарколог на дом | metro | Планерная | planernaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/planernaya/ |
+| Нарколог на дом | metro | Площадь Гагарина | ploshchad-gagarina | core | P0 | migrate/create | /uslugi/narkolog-na-dom/ploshchad-gagarina/ |
+| Нарколог на дом | metro | Площадь Ильича | ploshchad-ilicha | core | P0 | migrate/create | /uslugi/narkolog-na-dom/ploshchad-ilicha/ |
+| Нарколог на дом | metro | Площадь Революции | ploshchad-revolyucii | core | P0 | migrate/create | /uslugi/narkolog-na-dom/ploshchad-revolyucii/ |
+| Нарколог на дом | metro | Полежаевская | polezhaevskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/polezhaevskaya/ |
+| Нарколог на дом | metro | Полянка | polyanka | core | P0 | migrate/create | /uslugi/narkolog-na-dom/polyanka/ |
+| Нарколог на дом | metro | Пражская | prazhskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/prazhskaya/ |
+| Нарколог на дом | metro | Преображенская площадь | preobrazhenskaya-ploshchad | core | P0 | migrate/create | /uslugi/narkolog-na-dom/preobrazhenskaya-ploshchad/ |
+| Нарколог на дом | metro | Профсоюзная | profsoyuznaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/profsoyuznaya/ |
+| Нарколог на дом | metro | Пролетарская | proletarskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/proletarskaya/ |
+| Нарколог на дом | metro | Проспект Мира | prospekt-mira | core | P0 | migrate/create | /uslugi/narkolog-na-dom/prospekt-mira/ |
+| Нарколог на дом | metro | Проспект Вернадского | prospekt-vernadskogo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/prospekt-vernadskogo/ |
+| Нарколог на дом | metro | Пушкинская | pushkinskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/pushkinskaya/ |
+| Нарколог на дом | metro | Пятницкое шоссе | pyatnickoe-shosse | core | P0 | migrate/create | /uslugi/narkolog-na-dom/pyatnickoe-shosse/ |
+| Нарколог на дом | metro | Раменки | ramenki | core | P0 | migrate/create | /uslugi/narkolog-na-dom/ramenki/ |
+| Нарколог на дом | metro | Речной вокзал | rechnoj-vokzal | core | P0 | migrate/create | /uslugi/narkolog-na-dom/rechnoj-vokzal/ |
+| Нарколог на дом | metro | Римская | rimskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/rimskaya/ |
+| Нарколог на дом | metro | Рижская | rizhskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/rizhskaya/ |
+| Нарколог на дом | metro | Ростокино | rostokino | core | P0 | migrate/create | /uslugi/narkolog-na-dom/rostokino/ |
+| Нарколог на дом | metro | Румянцево | rumyancevo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/rumyancevo/ |
+| Нарколог на дом | metro | Рязанский проспект | ryazanskij-prospekt | core | P0 | migrate/create | /uslugi/narkolog-na-dom/ryazanskij-prospekt/ |
+| Нарколог на дом | metro | Саларьево | salarevo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/salarevo/ |
+| Нарколог на дом | metro | Савёловская | savelovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/savelovskaya/ |
+| Нарколог на дом | metro | Селигерская | seligerskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/seligerskaya/ |
+| Нарколог на дом | metro | Семёновская | semenovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/semenovskaya/ |
+| Нарколог на дом | metro | Серпуховская | serpuhovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/serpuhovskaya/ |
+| Нарколог на дом | metro | Севастопольская | sevastopolskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/sevastopolskaya/ |
+| Нарколог на дом | metro | Шаболовская | shabolovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/shabolovskaya/ |
+| Нарколог на дом | metro | Шелепиха | shelepiha | core | P0 | migrate/create | /uslugi/narkolog-na-dom/shelepiha/ |
+| Нарколог на дом | metro | Щукинская | shchukinskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/shchukinskaya/ |
+| Нарколог на дом | metro | Щёлковская | shchelkovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/shchelkovskaya/ |
+| Нарколог на дом | metro | Шипиловская | shipilovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/shipilovskaya/ |
+| Нарколог на дом | metro | Сходненская | shodnenskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/shodnenskaya/ |
+| Нарколог на дом | metro | Шоссе Энтузиастов | shosse-entuziastov | core | P0 | migrate/create | /uslugi/narkolog-na-dom/shosse-entuziastov/ |
+| Нарколог на дом | metro | Улица Скобелевская | ulica-skobelevskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/ulica-skobelevskaya/ |
+| Нарколог на дом | metro | Славянский бульвар | slavyanskij-bulvar | core | P0 | migrate/create | /uslugi/narkolog-na-dom/slavyanskij-bulvar/ |
+| Нарколог на дом | metro | Смоленская | smolenskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/smolenskaya/ |
+| Нарколог на дом | metro | Сокол | sokol | core | P0 | migrate/create | /uslugi/narkolog-na-dom/sokol/ |
+| Нарколог на дом | metro | Соколиная гора | sokolinaya-gora | core | P0 | migrate/create | /uslugi/narkolog-na-dom/sokolinaya-gora/ |
+| Нарколог на дом | metro | Спартак | spartak | core | P0 | migrate/create | /uslugi/narkolog-na-dom/spartak/ |
+| Нарколог на дом | metro | Спортивная | sportivnaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/sportivnaya/ |
+| Нарколог на дом | metro | Сретенский бульвар | sretenskij-bulvar | core | P0 | migrate/create | /uslugi/narkolog-na-dom/sretenskij-bulvar/ |
+| Нарколог на дом | metro | Стрешнево | streshnevo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/streshnevo/ |
+| Нарколог на дом | metro | Строгино | strogino | core | P0 | migrate/create | /uslugi/narkolog-na-dom/strogino/ |
+| Нарколог на дом | metro | Студенческая | studencheskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/studencheskaya/ |
+| Нарколог на дом | metro | Сухаревская | suharevskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/suharevskaya/ |
+| Нарколог на дом | metro | Свиблово | sviblovo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/sviblovo/ |
+| Нарколог на дом | metro | Таганская | taganskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/taganskaya/ |
+| Нарколог на дом | metro | Театральная | teatralnaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/teatralnaya/ |
+| Нарколог на дом | metro | Технопарк | tehnopark | core | P0 | migrate/create | /uslugi/narkolog-na-dom/tehnopark/ |
+| Нарколог на дом | metro | Текстильщики | tekstilshchiki | core | P0 | migrate/create | /uslugi/narkolog-na-dom/tekstilshchiki/ |
+| Нарколог на дом | metro | Телецентр | telecentr | core | P0 | migrate/create | /uslugi/narkolog-na-dom/telecentr/ |
+| Нарколог на дом | metro | Тёплый Стан | teplyj-stan | core | P0 | migrate/create | /uslugi/narkolog-na-dom/teplyj-stan/ |
+| Нарколог на дом | metro | Тимирязевская | timiryazevskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/timiryazevskaya/ |
+| Нарколог на дом | metro | Третьяковская | tretyakovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/tretyakovskaya/ |
+| Нарколог на дом | metro | Тропарёво | troparevo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/troparevo/ |
+| Нарколог на дом | metro | Трубная | trubnaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/trubnaya/ |
+| Нарколог на дом | metro | Тульская | tulskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/tulskaya/ |
+| Нарколог на дом | metro | Тургеневская | turgenevskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/turgenevskaya/ |
+| Нарколог на дом | metro | Тушинская | tushinskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/tushinskaya/ |
+| Нарколог на дом | metro | Тверская | tverskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/tverskaya/ |
+| Нарколог на дом | metro | Угрешская | ugreshskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/ugreshskaya/ |
+| Нарколог на дом | metro | Улица 1905 года | ulica-1905-goda | core | P0 | migrate/create | /uslugi/narkolog-na-dom/ulica-1905-goda/ |
+| Нарколог на дом | metro | Улица Академика Королёва | ulica-akademika-koroleva | core | P0 | migrate/create | /uslugi/narkolog-na-dom/ulica-akademika-koroleva/ |
+| Нарколог на дом | metro | Улица Академика Янгеля | ulica-akademika-yangelya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/ulica-akademika-yangelya/ |
+| Нарколог на дом | metro | Улица Горчакова | ulica-gorchakova | core | P0 | migrate/create | /uslugi/narkolog-na-dom/ulica-gorchakova/ |
+| Нарколог на дом | metro | Улица Милашенкова | ulica-milashenkova | core | P0 | migrate/create | /uslugi/narkolog-na-dom/ulica-milashenkova/ |
+| Нарколог на дом | metro | Улица Сергея Эйзенштейна | ulica-sergeya-ejzenshtejna | core | P0 | migrate/create | /uslugi/narkolog-na-dom/ulica-sergeya-ejzenshtejna/ |
+| Нарколог на дом | metro | Улица Старокачаловская | ulica-starokachalovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/ulica-starokachalovskaya/ |
+| Нарколог на дом | metro | Университет | universitet | core | P0 | migrate/create | /uslugi/narkolog-na-dom/universitet/ |
+| Нарколог на дом | metro | Варшавская | varshavskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/varshavskaya/ |
+| Нарколог на дом | metro | ВДНХ | vdnh | core | P0 | migrate/create | /uslugi/narkolog-na-dom/vdnh/ |
+| Нарколог на дом | metro | Верхние Котлы | verhnie-kotly | core | P0 | migrate/create | /uslugi/narkolog-na-dom/verhnie-kotly/ |
+| Нарколог на дом | metro | Верхние Лихоборы | verhnie-lihobory | core | P0 | migrate/create | /uslugi/narkolog-na-dom/verhnie-lihobory/ |
+| Нарколог на дом | metro | Владыкино | vladykino | core | P0 | migrate/create | /uslugi/narkolog-na-dom/vladykino/ |
+| Нарколог на дом | metro | Водный стадион | vodnyj-stadion | core | P0 | migrate/create | /uslugi/narkolog-na-dom/vodnyj-stadion/ |
+| Нарколог на дом | metro | Войковская | vojkovskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/vojkovskaya/ |
+| Нарколог на дом | metro | Волгоградский проспект | volgogradskij-prospekt | core | P0 | migrate/create | /uslugi/narkolog-na-dom/volgogradskij-prospekt/ |
+| Нарколог на дом | metro | Волоколамская | volokolamskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/volokolamskaya/ |
+| Нарколог на дом | metro | Волжская | volzhskaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/volzhskaya/ |
+| Нарколог на дом | metro | Воробьёвы горы | vorobevy-gory | core | P0 | migrate/create | /uslugi/narkolog-na-dom/vorobevy-gory/ |
+| Нарколог на дом | metro | Выхино | vyhino | core | P0 | migrate/create | /uslugi/narkolog-na-dom/vyhino/ |
+| Нарколог на дом | metro | Выставочная | vystavochnaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/vystavochnaya/ |
+| Нарколог на дом | metro | Выставочный центр | vystavochnyj-centr | core | P0 | migrate/create | /uslugi/narkolog-na-dom/vystavochnyj-centr/ |
+| Нарколог на дом | metro | Ясенево | yasenevo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/yasenevo/ |
+| Нарколог на дом | metro | Юго-Западная | yugo-zapadnaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/yugo-zapadnaya/ |
+| Нарколог на дом | metro | Южная | yuzhnaya | core | P0 | migrate/create | /uslugi/narkolog-na-dom/yuzhnaya/ |
+| Нарколог на дом | metro | Жулебино | zhulebino | core | P0 | migrate/create | /uslugi/narkolog-na-dom/zhulebino/ |
+| Нарколог на дом | metro | ЗИЛ | zil | core | P0 | migrate/create | /uslugi/narkolog-na-dom/zil/ |
+| Нарколог на дом | metro | Зорге | zorge | core | P0 | migrate/create | /uslugi/narkolog-na-dom/zorge/ |
+| Нарколог на дом | metro | Зябликово | zyablikovo | core | P0 | migrate/create | /uslugi/narkolog-na-dom/zyablikovo/ |
+| Нарколог на дом | okrug | ЦАО | cao | core | P0 | migrate/create | /uslugi/narkolog-na-dom/cao/ |
+| Нарколог на дом | okrug | САО | sao | core | P0 | migrate/create | /uslugi/narkolog-na-dom/sao/ |
+| Нарколог на дом | okrug | СВАО | svao | core | P0 | migrate/create | /uslugi/narkolog-na-dom/svao/ |
+| Нарколог на дом | okrug | ВАО | vao | core | P0 | migrate/create | /uslugi/narkolog-na-dom/vao/ |
+| Нарколог на дом | okrug | ЮВАО | yuvao | core | P0 | migrate/create | /uslugi/narkolog-na-dom/yuvao/ |
+| Нарколог на дом | okrug | ЮАО | yuao | core | P0 | migrate/create | /uslugi/narkolog-na-dom/yuao/ |
+| Нарколог на дом | okrug | ЮЗАО | yuzao | core | P0 | migrate/create | /uslugi/narkolog-na-dom/yuzao/ |
+| Нарколог на дом | okrug | ЗАО | zao | core | P0 | migrate/create | /uslugi/narkolog-na-dom/zao/ |
+| Нарколог на дом | okrug | СЗАО | szao | core | P0 | migrate/create | /uslugi/narkolog-na-dom/szao/ |
+| Нарколог на дом | okrug | ЗелАО | zelao | core | P0 | migrate/create | /uslugi/narkolog-na-dom/zelao/ |
+| Нарколог на дом | okrug | НАО | nao | core | P0 | migrate/create | /uslugi/narkolog-na-dom/nao/ |
+| Нарколог на дом | okrug | ТАО | tao | core | P0 | migrate/create | /uslugi/narkolog-na-dom/tao/ |
 | Нарколог на дом | mo | Балашиха | balashiha | tier-1 | P0 | migrate/create | /uslugi/narkolog-na-dom/moskovskaya-oblast/balashiha/ |
 | Нарколог на дом | mo | Подольск | podolsk | tier-1 | P0 | migrate/create | /uslugi/narkolog-na-dom/moskovskaya-oblast/podolsk/ |
 | Нарколог на дом | mo | Химки | himki | tier-1 | P0 | migrate/create | /uslugi/narkolog-na-dom/moskovskaya-oblast/himki/ |
@@ -1822,233 +1826,233 @@ SILO-хаб
 | Нарколог на дом | mo | Дубна | dubna | tier-2 | P1 | migrate/create | /uslugi/narkolog-na-dom/moskovskaya-oblast/dubna/ |
 | Нарколог на дом | mo | Черноголовка | chernogolovka | tier-2 | P1 | migrate/create | /uslugi/narkolog-na-dom/moskovskaya-oblast/chernogolovka/ |
 | Нарколог на дом | mo | Волоколамск | volokolamsk | tier-2 | P1 | migrate/create | /uslugi/narkolog-na-dom/moskovskaya-oblast/volokolamsk/ |
-| Вывод из запоя на дому | metro | Аэропорт | aeroport | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/aeroport/ |
-| Вывод из запоя на дому | metro | Александровский сад | aleksandrovskij-sad | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/aleksandrovskij-sad/ |
-| Вывод из запоя на дому | metro | Алексеевская | alekseevskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/alekseevskaya/ |
-| Вывод из запоя на дому | metro | Алма-Атинская | alma-atinskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/alma-atinskaya/ |
-| Вывод из запоя на дому | metro | Алтуфьево | altufevo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/altufevo/ |
-| Вывод из запоя на дому | metro | Андроновка | andronovka | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/andronovka/ |
-| Вывод из запоя на дому | metro | Аннино | annino | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/annino/ |
-| Вывод из запоя на дому | metro | Арбатская | arbatskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/arbatskaya/ |
-| Вывод из запоя на дому | metro | Авиамоторная | aviamotornaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/aviamotornaya/ |
-| Вывод из запоя на дому | metro | Автозаводская | avtozavodskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/avtozavodskaya/ |
-| Вывод из запоя на дому | metro | Бабушкинская | babushkinskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/babushkinskaya/ |
-| Вывод из запоя на дому | metro | Багратионовская | bagrationovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/bagrationovskaya/ |
-| Вывод из запоя на дому | metro | Балтийская | baltijskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/baltijskaya/ |
-| Вывод из запоя на дому | metro | Баррикадная | barrikadnaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/barrikadnaya/ |
-| Вывод из запоя на дому | metro | Бауманская | baumanskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/baumanskaya/ |
-| Вывод из запоя на дому | metro | Беговая | begovaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/begovaya/ |
-| Вывод из запоя на дому | metro | Белокаменная | belokamennaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/belokamennaya/ |
-| Вывод из запоя на дому | metro | Белорусская | belorusskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/belorusskaya/ |
-| Вывод из запоя на дому | metro | Беляево | belyaevo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/belyaevo/ |
-| Вывод из запоя на дому | metro | Бибирево | bibirevo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/bibirevo/ |
-| Вывод из запоя на дому | metro | Библиотека имени Ленина | biblioteka-imeni-lenina | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/biblioteka-imeni-lenina/ |
-| Вывод из запоя на дому | metro | Битцевский парк | bitcevskij-park | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/bitcevskij-park/ |
-| Вывод из запоя на дому | metro | Борисово | borisovo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/borisovo/ |
-| Вывод из запоя на дому | metro | Боровицкая | borovickaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/borovickaya/ |
-| Вывод из запоя на дому | metro | Ботанический сад | botanicheskij-sad | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/botanicheskij-sad/ |
-| Вывод из запоя на дому | metro | Братиславская | bratislavskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/bratislavskaya/ |
-| Вывод из запоя на дому | metro | Бульвар Адмирала Ушакова | bulvar-admirala-ushakova | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/bulvar-admirala-ushakova/ |
-| Вывод из запоя на дому | metro | Бульвар Рокоссовского | bulvar-rokossovskogo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/bulvar-rokossovskogo/ |
-| Вывод из запоя на дому | metro | Бунинская аллея | buninskaya-alleya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/buninskaya-alleya/ |
-| Вывод из запоя на дому | metro | Бутырская | butyrskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/butyrskaya/ |
-| Вывод из запоя на дому | metro | Чеховская | chehovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/chehovskaya/ |
-| Вывод из запоя на дому | metro | Черкизовская | cherkizovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/cherkizovskaya/ |
-| Вывод из запоя на дому | metro | Чертановская | chertanovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/chertanovskaya/ |
-| Вывод из запоя на дому | metro | Чистые пруды | chistye-prudy | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/chistye-prudy/ |
-| Вывод из запоя на дому | metro | Чкаловская | chkalovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/chkalovskaya/ |
-| Вывод из запоя на дому | metro | Царицыно | caricyno | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/caricyno/ |
-| Вывод из запоя на дому | metro | ЦСКА | cska | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/cska/ |
-| Вывод из запоя на дому | metro | Цветной бульвар | cvetnoj-bulvar | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/cvetnoj-bulvar/ |
-| Вывод из запоя на дому | metro | Деловой центр | delovoj-centr | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/delovoj-centr/ |
-| Вывод из запоя на дому | metro | Динамо | dinamo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/dinamo/ |
-| Вывод из запоя на дому | metro | Дмитровская | dmitrovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/dmitrovskaya/ |
-| Вывод из запоя на дому | metro | Добрынинская | dobryninskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/dobryninskaya/ |
-| Вывод из запоя на дому | metro | Домодедовская | domodedovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/domodedovskaya/ |
-| Вывод из запоя на дому | metro | Достоевская | dostoevskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/dostoevskaya/ |
-| Вывод из запоя на дому | metro | Электрозаводская | elektrozavodskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/elektrozavodskaya/ |
-| Вывод из запоя на дому | metro | Филёвский парк | filevskij-park | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/filevskij-park/ |
-| Вывод из запоя на дому | metro | Фили | fili | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/fili/ |
-| Вывод из запоя на дому | metro | Фонвизинская | fonvizinskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/fonvizinskaya/ |
-| Вывод из запоя на дому | metro | Фрунзенская | frunzenskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/frunzenskaya/ |
-| Вывод из запоя на дому | metro | Хорошёвская | horoshevskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/horoshevskaya/ |
-| Вывод из запоя на дому | metro | Ховрино | hovrino | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/hovrino/ |
-| Вывод из запоя на дому | metro | Измайловская | izmajlovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/izmajlovskaya/ |
-| Вывод из запоя на дому | metro | Каховская | kahovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/kahovskaya/ |
-| Вывод из запоя на дому | metro | Калужская | kaluzhskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/kaluzhskaya/ |
-| Вывод из запоя на дому | metro | Кантемировская | kantemirovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/kantemirovskaya/ |
-| Вывод из запоя на дому | metro | Каширская | kashirskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/kashirskaya/ |
-| Вывод из запоя на дому | metro | Киевская | kievskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/kievskaya/ |
-| Вывод из запоя на дому | metro | Китай-город | kitaj-gorod | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/kitaj-gorod/ |
-| Вывод из запоя на дому | metro | Коломенская | kolomenskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/kolomenskaya/ |
-| Вывод из запоя на дому | metro | Комсомольская | komsomolskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/komsomolskaya/ |
-| Вывод из запоя на дому | metro | Коньково | konkovo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/konkovo/ |
-| Вывод из запоя на дому | metro | Коптево | koptevo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/koptevo/ |
-| Вывод из запоя на дому | metro | Котельники | kotelniki | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/kotelniki/ |
-| Вывод из запоя на дому | metro | Кожуховская | kozhuhovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/kozhuhovskaya/ |
-| Вывод из запоя на дому | metro | Красногвардейская | krasnogvardejskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/krasnogvardejskaya/ |
-| Вывод из запоя на дому | metro | Краснопресненская | krasnopresnenskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/krasnopresnenskaya/ |
-| Вывод из запоя на дому | metro | Красносельская | krasnoselskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/krasnoselskaya/ |
-| Вывод из запоя на дому | metro | Красные ворота | krasnye-vorota | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/krasnye-vorota/ |
-| Вывод из запоя на дому | metro | Крестьянская застава | krestyanskaya-zastava | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/krestyanskaya-zastava/ |
-| Вывод из запоя на дому | metro | Кропоткинская | kropotkinskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/kropotkinskaya/ |
-| Вывод из запоя на дому | metro | Крылатское | krylatskoe | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/krylatskoe/ |
-| Вывод из запоя на дому | metro | Крымская | krymskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/krymskaya/ |
-| Вывод из запоя на дому | metro | Кунцевская | kuncevskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/kuncevskaya/ |
-| Вывод из запоя на дому | metro | Курская | kurskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/kurskaya/ |
-| Вывод из запоя на дому | metro | Кутузовская | kutuzovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/kutuzovskaya/ |
-| Вывод из запоя на дому | metro | Кузьминки | kuzminki | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/kuzminki/ |
-| Вывод из запоя на дому | metro | Кузнецкий мост | kuzneckij-most | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/kuzneckij-most/ |
-| Вывод из запоя на дому | metro | Ленинский проспект | leninskij-prospekt | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/leninskij-prospekt/ |
-| Вывод из запоя на дому | metro | Лермонтовский проспект | lermontovskij-prospekt | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/lermontovskij-prospekt/ |
-| Вывод из запоя на дому | metro | Лесопарковая | lesoparkovaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/lesoparkovaya/ |
-| Вывод из запоя на дому | metro | Лихоборы | lihobory | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/lihobory/ |
-| Вывод из запоя на дому | metro | Локомотив | lokomotiv | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/lokomotiv/ |
-| Вывод из запоя на дому | metro | Ломоносовский проспект | lomonosovskij-prospekt | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/lomonosovskij-prospekt/ |
-| Вывод из запоя на дому | metro | Лубянка | lubyanka | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/lubyanka/ |
-| Вывод из запоя на дому | metro | Лужники | luzhniki | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/luzhniki/ |
-| Вывод из запоя на дому | metro | Люблино | lyublino | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/lyublino/ |
-| Вывод из запоя на дому | metro | Марьино | marino | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/marino/ |
-| Вывод из запоя на дому | metro | Марьина Роща | marina-roshcha | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/marina-roshcha/ |
-| Вывод из запоя на дому | metro | Марксистская | marksistskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/marksistskaya/ |
-| Вывод из запоя на дому | metro | Маяковская | mayakovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/mayakovskaya/ |
-| Вывод из запоя на дому | metro | Медведково | medvedkovo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/medvedkovo/ |
-| Вывод из запоя на дому | metro | Менделеевская | mendeleevskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/mendeleevskaya/ |
-| Вывод из запоя на дому | metro | Международная | mezhdunarodnaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/mezhdunarodnaya/ |
-| Вывод из запоя на дому | metro | Минская | minskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/minskaya/ |
-| Вывод из запоя на дому | metro | Молодёжная | molodezhnaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/molodezhnaya/ |
-| Вывод из запоя на дому | metro | Мякинино | myakinino | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/myakinino/ |
-| Вывод из запоя на дому | metro | Нагатинская | nagatinskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/nagatinskaya/ |
-| Вывод из запоя на дому | metro | Нагорная | nagornaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/nagornaya/ |
-| Вывод из запоя на дому | metro | Нахимовский проспект | nahimovskij-prospekt | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/nahimovskij-prospekt/ |
-| Вывод из запоя на дому | metro | Нижегородская | nizhegorodskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/nizhegorodskaya/ |
-| Вывод из запоя на дому | metro | Новогиреево | novogireevo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/novogireevo/ |
-| Вывод из запоя на дому | metro | Новохохловская | novohohlovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/novohohlovskaya/ |
-| Вывод из запоя на дому | metro | Новокосино | novokosino | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/novokosino/ |
-| Вывод из запоя на дому | metro | Новокузнецкая | novokuzneckaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/novokuzneckaya/ |
-| Вывод из запоя на дому | metro | Новослободская | novoslobodskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/novoslobodskaya/ |
-| Вывод из запоя на дому | metro | Новоясеневская | novoyasenevskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/novoyasenevskaya/ |
-| Вывод из запоя на дому | metro | Новые Черёмушки | novye-cheremushki | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/novye-cheremushki/ |
-| Вывод из запоя на дому | metro | Охотный Ряд | ohotnyj-ryad | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/ohotnyj-ryad/ |
-| Вывод из запоя на дому | metro | Окружная | okruzhnaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/okruzhnaya/ |
-| Вывод из запоя на дому | metro | Октябрьское Поле | oktyabrskoe-pole | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/oktyabrskoe-pole/ |
-| Вывод из запоя на дому | metro | Октябрьская | oktyabrskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/oktyabrskaya/ |
-| Вывод из запоя на дому | metro | Орехово | orehovo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/orehovo/ |
-| Вывод из запоя на дому | metro | Отрадное | otradnoe | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/otradnoe/ |
-| Вывод из запоя на дому | metro | Панфиловская | panfilovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/panfilovskaya/ |
-| Вывод из запоя на дому | metro | Парк культуры | park-kultury | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/park-kultury/ |
-| Вывод из запоя на дому | metro | Парк Победы | park-pobedy | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/park-pobedy/ |
-| Вывод из запоя на дому | metro | Партизанская | partizanskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/partizanskaya/ |
-| Вывод из запоя на дому | metro | Павелецкая | paveleckaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/paveleckaya/ |
-| Вывод из запоя на дому | metro | Печатники | pechatniki | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/pechatniki/ |
-| Вывод из запоя на дому | metro | Перово | perovo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/perovo/ |
-| Вывод из запоя на дому | metro | Первомайская | pervomajskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/pervomajskaya/ |
-| Вывод из запоя на дому | metro | Петровский парк | petrovskij-park | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/petrovskij-park/ |
-| Вывод из запоя на дому | metro | Петровско-Разумовская | petrovsko-razumovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/petrovsko-razumovskaya/ |
-| Вывод из запоя на дому | metro | Пионерская | pionerskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/pionerskaya/ |
-| Вывод из запоя на дому | metro | Планерная | planernaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/planernaya/ |
-| Вывод из запоя на дому | metro | Площадь Гагарина | ploshchad-gagarina | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/ploshchad-gagarina/ |
-| Вывод из запоя на дому | metro | Площадь Ильича | ploshchad-ilicha | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/ploshchad-ilicha/ |
-| Вывод из запоя на дому | metro | Площадь Революции | ploshchad-revolyucii | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/ploshchad-revolyucii/ |
-| Вывод из запоя на дому | metro | Полежаевская | polezhaevskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/polezhaevskaya/ |
-| Вывод из запоя на дому | metro | Полянка | polyanka | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/polyanka/ |
-| Вывод из запоя на дому | metro | Пражская | prazhskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/prazhskaya/ |
-| Вывод из запоя на дому | metro | Преображенская площадь | preobrazhenskaya-ploshchad | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/preobrazhenskaya-ploshchad/ |
-| Вывод из запоя на дому | metro | Профсоюзная | profsoyuznaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/profsoyuznaya/ |
-| Вывод из запоя на дому | metro | Пролетарская | proletarskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/proletarskaya/ |
-| Вывод из запоя на дому | metro | Проспект Мира | prospekt-mira | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/prospekt-mira/ |
-| Вывод из запоя на дому | metro | Проспект Вернадского | prospekt-vernadskogo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/prospekt-vernadskogo/ |
-| Вывод из запоя на дому | metro | Пушкинская | pushkinskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/pushkinskaya/ |
-| Вывод из запоя на дому | metro | Пятницкое шоссе | pyatnickoe-shosse | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/pyatnickoe-shosse/ |
-| Вывод из запоя на дому | metro | Раменки | ramenki | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/ramenki/ |
-| Вывод из запоя на дому | metro | Речной вокзал | rechnoj-vokzal | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/rechnoj-vokzal/ |
-| Вывод из запоя на дому | metro | Римская | rimskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/rimskaya/ |
-| Вывод из запоя на дому | metro | Рижская | rizhskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/rizhskaya/ |
-| Вывод из запоя на дому | metro | Ростокино | rostokino | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/rostokino/ |
-| Вывод из запоя на дому | metro | Румянцево | rumyancevo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/rumyancevo/ |
-| Вывод из запоя на дому | metro | Рязанский проспект | ryazanskij-prospekt | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/ryazanskij-prospekt/ |
-| Вывод из запоя на дому | metro | Саларьево | salarevo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/salarevo/ |
-| Вывод из запоя на дому | metro | Савёловская | savelovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/savelovskaya/ |
-| Вывод из запоя на дому | metro | Селигерская | seligerskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/seligerskaya/ |
-| Вывод из запоя на дому | metro | Семёновская | semenovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/semenovskaya/ |
-| Вывод из запоя на дому | metro | Серпуховская | serpuhovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/serpuhovskaya/ |
-| Вывод из запоя на дому | metro | Севастопольская | sevastopolskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/sevastopolskaya/ |
-| Вывод из запоя на дому | metro | Шаболовская | shabolovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/shabolovskaya/ |
-| Вывод из запоя на дому | metro | Шелепиха | shelepiha | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/shelepiha/ |
-| Вывод из запоя на дому | metro | Щукинская | shchukinskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/shchukinskaya/ |
-| Вывод из запоя на дому | metro | Щёлковская | shchelkovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/shchelkovskaya/ |
-| Вывод из запоя на дому | metro | Шипиловская | shipilovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/shipilovskaya/ |
-| Вывод из запоя на дому | metro | Сходненская | shodnenskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/shodnenskaya/ |
-| Вывод из запоя на дому | metro | Шоссе Энтузиастов | shosse-entuziastov | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/shosse-entuziastov/ |
-| Вывод из запоя на дому | metro | Улица Скобелевская | ulica-skobelevskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/ulica-skobelevskaya/ |
-| Вывод из запоя на дому | metro | Славянский бульвар | slavyanskij-bulvar | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/slavyanskij-bulvar/ |
-| Вывод из запоя на дому | metro | Смоленская | smolenskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/smolenskaya/ |
-| Вывод из запоя на дому | metro | Сокол | sokol | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/sokol/ |
-| Вывод из запоя на дому | metro | Соколиная гора | sokolinaya-gora | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/sokolinaya-gora/ |
-| Вывод из запоя на дому | metro | Спартак | spartak | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/spartak/ |
-| Вывод из запоя на дому | metro | Спортивная | sportivnaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/sportivnaya/ |
-| Вывод из запоя на дому | metro | Сретенский бульвар | sretenskij-bulvar | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/sretenskij-bulvar/ |
-| Вывод из запоя на дому | metro | Стрешнево | streshnevo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/streshnevo/ |
-| Вывод из запоя на дому | metro | Строгино | strogino | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/strogino/ |
-| Вывод из запоя на дому | metro | Студенческая | studencheskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/studencheskaya/ |
-| Вывод из запоя на дому | metro | Сухаревская | suharevskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/suharevskaya/ |
-| Вывод из запоя на дому | metro | Свиблово | sviblovo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/sviblovo/ |
-| Вывод из запоя на дому | metro | Таганская | taganskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/taganskaya/ |
-| Вывод из запоя на дому | metro | Театральная | teatralnaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/teatralnaya/ |
-| Вывод из запоя на дому | metro | Технопарк | tehnopark | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/tehnopark/ |
-| Вывод из запоя на дому | metro | Текстильщики | tekstilshchiki | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/tekstilshchiki/ |
-| Вывод из запоя на дому | metro | Телецентр | telecentr | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/telecentr/ |
-| Вывод из запоя на дому | metro | Тёплый Стан | teplyj-stan | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/teplyj-stan/ |
-| Вывод из запоя на дому | metro | Тимирязевская | timiryazevskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/timiryazevskaya/ |
-| Вывод из запоя на дому | metro | Третьяковская | tretyakovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/tretyakovskaya/ |
-| Вывод из запоя на дому | metro | Тропарёво | troparevo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/troparevo/ |
-| Вывод из запоя на дому | metro | Трубная | trubnaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/trubnaya/ |
-| Вывод из запоя на дому | metro | Тульская | tulskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/tulskaya/ |
-| Вывод из запоя на дому | metro | Тургеневская | turgenevskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/turgenevskaya/ |
-| Вывод из запоя на дому | metro | Тушинская | tushinskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/tushinskaya/ |
-| Вывод из запоя на дому | metro | Тверская | tverskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/tverskaya/ |
-| Вывод из запоя на дому | metro | Угрешская | ugreshskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/ugreshskaya/ |
-| Вывод из запоя на дому | metro | Улица 1905 года | ulica-1905-goda | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/ulica-1905-goda/ |
-| Вывод из запоя на дому | metro | Улица Академика Королёва | ulica-akademika-koroleva | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/ulica-akademika-koroleva/ |
-| Вывод из запоя на дому | metro | Улица Академика Янгеля | ulica-akademika-yangelya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/ulica-akademika-yangelya/ |
-| Вывод из запоя на дому | metro | Улица Горчакова | ulica-gorchakova | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/ulica-gorchakova/ |
-| Вывод из запоя на дому | metro | Улица Милашенкова | ulica-milashenkova | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/ulica-milashenkova/ |
-| Вывод из запоя на дому | metro | Улица Сергея Эйзенштейна | ulica-sergeya-ejzenshtejna | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/ulica-sergeya-ejzenshtejna/ |
-| Вывод из запоя на дому | metro | Улица Старокачаловская | ulica-starokachalovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/ulica-starokachalovskaya/ |
-| Вывод из запоя на дому | metro | Университет | universitet | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/universitet/ |
-| Вывод из запоя на дому | metro | Варшавская | varshavskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/varshavskaya/ |
-| Вывод из запоя на дому | metro | ВДНХ | vdnh | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/vdnh/ |
-| Вывод из запоя на дому | metro | Верхние Котлы | verhnie-kotly | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/verhnie-kotly/ |
-| Вывод из запоя на дому | metro | Верхние Лихоборы | verhnie-lihobory | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/verhnie-lihobory/ |
-| Вывод из запоя на дому | metro | Владыкино | vladykino | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/vladykino/ |
-| Вывод из запоя на дому | metro | Водный стадион | vodnyj-stadion | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/vodnyj-stadion/ |
-| Вывод из запоя на дому | metro | Войковская | vojkovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/vojkovskaya/ |
-| Вывод из запоя на дому | metro | Волгоградский проспект | volgogradskij-prospekt | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/volgogradskij-prospekt/ |
-| Вывод из запоя на дому | metro | Волоколамская | volokolamskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/volokolamskaya/ |
-| Вывод из запоя на дому | metro | Волжская | volzhskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/volzhskaya/ |
-| Вывод из запоя на дому | metro | Воробьёвы горы | vorobevy-gory | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/vorobevy-gory/ |
-| Вывод из запоя на дому | metro | Выхино | vyhino | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/vyhino/ |
-| Вывод из запоя на дому | metro | Выставочная | vystavochnaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/vystavochnaya/ |
-| Вывод из запоя на дому | metro | Выставочный центр | vystavochnyj-centr | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/vystavochnyj-centr/ |
-| Вывод из запоя на дому | metro | Ясенево | yasenevo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/yasenevo/ |
-| Вывод из запоя на дому | metro | Юго-Западная | yugo-zapadnaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/yugo-zapadnaya/ |
-| Вывод из запоя на дому | metro | Южная | yuzhnaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/yuzhnaya/ |
-| Вывод из запоя на дому | metro | Жулебино | zhulebino | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/zhulebino/ |
-| Вывод из запоя на дому | metro | ЗИЛ | zil | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/zil/ |
-| Вывод из запоя на дому | metro | Зорге | zorge | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/zorge/ |
-| Вывод из запоя на дому | metro | Зябликово | zyablikovo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/zyablikovo/ |
-| Вывод из запоя на дому | okrug | ЦАО | cao | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/cao/ |
-| Вывод из запоя на дому | okrug | САО | sao | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/sao/ |
-| Вывод из запоя на дому | okrug | СВАО | svao | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/svao/ |
-| Вывод из запоя на дому | okrug | ВАО | vao | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/vao/ |
-| Вывод из запоя на дому | okrug | ЮВАО | yuvao | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/yuvao/ |
-| Вывод из запоя на дому | okrug | ЮАО | yuao | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/yuao/ |
-| Вывод из запоя на дому | okrug | ЮЗАО | yuzao | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/yuzao/ |
-| Вывод из запоя на дому | okrug | ЗАО | zao | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/zao/ |
-| Вывод из запоя на дому | okrug | СЗАО | szao | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/szao/ |
-| Вывод из запоя на дому | okrug | ЗелАО | zelao | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/zelao/ |
-| Вывод из запоя на дому | okrug | НАО | nao | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/nao/ |
-| Вывод из запоя на дому | okrug | ТАО | tao | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskva/tao/ |
+| Вывод из запоя на дому | metro | Аэропорт | aeroport | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/aeroport/ |
+| Вывод из запоя на дому | metro | Александровский сад | aleksandrovskij-sad | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/aleksandrovskij-sad/ |
+| Вывод из запоя на дому | metro | Алексеевская | alekseevskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/alekseevskaya/ |
+| Вывод из запоя на дому | metro | Алма-Атинская | alma-atinskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/alma-atinskaya/ |
+| Вывод из запоя на дому | metro | Алтуфьево | altufevo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/altufevo/ |
+| Вывод из запоя на дому | metro | Андроновка | andronovka | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/andronovka/ |
+| Вывод из запоя на дому | metro | Аннино | annino | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/annino/ |
+| Вывод из запоя на дому | metro | Арбатская | arbatskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/arbatskaya/ |
+| Вывод из запоя на дому | metro | Авиамоторная | aviamotornaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/aviamotornaya/ |
+| Вывод из запоя на дому | metro | Автозаводская | avtozavodskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/avtozavodskaya/ |
+| Вывод из запоя на дому | metro | Бабушкинская | babushkinskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/babushkinskaya/ |
+| Вывод из запоя на дому | metro | Багратионовская | bagrationovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/bagrationovskaya/ |
+| Вывод из запоя на дому | metro | Балтийская | baltijskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/baltijskaya/ |
+| Вывод из запоя на дому | metro | Баррикадная | barrikadnaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/barrikadnaya/ |
+| Вывод из запоя на дому | metro | Бауманская | baumanskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/baumanskaya/ |
+| Вывод из запоя на дому | metro | Беговая | begovaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/begovaya/ |
+| Вывод из запоя на дому | metro | Белокаменная | belokamennaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/belokamennaya/ |
+| Вывод из запоя на дому | metro | Белорусская | belorusskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/belorusskaya/ |
+| Вывод из запоя на дому | metro | Беляево | belyaevo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/belyaevo/ |
+| Вывод из запоя на дому | metro | Бибирево | bibirevo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/bibirevo/ |
+| Вывод из запоя на дому | metro | Библиотека имени Ленина | biblioteka-imeni-lenina | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/biblioteka-imeni-lenina/ |
+| Вывод из запоя на дому | metro | Битцевский парк | bitcevskij-park | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/bitcevskij-park/ |
+| Вывод из запоя на дому | metro | Борисово | borisovo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/borisovo/ |
+| Вывод из запоя на дому | metro | Боровицкая | borovickaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/borovickaya/ |
+| Вывод из запоя на дому | metro | Ботанический сад | botanicheskij-sad | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/botanicheskij-sad/ |
+| Вывод из запоя на дому | metro | Братиславская | bratislavskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/bratislavskaya/ |
+| Вывод из запоя на дому | metro | Бульвар Адмирала Ушакова | bulvar-admirala-ushakova | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/bulvar-admirala-ushakova/ |
+| Вывод из запоя на дому | metro | Бульвар Рокоссовского | bulvar-rokossovskogo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/bulvar-rokossovskogo/ |
+| Вывод из запоя на дому | metro | Бунинская аллея | buninskaya-alleya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/buninskaya-alleya/ |
+| Вывод из запоя на дому | metro | Бутырская | butyrskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/butyrskaya/ |
+| Вывод из запоя на дому | metro | Чеховская | chehovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/chehovskaya/ |
+| Вывод из запоя на дому | metro | Черкизовская | cherkizovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/cherkizovskaya/ |
+| Вывод из запоя на дому | metro | Чертановская | chertanovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/chertanovskaya/ |
+| Вывод из запоя на дому | metro | Чистые пруды | chistye-prudy | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/chistye-prudy/ |
+| Вывод из запоя на дому | metro | Чкаловская | chkalovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/chkalovskaya/ |
+| Вывод из запоя на дому | metro | Царицыно | caricyno | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/caricyno/ |
+| Вывод из запоя на дому | metro | ЦСКА | cska | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/cska/ |
+| Вывод из запоя на дому | metro | Цветной бульвар | cvetnoj-bulvar | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/cvetnoj-bulvar/ |
+| Вывод из запоя на дому | metro | Деловой центр | delovoj-centr | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/delovoj-centr/ |
+| Вывод из запоя на дому | metro | Динамо | dinamo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/dinamo/ |
+| Вывод из запоя на дому | metro | Дмитровская | dmitrovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/dmitrovskaya/ |
+| Вывод из запоя на дому | metro | Добрынинская | dobryninskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/dobryninskaya/ |
+| Вывод из запоя на дому | metro | Домодедовская | domodedovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/domodedovskaya/ |
+| Вывод из запоя на дому | metro | Достоевская | dostoevskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/dostoevskaya/ |
+| Вывод из запоя на дому | metro | Электрозаводская | elektrozavodskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/elektrozavodskaya/ |
+| Вывод из запоя на дому | metro | Филёвский парк | filevskij-park | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/filevskij-park/ |
+| Вывод из запоя на дому | metro | Фили | fili | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/fili/ |
+| Вывод из запоя на дому | metro | Фонвизинская | fonvizinskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/fonvizinskaya/ |
+| Вывод из запоя на дому | metro | Фрунзенская | frunzenskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/frunzenskaya/ |
+| Вывод из запоя на дому | metro | Хорошёвская | horoshevskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/horoshevskaya/ |
+| Вывод из запоя на дому | metro | Ховрино | hovrino | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/hovrino/ |
+| Вывод из запоя на дому | metro | Измайловская | izmajlovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/izmajlovskaya/ |
+| Вывод из запоя на дому | metro | Каховская | kahovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/kahovskaya/ |
+| Вывод из запоя на дому | metro | Калужская | kaluzhskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/kaluzhskaya/ |
+| Вывод из запоя на дому | metro | Кантемировская | kantemirovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/kantemirovskaya/ |
+| Вывод из запоя на дому | metro | Каширская | kashirskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/kashirskaya/ |
+| Вывод из запоя на дому | metro | Киевская | kievskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/kievskaya/ |
+| Вывод из запоя на дому | metro | Китай-город | kitaj-gorod | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/kitaj-gorod/ |
+| Вывод из запоя на дому | metro | Коломенская | kolomenskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/kolomenskaya/ |
+| Вывод из запоя на дому | metro | Комсомольская | komsomolskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/komsomolskaya/ |
+| Вывод из запоя на дому | metro | Коньково | konkovo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/konkovo/ |
+| Вывод из запоя на дому | metro | Коптево | koptevo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/koptevo/ |
+| Вывод из запоя на дому | metro | Котельники | kotelniki | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/kotelniki/ |
+| Вывод из запоя на дому | metro | Кожуховская | kozhuhovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/kozhuhovskaya/ |
+| Вывод из запоя на дому | metro | Красногвардейская | krasnogvardejskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/krasnogvardejskaya/ |
+| Вывод из запоя на дому | metro | Краснопресненская | krasnopresnenskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/krasnopresnenskaya/ |
+| Вывод из запоя на дому | metro | Красносельская | krasnoselskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/krasnoselskaya/ |
+| Вывод из запоя на дому | metro | Красные ворота | krasnye-vorota | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/krasnye-vorota/ |
+| Вывод из запоя на дому | metro | Крестьянская застава | krestyanskaya-zastava | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/krestyanskaya-zastava/ |
+| Вывод из запоя на дому | metro | Кропоткинская | kropotkinskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/kropotkinskaya/ |
+| Вывод из запоя на дому | metro | Крылатское | krylatskoe | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/krylatskoe/ |
+| Вывод из запоя на дому | metro | Крымская | krymskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/krymskaya/ |
+| Вывод из запоя на дому | metro | Кунцевская | kuncevskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/kuncevskaya/ |
+| Вывод из запоя на дому | metro | Курская | kurskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/kurskaya/ |
+| Вывод из запоя на дому | metro | Кутузовская | kutuzovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/kutuzovskaya/ |
+| Вывод из запоя на дому | metro | Кузьминки | kuzminki | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/kuzminki/ |
+| Вывод из запоя на дому | metro | Кузнецкий мост | kuzneckij-most | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/kuzneckij-most/ |
+| Вывод из запоя на дому | metro | Ленинский проспект | leninskij-prospekt | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/leninskij-prospekt/ |
+| Вывод из запоя на дому | metro | Лермонтовский проспект | lermontovskij-prospekt | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/lermontovskij-prospekt/ |
+| Вывод из запоя на дому | metro | Лесопарковая | lesoparkovaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/lesoparkovaya/ |
+| Вывод из запоя на дому | metro | Лихоборы | lihobory | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/lihobory/ |
+| Вывод из запоя на дому | metro | Локомотив | lokomotiv | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/lokomotiv/ |
+| Вывод из запоя на дому | metro | Ломоносовский проспект | lomonosovskij-prospekt | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/lomonosovskij-prospekt/ |
+| Вывод из запоя на дому | metro | Лубянка | lubyanka | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/lubyanka/ |
+| Вывод из запоя на дому | metro | Лужники | luzhniki | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/luzhniki/ |
+| Вывод из запоя на дому | metro | Люблино | lyublino | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/lyublino/ |
+| Вывод из запоя на дому | metro | Марьино | marino | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/marino/ |
+| Вывод из запоя на дому | metro | Марьина Роща | marina-roshcha | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/marina-roshcha/ |
+| Вывод из запоя на дому | metro | Марксистская | marksistskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/marksistskaya/ |
+| Вывод из запоя на дому | metro | Маяковская | mayakovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/mayakovskaya/ |
+| Вывод из запоя на дому | metro | Медведково | medvedkovo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/medvedkovo/ |
+| Вывод из запоя на дому | metro | Менделеевская | mendeleevskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/mendeleevskaya/ |
+| Вывод из запоя на дому | metro | Международная | mezhdunarodnaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/mezhdunarodnaya/ |
+| Вывод из запоя на дому | metro | Минская | minskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/minskaya/ |
+| Вывод из запоя на дому | metro | Молодёжная | molodezhnaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/molodezhnaya/ |
+| Вывод из запоя на дому | metro | Мякинино | myakinino | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/myakinino/ |
+| Вывод из запоя на дому | metro | Нагатинская | nagatinskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/nagatinskaya/ |
+| Вывод из запоя на дому | metro | Нагорная | nagornaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/nagornaya/ |
+| Вывод из запоя на дому | metro | Нахимовский проспект | nahimovskij-prospekt | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/nahimovskij-prospekt/ |
+| Вывод из запоя на дому | metro | Нижегородская | nizhegorodskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/nizhegorodskaya/ |
+| Вывод из запоя на дому | metro | Новогиреево | novogireevo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/novogireevo/ |
+| Вывод из запоя на дому | metro | Новохохловская | novohohlovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/novohohlovskaya/ |
+| Вывод из запоя на дому | metro | Новокосино | novokosino | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/novokosino/ |
+| Вывод из запоя на дому | metro | Новокузнецкая | novokuzneckaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/novokuzneckaya/ |
+| Вывод из запоя на дому | metro | Новослободская | novoslobodskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/novoslobodskaya/ |
+| Вывод из запоя на дому | metro | Новоясеневская | novoyasenevskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/novoyasenevskaya/ |
+| Вывод из запоя на дому | metro | Новые Черёмушки | novye-cheremushki | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/novye-cheremushki/ |
+| Вывод из запоя на дому | metro | Охотный Ряд | ohotnyj-ryad | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/ohotnyj-ryad/ |
+| Вывод из запоя на дому | metro | Окружная | okruzhnaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/okruzhnaya/ |
+| Вывод из запоя на дому | metro | Октябрьское Поле | oktyabrskoe-pole | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/oktyabrskoe-pole/ |
+| Вывод из запоя на дому | metro | Октябрьская | oktyabrskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/oktyabrskaya/ |
+| Вывод из запоя на дому | metro | Орехово | orehovo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/orehovo/ |
+| Вывод из запоя на дому | metro | Отрадное | otradnoe | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/otradnoe/ |
+| Вывод из запоя на дому | metro | Панфиловская | panfilovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/panfilovskaya/ |
+| Вывод из запоя на дому | metro | Парк культуры | park-kultury | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/park-kultury/ |
+| Вывод из запоя на дому | metro | Парк Победы | park-pobedy | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/park-pobedy/ |
+| Вывод из запоя на дому | metro | Партизанская | partizanskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/partizanskaya/ |
+| Вывод из запоя на дому | metro | Павелецкая | paveleckaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/paveleckaya/ |
+| Вывод из запоя на дому | metro | Печатники | pechatniki | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/pechatniki/ |
+| Вывод из запоя на дому | metro | Перово | perovo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/perovo/ |
+| Вывод из запоя на дому | metro | Первомайская | pervomajskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/pervomajskaya/ |
+| Вывод из запоя на дому | metro | Петровский парк | petrovskij-park | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/petrovskij-park/ |
+| Вывод из запоя на дому | metro | Петровско-Разумовская | petrovsko-razumovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/petrovsko-razumovskaya/ |
+| Вывод из запоя на дому | metro | Пионерская | pionerskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/pionerskaya/ |
+| Вывод из запоя на дому | metro | Планерная | planernaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/planernaya/ |
+| Вывод из запоя на дому | metro | Площадь Гагарина | ploshchad-gagarina | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/ploshchad-gagarina/ |
+| Вывод из запоя на дому | metro | Площадь Ильича | ploshchad-ilicha | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/ploshchad-ilicha/ |
+| Вывод из запоя на дому | metro | Площадь Революции | ploshchad-revolyucii | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/ploshchad-revolyucii/ |
+| Вывод из запоя на дому | metro | Полежаевская | polezhaevskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/polezhaevskaya/ |
+| Вывод из запоя на дому | metro | Полянка | polyanka | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/polyanka/ |
+| Вывод из запоя на дому | metro | Пражская | prazhskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/prazhskaya/ |
+| Вывод из запоя на дому | metro | Преображенская площадь | preobrazhenskaya-ploshchad | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/preobrazhenskaya-ploshchad/ |
+| Вывод из запоя на дому | metro | Профсоюзная | profsoyuznaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/profsoyuznaya/ |
+| Вывод из запоя на дому | metro | Пролетарская | proletarskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/proletarskaya/ |
+| Вывод из запоя на дому | metro | Проспект Мира | prospekt-mira | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/prospekt-mira/ |
+| Вывод из запоя на дому | metro | Проспект Вернадского | prospekt-vernadskogo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/prospekt-vernadskogo/ |
+| Вывод из запоя на дому | metro | Пушкинская | pushkinskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/pushkinskaya/ |
+| Вывод из запоя на дому | metro | Пятницкое шоссе | pyatnickoe-shosse | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/pyatnickoe-shosse/ |
+| Вывод из запоя на дому | metro | Раменки | ramenki | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/ramenki/ |
+| Вывод из запоя на дому | metro | Речной вокзал | rechnoj-vokzal | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/rechnoj-vokzal/ |
+| Вывод из запоя на дому | metro | Римская | rimskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/rimskaya/ |
+| Вывод из запоя на дому | metro | Рижская | rizhskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/rizhskaya/ |
+| Вывод из запоя на дому | metro | Ростокино | rostokino | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/rostokino/ |
+| Вывод из запоя на дому | metro | Румянцево | rumyancevo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/rumyancevo/ |
+| Вывод из запоя на дому | metro | Рязанский проспект | ryazanskij-prospekt | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/ryazanskij-prospekt/ |
+| Вывод из запоя на дому | metro | Саларьево | salarevo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/salarevo/ |
+| Вывод из запоя на дому | metro | Савёловская | savelovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/savelovskaya/ |
+| Вывод из запоя на дому | metro | Селигерская | seligerskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/seligerskaya/ |
+| Вывод из запоя на дому | metro | Семёновская | semenovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/semenovskaya/ |
+| Вывод из запоя на дому | metro | Серпуховская | serpuhovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/serpuhovskaya/ |
+| Вывод из запоя на дому | metro | Севастопольская | sevastopolskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/sevastopolskaya/ |
+| Вывод из запоя на дому | metro | Шаболовская | shabolovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/shabolovskaya/ |
+| Вывод из запоя на дому | metro | Шелепиха | shelepiha | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/shelepiha/ |
+| Вывод из запоя на дому | metro | Щукинская | shchukinskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/shchukinskaya/ |
+| Вывод из запоя на дому | metro | Щёлковская | shchelkovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/shchelkovskaya/ |
+| Вывод из запоя на дому | metro | Шипиловская | shipilovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/shipilovskaya/ |
+| Вывод из запоя на дому | metro | Сходненская | shodnenskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/shodnenskaya/ |
+| Вывод из запоя на дому | metro | Шоссе Энтузиастов | shosse-entuziastov | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/shosse-entuziastov/ |
+| Вывод из запоя на дому | metro | Улица Скобелевская | ulica-skobelevskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/ulica-skobelevskaya/ |
+| Вывод из запоя на дому | metro | Славянский бульвар | slavyanskij-bulvar | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/slavyanskij-bulvar/ |
+| Вывод из запоя на дому | metro | Смоленская | smolenskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/smolenskaya/ |
+| Вывод из запоя на дому | metro | Сокол | sokol | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/sokol/ |
+| Вывод из запоя на дому | metro | Соколиная гора | sokolinaya-gora | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/sokolinaya-gora/ |
+| Вывод из запоя на дому | metro | Спартак | spartak | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/spartak/ |
+| Вывод из запоя на дому | metro | Спортивная | sportivnaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/sportivnaya/ |
+| Вывод из запоя на дому | metro | Сретенский бульвар | sretenskij-bulvar | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/sretenskij-bulvar/ |
+| Вывод из запоя на дому | metro | Стрешнево | streshnevo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/streshnevo/ |
+| Вывод из запоя на дому | metro | Строгино | strogino | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/strogino/ |
+| Вывод из запоя на дому | metro | Студенческая | studencheskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/studencheskaya/ |
+| Вывод из запоя на дому | metro | Сухаревская | suharevskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/suharevskaya/ |
+| Вывод из запоя на дому | metro | Свиблово | sviblovo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/sviblovo/ |
+| Вывод из запоя на дому | metro | Таганская | taganskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/taganskaya/ |
+| Вывод из запоя на дому | metro | Театральная | teatralnaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/teatralnaya/ |
+| Вывод из запоя на дому | metro | Технопарк | tehnopark | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/tehnopark/ |
+| Вывод из запоя на дому | metro | Текстильщики | tekstilshchiki | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/tekstilshchiki/ |
+| Вывод из запоя на дому | metro | Телецентр | telecentr | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/telecentr/ |
+| Вывод из запоя на дому | metro | Тёплый Стан | teplyj-stan | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/teplyj-stan/ |
+| Вывод из запоя на дому | metro | Тимирязевская | timiryazevskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/timiryazevskaya/ |
+| Вывод из запоя на дому | metro | Третьяковская | tretyakovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/tretyakovskaya/ |
+| Вывод из запоя на дому | metro | Тропарёво | troparevo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/troparevo/ |
+| Вывод из запоя на дому | metro | Трубная | trubnaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/trubnaya/ |
+| Вывод из запоя на дому | metro | Тульская | tulskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/tulskaya/ |
+| Вывод из запоя на дому | metro | Тургеневская | turgenevskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/turgenevskaya/ |
+| Вывод из запоя на дому | metro | Тушинская | tushinskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/tushinskaya/ |
+| Вывод из запоя на дому | metro | Тверская | tverskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/tverskaya/ |
+| Вывод из запоя на дому | metro | Угрешская | ugreshskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/ugreshskaya/ |
+| Вывод из запоя на дому | metro | Улица 1905 года | ulica-1905-goda | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/ulica-1905-goda/ |
+| Вывод из запоя на дому | metro | Улица Академика Королёва | ulica-akademika-koroleva | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/ulica-akademika-koroleva/ |
+| Вывод из запоя на дому | metro | Улица Академика Янгеля | ulica-akademika-yangelya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/ulica-akademika-yangelya/ |
+| Вывод из запоя на дому | metro | Улица Горчакова | ulica-gorchakova | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/ulica-gorchakova/ |
+| Вывод из запоя на дому | metro | Улица Милашенкова | ulica-milashenkova | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/ulica-milashenkova/ |
+| Вывод из запоя на дому | metro | Улица Сергея Эйзенштейна | ulica-sergeya-ejzenshtejna | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/ulica-sergeya-ejzenshtejna/ |
+| Вывод из запоя на дому | metro | Улица Старокачаловская | ulica-starokachalovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/ulica-starokachalovskaya/ |
+| Вывод из запоя на дому | metro | Университет | universitet | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/universitet/ |
+| Вывод из запоя на дому | metro | Варшавская | varshavskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/varshavskaya/ |
+| Вывод из запоя на дому | metro | ВДНХ | vdnh | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/vdnh/ |
+| Вывод из запоя на дому | metro | Верхние Котлы | verhnie-kotly | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/verhnie-kotly/ |
+| Вывод из запоя на дому | metro | Верхние Лихоборы | verhnie-lihobory | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/verhnie-lihobory/ |
+| Вывод из запоя на дому | metro | Владыкино | vladykino | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/vladykino/ |
+| Вывод из запоя на дому | metro | Водный стадион | vodnyj-stadion | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/vodnyj-stadion/ |
+| Вывод из запоя на дому | metro | Войковская | vojkovskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/vojkovskaya/ |
+| Вывод из запоя на дому | metro | Волгоградский проспект | volgogradskij-prospekt | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/volgogradskij-prospekt/ |
+| Вывод из запоя на дому | metro | Волоколамская | volokolamskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/volokolamskaya/ |
+| Вывод из запоя на дому | metro | Волжская | volzhskaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/volzhskaya/ |
+| Вывод из запоя на дому | metro | Воробьёвы горы | vorobevy-gory | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/vorobevy-gory/ |
+| Вывод из запоя на дому | metro | Выхино | vyhino | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/vyhino/ |
+| Вывод из запоя на дому | metro | Выставочная | vystavochnaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/vystavochnaya/ |
+| Вывод из запоя на дому | metro | Выставочный центр | vystavochnyj-centr | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/vystavochnyj-centr/ |
+| Вывод из запоя на дому | metro | Ясенево | yasenevo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/yasenevo/ |
+| Вывод из запоя на дому | metro | Юго-Западная | yugo-zapadnaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/yugo-zapadnaya/ |
+| Вывод из запоя на дому | metro | Южная | yuzhnaya | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/yuzhnaya/ |
+| Вывод из запоя на дому | metro | Жулебино | zhulebino | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/zhulebino/ |
+| Вывод из запоя на дому | metro | ЗИЛ | zil | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/zil/ |
+| Вывод из запоя на дому | metro | Зорге | zorge | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/zorge/ |
+| Вывод из запоя на дому | metro | Зябликово | zyablikovo | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/zyablikovo/ |
+| Вывод из запоя на дому | okrug | ЦАО | cao | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/cao/ |
+| Вывод из запоя на дому | okrug | САО | sao | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/sao/ |
+| Вывод из запоя на дому | okrug | СВАО | svao | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/svao/ |
+| Вывод из запоя на дому | okrug | ВАО | vao | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/vao/ |
+| Вывод из запоя на дому | okrug | ЮВАО | yuvao | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/yuvao/ |
+| Вывод из запоя на дому | okrug | ЮАО | yuao | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/yuao/ |
+| Вывод из запоя на дому | okrug | ЮЗАО | yuzao | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/yuzao/ |
+| Вывод из запоя на дому | okrug | ЗАО | zao | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/zao/ |
+| Вывод из запоя на дому | okrug | СЗАО | szao | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/szao/ |
+| Вывод из запоя на дому | okrug | ЗелАО | zelao | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/zelao/ |
+| Вывод из запоя на дому | okrug | НАО | nao | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/nao/ |
+| Вывод из запоя на дому | okrug | ТАО | tao | core | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/tao/ |
 | Вывод из запоя на дому | mo | Балашиха | balashiha | tier-1 | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskovskaya-oblast/balashiha/ |
 | Вывод из запоя на дому | mo | Подольск | podolsk | tier-1 | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskovskaya-oblast/podolsk/ |
 | Вывод из запоя на дому | mo | Химки | himki | tier-1 | P0 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskovskaya-oblast/himki/ |
@@ -2099,233 +2103,233 @@ SILO-хаб
 | Вывод из запоя на дому | mo | Дубна | dubna | tier-2 | P1 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskovskaya-oblast/dubna/ |
 | Вывод из запоя на дому | mo | Черноголовка | chernogolovka | tier-2 | P1 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskovskaya-oblast/chernogolovka/ |
 | Вывод из запоя на дому | mo | Волоколамск | volokolamsk | tier-2 | P1 | migrate/create | /uslugi/vyvod-iz-zapoya/na-domu/moskovskaya-oblast/volokolamsk/ |
-| Капельница от запоя и алкоголя на дому | metro | Аэропорт | aeroport | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/aeroport/ |
-| Капельница от запоя и алкоголя на дому | metro | Александровский сад | aleksandrovskij-sad | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/aleksandrovskij-sad/ |
-| Капельница от запоя и алкоголя на дому | metro | Алексеевская | alekseevskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/alekseevskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Алма-Атинская | alma-atinskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/alma-atinskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Алтуфьево | altufevo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/altufevo/ |
-| Капельница от запоя и алкоголя на дому | metro | Андроновка | andronovka | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/andronovka/ |
-| Капельница от запоя и алкоголя на дому | metro | Аннино | annino | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/annino/ |
-| Капельница от запоя и алкоголя на дому | metro | Арбатская | arbatskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/arbatskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Авиамоторная | aviamotornaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/aviamotornaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Автозаводская | avtozavodskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/avtozavodskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Бабушкинская | babushkinskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/babushkinskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Багратионовская | bagrationovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/bagrationovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Балтийская | baltijskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/baltijskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Баррикадная | barrikadnaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/barrikadnaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Бауманская | baumanskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/baumanskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Беговая | begovaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/begovaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Белокаменная | belokamennaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/belokamennaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Белорусская | belorusskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/belorusskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Беляево | belyaevo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/belyaevo/ |
-| Капельница от запоя и алкоголя на дому | metro | Бибирево | bibirevo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/bibirevo/ |
-| Капельница от запоя и алкоголя на дому | metro | Библиотека имени Ленина | biblioteka-imeni-lenina | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/biblioteka-imeni-lenina/ |
-| Капельница от запоя и алкоголя на дому | metro | Битцевский парк | bitcevskij-park | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/bitcevskij-park/ |
-| Капельница от запоя и алкоголя на дому | metro | Борисово | borisovo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/borisovo/ |
-| Капельница от запоя и алкоголя на дому | metro | Боровицкая | borovickaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/borovickaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Ботанический сад | botanicheskij-sad | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/botanicheskij-sad/ |
-| Капельница от запоя и алкоголя на дому | metro | Братиславская | bratislavskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/bratislavskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Бульвар Адмирала Ушакова | bulvar-admirala-ushakova | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/bulvar-admirala-ushakova/ |
-| Капельница от запоя и алкоголя на дому | metro | Бульвар Рокоссовского | bulvar-rokossovskogo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/bulvar-rokossovskogo/ |
-| Капельница от запоя и алкоголя на дому | metro | Бунинская аллея | buninskaya-alleya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/buninskaya-alleya/ |
-| Капельница от запоя и алкоголя на дому | metro | Бутырская | butyrskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/butyrskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Чеховская | chehovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/chehovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Черкизовская | cherkizovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/cherkizovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Чертановская | chertanovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/chertanovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Чистые пруды | chistye-prudy | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/chistye-prudy/ |
-| Капельница от запоя и алкоголя на дому | metro | Чкаловская | chkalovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/chkalovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Царицыно | caricyno | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/caricyno/ |
-| Капельница от запоя и алкоголя на дому | metro | ЦСКА | cska | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/cska/ |
-| Капельница от запоя и алкоголя на дому | metro | Цветной бульвар | cvetnoj-bulvar | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/cvetnoj-bulvar/ |
-| Капельница от запоя и алкоголя на дому | metro | Деловой центр | delovoj-centr | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/delovoj-centr/ |
-| Капельница от запоя и алкоголя на дому | metro | Динамо | dinamo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/dinamo/ |
-| Капельница от запоя и алкоголя на дому | metro | Дмитровская | dmitrovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/dmitrovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Добрынинская | dobryninskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/dobryninskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Домодедовская | domodedovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/domodedovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Достоевская | dostoevskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/dostoevskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Электрозаводская | elektrozavodskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/elektrozavodskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Филёвский парк | filevskij-park | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/filevskij-park/ |
-| Капельница от запоя и алкоголя на дому | metro | Фили | fili | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/fili/ |
-| Капельница от запоя и алкоголя на дому | metro | Фонвизинская | fonvizinskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/fonvizinskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Фрунзенская | frunzenskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/frunzenskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Хорошёвская | horoshevskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/horoshevskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Ховрино | hovrino | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/hovrino/ |
-| Капельница от запоя и алкоголя на дому | metro | Измайловская | izmajlovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/izmajlovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Каховская | kahovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/kahovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Калужская | kaluzhskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/kaluzhskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Кантемировская | kantemirovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/kantemirovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Каширская | kashirskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/kashirskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Киевская | kievskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/kievskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Китай-город | kitaj-gorod | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/kitaj-gorod/ |
-| Капельница от запоя и алкоголя на дому | metro | Коломенская | kolomenskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/kolomenskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Комсомольская | komsomolskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/komsomolskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Коньково | konkovo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/konkovo/ |
-| Капельница от запоя и алкоголя на дому | metro | Коптево | koptevo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/koptevo/ |
-| Капельница от запоя и алкоголя на дому | metro | Котельники | kotelniki | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/kotelniki/ |
-| Капельница от запоя и алкоголя на дому | metro | Кожуховская | kozhuhovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/kozhuhovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Красногвардейская | krasnogvardejskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/krasnogvardejskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Краснопресненская | krasnopresnenskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/krasnopresnenskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Красносельская | krasnoselskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/krasnoselskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Красные ворота | krasnye-vorota | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/krasnye-vorota/ |
-| Капельница от запоя и алкоголя на дому | metro | Крестьянская застава | krestyanskaya-zastava | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/krestyanskaya-zastava/ |
-| Капельница от запоя и алкоголя на дому | metro | Кропоткинская | kropotkinskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/kropotkinskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Крылатское | krylatskoe | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/krylatskoe/ |
-| Капельница от запоя и алкоголя на дому | metro | Крымская | krymskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/krymskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Кунцевская | kuncevskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/kuncevskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Курская | kurskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/kurskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Кутузовская | kutuzovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/kutuzovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Кузьминки | kuzminki | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/kuzminki/ |
-| Капельница от запоя и алкоголя на дому | metro | Кузнецкий мост | kuzneckij-most | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/kuzneckij-most/ |
-| Капельница от запоя и алкоголя на дому | metro | Ленинский проспект | leninskij-prospekt | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/leninskij-prospekt/ |
-| Капельница от запоя и алкоголя на дому | metro | Лермонтовский проспект | lermontovskij-prospekt | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/lermontovskij-prospekt/ |
-| Капельница от запоя и алкоголя на дому | metro | Лесопарковая | lesoparkovaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/lesoparkovaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Лихоборы | lihobory | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/lihobory/ |
-| Капельница от запоя и алкоголя на дому | metro | Локомотив | lokomotiv | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/lokomotiv/ |
-| Капельница от запоя и алкоголя на дому | metro | Ломоносовский проспект | lomonosovskij-prospekt | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/lomonosovskij-prospekt/ |
-| Капельница от запоя и алкоголя на дому | metro | Лубянка | lubyanka | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/lubyanka/ |
-| Капельница от запоя и алкоголя на дому | metro | Лужники | luzhniki | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/luzhniki/ |
-| Капельница от запоя и алкоголя на дому | metro | Люблино | lyublino | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/lyublino/ |
-| Капельница от запоя и алкоголя на дому | metro | Марьино | marino | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/marino/ |
-| Капельница от запоя и алкоголя на дому | metro | Марьина Роща | marina-roshcha | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/marina-roshcha/ |
-| Капельница от запоя и алкоголя на дому | metro | Марксистская | marksistskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/marksistskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Маяковская | mayakovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/mayakovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Медведково | medvedkovo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/medvedkovo/ |
-| Капельница от запоя и алкоголя на дому | metro | Менделеевская | mendeleevskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/mendeleevskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Международная | mezhdunarodnaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/mezhdunarodnaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Минская | minskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/minskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Молодёжная | molodezhnaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/molodezhnaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Мякинино | myakinino | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/myakinino/ |
-| Капельница от запоя и алкоголя на дому | metro | Нагатинская | nagatinskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/nagatinskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Нагорная | nagornaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/nagornaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Нахимовский проспект | nahimovskij-prospekt | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/nahimovskij-prospekt/ |
-| Капельница от запоя и алкоголя на дому | metro | Нижегородская | nizhegorodskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/nizhegorodskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Новогиреево | novogireevo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/novogireevo/ |
-| Капельница от запоя и алкоголя на дому | metro | Новохохловская | novohohlovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/novohohlovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Новокосино | novokosino | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/novokosino/ |
-| Капельница от запоя и алкоголя на дому | metro | Новокузнецкая | novokuzneckaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/novokuzneckaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Новослободская | novoslobodskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/novoslobodskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Новоясеневская | novoyasenevskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/novoyasenevskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Новые Черёмушки | novye-cheremushki | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/novye-cheremushki/ |
-| Капельница от запоя и алкоголя на дому | metro | Охотный Ряд | ohotnyj-ryad | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/ohotnyj-ryad/ |
-| Капельница от запоя и алкоголя на дому | metro | Окружная | okruzhnaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/okruzhnaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Октябрьское Поле | oktyabrskoe-pole | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/oktyabrskoe-pole/ |
-| Капельница от запоя и алкоголя на дому | metro | Октябрьская | oktyabrskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/oktyabrskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Орехово | orehovo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/orehovo/ |
-| Капельница от запоя и алкоголя на дому | metro | Отрадное | otradnoe | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/otradnoe/ |
-| Капельница от запоя и алкоголя на дому | metro | Панфиловская | panfilovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/panfilovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Парк культуры | park-kultury | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/park-kultury/ |
-| Капельница от запоя и алкоголя на дому | metro | Парк Победы | park-pobedy | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/park-pobedy/ |
-| Капельница от запоя и алкоголя на дому | metro | Партизанская | partizanskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/partizanskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Павелецкая | paveleckaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/paveleckaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Печатники | pechatniki | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/pechatniki/ |
-| Капельница от запоя и алкоголя на дому | metro | Перово | perovo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/perovo/ |
-| Капельница от запоя и алкоголя на дому | metro | Первомайская | pervomajskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/pervomajskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Петровский парк | petrovskij-park | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/petrovskij-park/ |
-| Капельница от запоя и алкоголя на дому | metro | Петровско-Разумовская | petrovsko-razumovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/petrovsko-razumovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Пионерская | pionerskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/pionerskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Планерная | planernaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/planernaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Площадь Гагарина | ploshchad-gagarina | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/ploshchad-gagarina/ |
-| Капельница от запоя и алкоголя на дому | metro | Площадь Ильича | ploshchad-ilicha | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/ploshchad-ilicha/ |
-| Капельница от запоя и алкоголя на дому | metro | Площадь Революции | ploshchad-revolyucii | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/ploshchad-revolyucii/ |
-| Капельница от запоя и алкоголя на дому | metro | Полежаевская | polezhaevskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/polezhaevskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Полянка | polyanka | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/polyanka/ |
-| Капельница от запоя и алкоголя на дому | metro | Пражская | prazhskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/prazhskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Преображенская площадь | preobrazhenskaya-ploshchad | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/preobrazhenskaya-ploshchad/ |
-| Капельница от запоя и алкоголя на дому | metro | Профсоюзная | profsoyuznaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/profsoyuznaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Пролетарская | proletarskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/proletarskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Проспект Мира | prospekt-mira | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/prospekt-mira/ |
-| Капельница от запоя и алкоголя на дому | metro | Проспект Вернадского | prospekt-vernadskogo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/prospekt-vernadskogo/ |
-| Капельница от запоя и алкоголя на дому | metro | Пушкинская | pushkinskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/pushkinskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Пятницкое шоссе | pyatnickoe-shosse | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/pyatnickoe-shosse/ |
-| Капельница от запоя и алкоголя на дому | metro | Раменки | ramenki | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/ramenki/ |
-| Капельница от запоя и алкоголя на дому | metro | Речной вокзал | rechnoj-vokzal | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/rechnoj-vokzal/ |
-| Капельница от запоя и алкоголя на дому | metro | Римская | rimskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/rimskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Рижская | rizhskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/rizhskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Ростокино | rostokino | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/rostokino/ |
-| Капельница от запоя и алкоголя на дому | metro | Румянцево | rumyancevo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/rumyancevo/ |
-| Капельница от запоя и алкоголя на дому | metro | Рязанский проспект | ryazanskij-prospekt | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/ryazanskij-prospekt/ |
-| Капельница от запоя и алкоголя на дому | metro | Саларьево | salarevo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/salarevo/ |
-| Капельница от запоя и алкоголя на дому | metro | Савёловская | savelovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/savelovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Селигерская | seligerskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/seligerskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Семёновская | semenovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/semenovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Серпуховская | serpuhovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/serpuhovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Севастопольская | sevastopolskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/sevastopolskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Шаболовская | shabolovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/shabolovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Шелепиха | shelepiha | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/shelepiha/ |
-| Капельница от запоя и алкоголя на дому | metro | Щукинская | shchukinskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/shchukinskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Щёлковская | shchelkovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/shchelkovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Шипиловская | shipilovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/shipilovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Сходненская | shodnenskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/shodnenskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Шоссе Энтузиастов | shosse-entuziastov | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/shosse-entuziastov/ |
-| Капельница от запоя и алкоголя на дому | metro | Улица Скобелевская | ulica-skobelevskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/ulica-skobelevskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Славянский бульвар | slavyanskij-bulvar | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/slavyanskij-bulvar/ |
-| Капельница от запоя и алкоголя на дому | metro | Смоленская | smolenskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/smolenskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Сокол | sokol | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/sokol/ |
-| Капельница от запоя и алкоголя на дому | metro | Соколиная гора | sokolinaya-gora | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/sokolinaya-gora/ |
-| Капельница от запоя и алкоголя на дому | metro | Спартак | spartak | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/spartak/ |
-| Капельница от запоя и алкоголя на дому | metro | Спортивная | sportivnaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/sportivnaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Сретенский бульвар | sretenskij-bulvar | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/sretenskij-bulvar/ |
-| Капельница от запоя и алкоголя на дому | metro | Стрешнево | streshnevo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/streshnevo/ |
-| Капельница от запоя и алкоголя на дому | metro | Строгино | strogino | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/strogino/ |
-| Капельница от запоя и алкоголя на дому | metro | Студенческая | studencheskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/studencheskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Сухаревская | suharevskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/suharevskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Свиблово | sviblovo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/sviblovo/ |
-| Капельница от запоя и алкоголя на дому | metro | Таганская | taganskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/taganskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Театральная | teatralnaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/teatralnaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Технопарк | tehnopark | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/tehnopark/ |
-| Капельница от запоя и алкоголя на дому | metro | Текстильщики | tekstilshchiki | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/tekstilshchiki/ |
-| Капельница от запоя и алкоголя на дому | metro | Телецентр | telecentr | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/telecentr/ |
-| Капельница от запоя и алкоголя на дому | metro | Тёплый Стан | teplyj-stan | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/teplyj-stan/ |
-| Капельница от запоя и алкоголя на дому | metro | Тимирязевская | timiryazevskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/timiryazevskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Третьяковская | tretyakovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/tretyakovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Тропарёво | troparevo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/troparevo/ |
-| Капельница от запоя и алкоголя на дому | metro | Трубная | trubnaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/trubnaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Тульская | tulskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/tulskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Тургеневская | turgenevskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/turgenevskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Тушинская | tushinskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/tushinskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Тверская | tverskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/tverskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Угрешская | ugreshskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/ugreshskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Улица 1905 года | ulica-1905-goda | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/ulica-1905-goda/ |
-| Капельница от запоя и алкоголя на дому | metro | Улица Академика Королёва | ulica-akademika-koroleva | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/ulica-akademika-koroleva/ |
-| Капельница от запоя и алкоголя на дому | metro | Улица Академика Янгеля | ulica-akademika-yangelya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/ulica-akademika-yangelya/ |
-| Капельница от запоя и алкоголя на дому | metro | Улица Горчакова | ulica-gorchakova | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/ulica-gorchakova/ |
-| Капельница от запоя и алкоголя на дому | metro | Улица Милашенкова | ulica-milashenkova | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/ulica-milashenkova/ |
-| Капельница от запоя и алкоголя на дому | metro | Улица Сергея Эйзенштейна | ulica-sergeya-ejzenshtejna | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/ulica-sergeya-ejzenshtejna/ |
-| Капельница от запоя и алкоголя на дому | metro | Улица Старокачаловская | ulica-starokachalovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/ulica-starokachalovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Университет | universitet | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/universitet/ |
-| Капельница от запоя и алкоголя на дому | metro | Варшавская | varshavskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/varshavskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | ВДНХ | vdnh | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/vdnh/ |
-| Капельница от запоя и алкоголя на дому | metro | Верхние Котлы | verhnie-kotly | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/verhnie-kotly/ |
-| Капельница от запоя и алкоголя на дому | metro | Верхние Лихоборы | verhnie-lihobory | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/verhnie-lihobory/ |
-| Капельница от запоя и алкоголя на дому | metro | Владыкино | vladykino | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/vladykino/ |
-| Капельница от запоя и алкоголя на дому | metro | Водный стадион | vodnyj-stadion | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/vodnyj-stadion/ |
-| Капельница от запоя и алкоголя на дому | metro | Войковская | vojkovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/vojkovskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Волгоградский проспект | volgogradskij-prospekt | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/volgogradskij-prospekt/ |
-| Капельница от запоя и алкоголя на дому | metro | Волоколамская | volokolamskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/volokolamskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Волжская | volzhskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/volzhskaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Воробьёвы горы | vorobevy-gory | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/vorobevy-gory/ |
-| Капельница от запоя и алкоголя на дому | metro | Выхино | vyhino | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/vyhino/ |
-| Капельница от запоя и алкоголя на дому | metro | Выставочная | vystavochnaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/vystavochnaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Выставочный центр | vystavochnyj-centr | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/vystavochnyj-centr/ |
-| Капельница от запоя и алкоголя на дому | metro | Ясенево | yasenevo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/yasenevo/ |
-| Капельница от запоя и алкоголя на дому | metro | Юго-Западная | yugo-zapadnaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/yugo-zapadnaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Южная | yuzhnaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/yuzhnaya/ |
-| Капельница от запоя и алкоголя на дому | metro | Жулебино | zhulebino | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/zhulebino/ |
-| Капельница от запоя и алкоголя на дому | metro | ЗИЛ | zil | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/zil/ |
-| Капельница от запоя и алкоголя на дому | metro | Зорге | zorge | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/zorge/ |
-| Капельница от запоя и алкоголя на дому | metro | Зябликово | zyablikovo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/zyablikovo/ |
-| Капельница от запоя и алкоголя на дому | okrug | ЦАО | cao | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/cao/ |
-| Капельница от запоя и алкоголя на дому | okrug | САО | sao | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/sao/ |
-| Капельница от запоя и алкоголя на дому | okrug | СВАО | svao | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/svao/ |
-| Капельница от запоя и алкоголя на дому | okrug | ВАО | vao | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/vao/ |
-| Капельница от запоя и алкоголя на дому | okrug | ЮВАО | yuvao | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/yuvao/ |
-| Капельница от запоя и алкоголя на дому | okrug | ЮАО | yuao | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/yuao/ |
-| Капельница от запоя и алкоголя на дому | okrug | ЮЗАО | yuzao | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/yuzao/ |
-| Капельница от запоя и алкоголя на дому | okrug | ЗАО | zao | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/zao/ |
-| Капельница от запоя и алкоголя на дому | okrug | СЗАО | szao | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/szao/ |
-| Капельница от запоя и алкоголя на дому | okrug | ЗелАО | zelao | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/zelao/ |
-| Капельница от запоя и алкоголя на дому | okrug | НАО | nao | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/nao/ |
-| Капельница от запоя и алкоголя на дому | okrug | ТАО | tao | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskva/tao/ |
+| Капельница от запоя и алкоголя на дому | metro | Аэропорт | aeroport | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/aeroport/ |
+| Капельница от запоя и алкоголя на дому | metro | Александровский сад | aleksandrovskij-sad | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/aleksandrovskij-sad/ |
+| Капельница от запоя и алкоголя на дому | metro | Алексеевская | alekseevskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/alekseevskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Алма-Атинская | alma-atinskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/alma-atinskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Алтуфьево | altufevo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/altufevo/ |
+| Капельница от запоя и алкоголя на дому | metro | Андроновка | andronovka | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/andronovka/ |
+| Капельница от запоя и алкоголя на дому | metro | Аннино | annino | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/annino/ |
+| Капельница от запоя и алкоголя на дому | metro | Арбатская | arbatskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/arbatskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Авиамоторная | aviamotornaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/aviamotornaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Автозаводская | avtozavodskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/avtozavodskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Бабушкинская | babushkinskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/babushkinskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Багратионовская | bagrationovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/bagrationovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Балтийская | baltijskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/baltijskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Баррикадная | barrikadnaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/barrikadnaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Бауманская | baumanskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/baumanskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Беговая | begovaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/begovaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Белокаменная | belokamennaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/belokamennaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Белорусская | belorusskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/belorusskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Беляево | belyaevo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/belyaevo/ |
+| Капельница от запоя и алкоголя на дому | metro | Бибирево | bibirevo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/bibirevo/ |
+| Капельница от запоя и алкоголя на дому | metro | Библиотека имени Ленина | biblioteka-imeni-lenina | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/biblioteka-imeni-lenina/ |
+| Капельница от запоя и алкоголя на дому | metro | Битцевский парк | bitcevskij-park | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/bitcevskij-park/ |
+| Капельница от запоя и алкоголя на дому | metro | Борисово | borisovo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/borisovo/ |
+| Капельница от запоя и алкоголя на дому | metro | Боровицкая | borovickaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/borovickaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Ботанический сад | botanicheskij-sad | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/botanicheskij-sad/ |
+| Капельница от запоя и алкоголя на дому | metro | Братиславская | bratislavskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/bratislavskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Бульвар Адмирала Ушакова | bulvar-admirala-ushakova | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/bulvar-admirala-ushakova/ |
+| Капельница от запоя и алкоголя на дому | metro | Бульвар Рокоссовского | bulvar-rokossovskogo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/bulvar-rokossovskogo/ |
+| Капельница от запоя и алкоголя на дому | metro | Бунинская аллея | buninskaya-alleya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/buninskaya-alleya/ |
+| Капельница от запоя и алкоголя на дому | metro | Бутырская | butyrskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/butyrskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Чеховская | chehovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/chehovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Черкизовская | cherkizovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/cherkizovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Чертановская | chertanovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/chertanovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Чистые пруды | chistye-prudy | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/chistye-prudy/ |
+| Капельница от запоя и алкоголя на дому | metro | Чкаловская | chkalovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/chkalovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Царицыно | caricyno | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/caricyno/ |
+| Капельница от запоя и алкоголя на дому | metro | ЦСКА | cska | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/cska/ |
+| Капельница от запоя и алкоголя на дому | metro | Цветной бульвар | cvetnoj-bulvar | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/cvetnoj-bulvar/ |
+| Капельница от запоя и алкоголя на дому | metro | Деловой центр | delovoj-centr | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/delovoj-centr/ |
+| Капельница от запоя и алкоголя на дому | metro | Динамо | dinamo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/dinamo/ |
+| Капельница от запоя и алкоголя на дому | metro | Дмитровская | dmitrovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/dmitrovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Добрынинская | dobryninskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/dobryninskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Домодедовская | domodedovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/domodedovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Достоевская | dostoevskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/dostoevskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Электрозаводская | elektrozavodskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/elektrozavodskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Филёвский парк | filevskij-park | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/filevskij-park/ |
+| Капельница от запоя и алкоголя на дому | metro | Фили | fili | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/fili/ |
+| Капельница от запоя и алкоголя на дому | metro | Фонвизинская | fonvizinskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/fonvizinskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Фрунзенская | frunzenskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/frunzenskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Хорошёвская | horoshevskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/horoshevskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Ховрино | hovrino | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/hovrino/ |
+| Капельница от запоя и алкоголя на дому | metro | Измайловская | izmajlovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/izmajlovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Каховская | kahovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/kahovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Калужская | kaluzhskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/kaluzhskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Кантемировская | kantemirovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/kantemirovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Каширская | kashirskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/kashirskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Киевская | kievskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/kievskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Китай-город | kitaj-gorod | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/kitaj-gorod/ |
+| Капельница от запоя и алкоголя на дому | metro | Коломенская | kolomenskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/kolomenskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Комсомольская | komsomolskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/komsomolskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Коньково | konkovo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/konkovo/ |
+| Капельница от запоя и алкоголя на дому | metro | Коптево | koptevo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/koptevo/ |
+| Капельница от запоя и алкоголя на дому | metro | Котельники | kotelniki | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/kotelniki/ |
+| Капельница от запоя и алкоголя на дому | metro | Кожуховская | kozhuhovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/kozhuhovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Красногвардейская | krasnogvardejskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/krasnogvardejskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Краснопресненская | krasnopresnenskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/krasnopresnenskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Красносельская | krasnoselskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/krasnoselskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Красные ворота | krasnye-vorota | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/krasnye-vorota/ |
+| Капельница от запоя и алкоголя на дому | metro | Крестьянская застава | krestyanskaya-zastava | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/krestyanskaya-zastava/ |
+| Капельница от запоя и алкоголя на дому | metro | Кропоткинская | kropotkinskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/kropotkinskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Крылатское | krylatskoe | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/krylatskoe/ |
+| Капельница от запоя и алкоголя на дому | metro | Крымская | krymskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/krymskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Кунцевская | kuncevskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/kuncevskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Курская | kurskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/kurskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Кутузовская | kutuzovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/kutuzovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Кузьминки | kuzminki | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/kuzminki/ |
+| Капельница от запоя и алкоголя на дому | metro | Кузнецкий мост | kuzneckij-most | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/kuzneckij-most/ |
+| Капельница от запоя и алкоголя на дому | metro | Ленинский проспект | leninskij-prospekt | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/leninskij-prospekt/ |
+| Капельница от запоя и алкоголя на дому | metro | Лермонтовский проспект | lermontovskij-prospekt | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/lermontovskij-prospekt/ |
+| Капельница от запоя и алкоголя на дому | metro | Лесопарковая | lesoparkovaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/lesoparkovaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Лихоборы | lihobory | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/lihobory/ |
+| Капельница от запоя и алкоголя на дому | metro | Локомотив | lokomotiv | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/lokomotiv/ |
+| Капельница от запоя и алкоголя на дому | metro | Ломоносовский проспект | lomonosovskij-prospekt | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/lomonosovskij-prospekt/ |
+| Капельница от запоя и алкоголя на дому | metro | Лубянка | lubyanka | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/lubyanka/ |
+| Капельница от запоя и алкоголя на дому | metro | Лужники | luzhniki | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/luzhniki/ |
+| Капельница от запоя и алкоголя на дому | metro | Люблино | lyublino | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/lyublino/ |
+| Капельница от запоя и алкоголя на дому | metro | Марьино | marino | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/marino/ |
+| Капельница от запоя и алкоголя на дому | metro | Марьина Роща | marina-roshcha | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/marina-roshcha/ |
+| Капельница от запоя и алкоголя на дому | metro | Марксистская | marksistskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/marksistskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Маяковская | mayakovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/mayakovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Медведково | medvedkovo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/medvedkovo/ |
+| Капельница от запоя и алкоголя на дому | metro | Менделеевская | mendeleevskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/mendeleevskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Международная | mezhdunarodnaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/mezhdunarodnaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Минская | minskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/minskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Молодёжная | molodezhnaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/molodezhnaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Мякинино | myakinino | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/myakinino/ |
+| Капельница от запоя и алкоголя на дому | metro | Нагатинская | nagatinskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/nagatinskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Нагорная | nagornaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/nagornaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Нахимовский проспект | nahimovskij-prospekt | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/nahimovskij-prospekt/ |
+| Капельница от запоя и алкоголя на дому | metro | Нижегородская | nizhegorodskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/nizhegorodskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Новогиреево | novogireevo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/novogireevo/ |
+| Капельница от запоя и алкоголя на дому | metro | Новохохловская | novohohlovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/novohohlovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Новокосино | novokosino | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/novokosino/ |
+| Капельница от запоя и алкоголя на дому | metro | Новокузнецкая | novokuzneckaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/novokuzneckaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Новослободская | novoslobodskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/novoslobodskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Новоясеневская | novoyasenevskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/novoyasenevskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Новые Черёмушки | novye-cheremushki | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/novye-cheremushki/ |
+| Капельница от запоя и алкоголя на дому | metro | Охотный Ряд | ohotnyj-ryad | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/ohotnyj-ryad/ |
+| Капельница от запоя и алкоголя на дому | metro | Окружная | okruzhnaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/okruzhnaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Октябрьское Поле | oktyabrskoe-pole | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/oktyabrskoe-pole/ |
+| Капельница от запоя и алкоголя на дому | metro | Октябрьская | oktyabrskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/oktyabrskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Орехово | orehovo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/orehovo/ |
+| Капельница от запоя и алкоголя на дому | metro | Отрадное | otradnoe | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/otradnoe/ |
+| Капельница от запоя и алкоголя на дому | metro | Панфиловская | panfilovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/panfilovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Парк культуры | park-kultury | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/park-kultury/ |
+| Капельница от запоя и алкоголя на дому | metro | Парк Победы | park-pobedy | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/park-pobedy/ |
+| Капельница от запоя и алкоголя на дому | metro | Партизанская | partizanskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/partizanskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Павелецкая | paveleckaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/paveleckaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Печатники | pechatniki | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/pechatniki/ |
+| Капельница от запоя и алкоголя на дому | metro | Перово | perovo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/perovo/ |
+| Капельница от запоя и алкоголя на дому | metro | Первомайская | pervomajskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/pervomajskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Петровский парк | petrovskij-park | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/petrovskij-park/ |
+| Капельница от запоя и алкоголя на дому | metro | Петровско-Разумовская | petrovsko-razumovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/petrovsko-razumovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Пионерская | pionerskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/pionerskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Планерная | planernaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/planernaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Площадь Гагарина | ploshchad-gagarina | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/ploshchad-gagarina/ |
+| Капельница от запоя и алкоголя на дому | metro | Площадь Ильича | ploshchad-ilicha | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/ploshchad-ilicha/ |
+| Капельница от запоя и алкоголя на дому | metro | Площадь Революции | ploshchad-revolyucii | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/ploshchad-revolyucii/ |
+| Капельница от запоя и алкоголя на дому | metro | Полежаевская | polezhaevskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/polezhaevskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Полянка | polyanka | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/polyanka/ |
+| Капельница от запоя и алкоголя на дому | metro | Пражская | prazhskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/prazhskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Преображенская площадь | preobrazhenskaya-ploshchad | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/preobrazhenskaya-ploshchad/ |
+| Капельница от запоя и алкоголя на дому | metro | Профсоюзная | profsoyuznaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/profsoyuznaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Пролетарская | proletarskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/proletarskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Проспект Мира | prospekt-mira | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/prospekt-mira/ |
+| Капельница от запоя и алкоголя на дому | metro | Проспект Вернадского | prospekt-vernadskogo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/prospekt-vernadskogo/ |
+| Капельница от запоя и алкоголя на дому | metro | Пушкинская | pushkinskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/pushkinskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Пятницкое шоссе | pyatnickoe-shosse | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/pyatnickoe-shosse/ |
+| Капельница от запоя и алкоголя на дому | metro | Раменки | ramenki | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/ramenki/ |
+| Капельница от запоя и алкоголя на дому | metro | Речной вокзал | rechnoj-vokzal | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/rechnoj-vokzal/ |
+| Капельница от запоя и алкоголя на дому | metro | Римская | rimskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/rimskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Рижская | rizhskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/rizhskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Ростокино | rostokino | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/rostokino/ |
+| Капельница от запоя и алкоголя на дому | metro | Румянцево | rumyancevo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/rumyancevo/ |
+| Капельница от запоя и алкоголя на дому | metro | Рязанский проспект | ryazanskij-prospekt | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/ryazanskij-prospekt/ |
+| Капельница от запоя и алкоголя на дому | metro | Саларьево | salarevo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/salarevo/ |
+| Капельница от запоя и алкоголя на дому | metro | Савёловская | savelovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/savelovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Селигерская | seligerskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/seligerskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Семёновская | semenovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/semenovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Серпуховская | serpuhovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/serpuhovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Севастопольская | sevastopolskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/sevastopolskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Шаболовская | shabolovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/shabolovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Шелепиха | shelepiha | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/shelepiha/ |
+| Капельница от запоя и алкоголя на дому | metro | Щукинская | shchukinskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/shchukinskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Щёлковская | shchelkovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/shchelkovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Шипиловская | shipilovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/shipilovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Сходненская | shodnenskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/shodnenskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Шоссе Энтузиастов | shosse-entuziastov | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/shosse-entuziastov/ |
+| Капельница от запоя и алкоголя на дому | metro | Улица Скобелевская | ulica-skobelevskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/ulica-skobelevskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Славянский бульвар | slavyanskij-bulvar | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/slavyanskij-bulvar/ |
+| Капельница от запоя и алкоголя на дому | metro | Смоленская | smolenskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/smolenskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Сокол | sokol | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/sokol/ |
+| Капельница от запоя и алкоголя на дому | metro | Соколиная гора | sokolinaya-gora | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/sokolinaya-gora/ |
+| Капельница от запоя и алкоголя на дому | metro | Спартак | spartak | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/spartak/ |
+| Капельница от запоя и алкоголя на дому | metro | Спортивная | sportivnaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/sportivnaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Сретенский бульвар | sretenskij-bulvar | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/sretenskij-bulvar/ |
+| Капельница от запоя и алкоголя на дому | metro | Стрешнево | streshnevo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/streshnevo/ |
+| Капельница от запоя и алкоголя на дому | metro | Строгино | strogino | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/strogino/ |
+| Капельница от запоя и алкоголя на дому | metro | Студенческая | studencheskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/studencheskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Сухаревская | suharevskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/suharevskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Свиблово | sviblovo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/sviblovo/ |
+| Капельница от запоя и алкоголя на дому | metro | Таганская | taganskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/taganskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Театральная | teatralnaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/teatralnaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Технопарк | tehnopark | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/tehnopark/ |
+| Капельница от запоя и алкоголя на дому | metro | Текстильщики | tekstilshchiki | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/tekstilshchiki/ |
+| Капельница от запоя и алкоголя на дому | metro | Телецентр | telecentr | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/telecentr/ |
+| Капельница от запоя и алкоголя на дому | metro | Тёплый Стан | teplyj-stan | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/teplyj-stan/ |
+| Капельница от запоя и алкоголя на дому | metro | Тимирязевская | timiryazevskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/timiryazevskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Третьяковская | tretyakovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/tretyakovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Тропарёво | troparevo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/troparevo/ |
+| Капельница от запоя и алкоголя на дому | metro | Трубная | trubnaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/trubnaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Тульская | tulskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/tulskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Тургеневская | turgenevskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/turgenevskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Тушинская | tushinskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/tushinskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Тверская | tverskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/tverskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Угрешская | ugreshskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/ugreshskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Улица 1905 года | ulica-1905-goda | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/ulica-1905-goda/ |
+| Капельница от запоя и алкоголя на дому | metro | Улица Академика Королёва | ulica-akademika-koroleva | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/ulica-akademika-koroleva/ |
+| Капельница от запоя и алкоголя на дому | metro | Улица Академика Янгеля | ulica-akademika-yangelya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/ulica-akademika-yangelya/ |
+| Капельница от запоя и алкоголя на дому | metro | Улица Горчакова | ulica-gorchakova | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/ulica-gorchakova/ |
+| Капельница от запоя и алкоголя на дому | metro | Улица Милашенкова | ulica-milashenkova | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/ulica-milashenkova/ |
+| Капельница от запоя и алкоголя на дому | metro | Улица Сергея Эйзенштейна | ulica-sergeya-ejzenshtejna | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/ulica-sergeya-ejzenshtejna/ |
+| Капельница от запоя и алкоголя на дому | metro | Улица Старокачаловская | ulica-starokachalovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/ulica-starokachalovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Университет | universitet | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/universitet/ |
+| Капельница от запоя и алкоголя на дому | metro | Варшавская | varshavskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/varshavskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | ВДНХ | vdnh | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/vdnh/ |
+| Капельница от запоя и алкоголя на дому | metro | Верхние Котлы | verhnie-kotly | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/verhnie-kotly/ |
+| Капельница от запоя и алкоголя на дому | metro | Верхние Лихоборы | verhnie-lihobory | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/verhnie-lihobory/ |
+| Капельница от запоя и алкоголя на дому | metro | Владыкино | vladykino | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/vladykino/ |
+| Капельница от запоя и алкоголя на дому | metro | Водный стадион | vodnyj-stadion | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/vodnyj-stadion/ |
+| Капельница от запоя и алкоголя на дому | metro | Войковская | vojkovskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/vojkovskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Волгоградский проспект | volgogradskij-prospekt | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/volgogradskij-prospekt/ |
+| Капельница от запоя и алкоголя на дому | metro | Волоколамская | volokolamskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/volokolamskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Волжская | volzhskaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/volzhskaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Воробьёвы горы | vorobevy-gory | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/vorobevy-gory/ |
+| Капельница от запоя и алкоголя на дому | metro | Выхино | vyhino | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/vyhino/ |
+| Капельница от запоя и алкоголя на дому | metro | Выставочная | vystavochnaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/vystavochnaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Выставочный центр | vystavochnyj-centr | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/vystavochnyj-centr/ |
+| Капельница от запоя и алкоголя на дому | metro | Ясенево | yasenevo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/yasenevo/ |
+| Капельница от запоя и алкоголя на дому | metro | Юго-Западная | yugo-zapadnaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/yugo-zapadnaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Южная | yuzhnaya | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/yuzhnaya/ |
+| Капельница от запоя и алкоголя на дому | metro | Жулебино | zhulebino | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/zhulebino/ |
+| Капельница от запоя и алкоголя на дому | metro | ЗИЛ | zil | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/zil/ |
+| Капельница от запоя и алкоголя на дому | metro | Зорге | zorge | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/zorge/ |
+| Капельница от запоя и алкоголя на дому | metro | Зябликово | zyablikovo | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/zyablikovo/ |
+| Капельница от запоя и алкоголя на дому | okrug | ЦАО | cao | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/cao/ |
+| Капельница от запоя и алкоголя на дому | okrug | САО | sao | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/sao/ |
+| Капельница от запоя и алкоголя на дому | okrug | СВАО | svao | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/svao/ |
+| Капельница от запоя и алкоголя на дому | okrug | ВАО | vao | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/vao/ |
+| Капельница от запоя и алкоголя на дому | okrug | ЮВАО | yuvao | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/yuvao/ |
+| Капельница от запоя и алкоголя на дому | okrug | ЮАО | yuao | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/yuao/ |
+| Капельница от запоя и алкоголя на дому | okrug | ЮЗАО | yuzao | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/yuzao/ |
+| Капельница от запоя и алкоголя на дому | okrug | ЗАО | zao | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/zao/ |
+| Капельница от запоя и алкоголя на дому | okrug | СЗАО | szao | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/szao/ |
+| Капельница от запоя и алкоголя на дому | okrug | ЗелАО | zelao | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/zelao/ |
+| Капельница от запоя и алкоголя на дому | okrug | НАО | nao | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/nao/ |
+| Капельница от запоя и алкоголя на дому | okrug | ТАО | tao | core | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/tao/ |
 | Капельница от запоя и алкоголя на дому | mo | Балашиха | balashiha | tier-1 | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskovskaya-oblast/balashiha/ |
 | Капельница от запоя и алкоголя на дому | mo | Подольск | podolsk | tier-1 | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskovskaya-oblast/podolsk/ |
 | Капельница от запоя и алкоголя на дому | mo | Химки | himki | tier-1 | P0 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskovskaya-oblast/himki/ |
@@ -2376,233 +2380,233 @@ SILO-хаб
 | Капельница от запоя и алкоголя на дому | mo | Дубна | dubna | tier-2 | P1 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskovskaya-oblast/dubna/ |
 | Капельница от запоя и алкоголя на дому | mo | Черноголовка | chernogolovka | tier-2 | P1 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskovskaya-oblast/chernogolovka/ |
 | Капельница от запоя и алкоголя на дому | mo | Волоколамск | volokolamsk | tier-2 | P1 | migrate/create | /uslugi/kapelnitsy/ot-zapoya-i-alkogolya/moskovskaya-oblast/volokolamsk/ |
-| Кодирование от алкоголизма | metro | Аэропорт | aeroport | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/aeroport/ |
-| Кодирование от алкоголизма | metro | Александровский сад | aleksandrovskij-sad | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/aleksandrovskij-sad/ |
-| Кодирование от алкоголизма | metro | Алексеевская | alekseevskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/alekseevskaya/ |
-| Кодирование от алкоголизма | metro | Алма-Атинская | alma-atinskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/alma-atinskaya/ |
-| Кодирование от алкоголизма | metro | Алтуфьево | altufevo | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/altufevo/ |
-| Кодирование от алкоголизма | metro | Андроновка | andronovka | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/andronovka/ |
-| Кодирование от алкоголизма | metro | Аннино | annino | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/annino/ |
-| Кодирование от алкоголизма | metro | Арбатская | arbatskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/arbatskaya/ |
-| Кодирование от алкоголизма | metro | Авиамоторная | aviamotornaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/aviamotornaya/ |
-| Кодирование от алкоголизма | metro | Автозаводская | avtozavodskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/avtozavodskaya/ |
-| Кодирование от алкоголизма | metro | Бабушкинская | babushkinskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/babushkinskaya/ |
-| Кодирование от алкоголизма | metro | Багратионовская | bagrationovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/bagrationovskaya/ |
-| Кодирование от алкоголизма | metro | Балтийская | baltijskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/baltijskaya/ |
-| Кодирование от алкоголизма | metro | Баррикадная | barrikadnaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/barrikadnaya/ |
-| Кодирование от алкоголизма | metro | Бауманская | baumanskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/baumanskaya/ |
-| Кодирование от алкоголизма | metro | Беговая | begovaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/begovaya/ |
-| Кодирование от алкоголизма | metro | Белокаменная | belokamennaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/belokamennaya/ |
-| Кодирование от алкоголизма | metro | Белорусская | belorusskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/belorusskaya/ |
-| Кодирование от алкоголизма | metro | Беляево | belyaevo | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/belyaevo/ |
-| Кодирование от алкоголизма | metro | Бибирево | bibirevo | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/bibirevo/ |
-| Кодирование от алкоголизма | metro | Библиотека имени Ленина | biblioteka-imeni-lenina | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/biblioteka-imeni-lenina/ |
-| Кодирование от алкоголизма | metro | Битцевский парк | bitcevskij-park | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/bitcevskij-park/ |
-| Кодирование от алкоголизма | metro | Борисово | borisovo | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/borisovo/ |
-| Кодирование от алкоголизма | metro | Боровицкая | borovickaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/borovickaya/ |
-| Кодирование от алкоголизма | metro | Ботанический сад | botanicheskij-sad | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/botanicheskij-sad/ |
-| Кодирование от алкоголизма | metro | Братиславская | bratislavskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/bratislavskaya/ |
-| Кодирование от алкоголизма | metro | Бульвар Адмирала Ушакова | bulvar-admirala-ushakova | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/bulvar-admirala-ushakova/ |
-| Кодирование от алкоголизма | metro | Бульвар Рокоссовского | bulvar-rokossovskogo | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/bulvar-rokossovskogo/ |
-| Кодирование от алкоголизма | metro | Бунинская аллея | buninskaya-alleya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/buninskaya-alleya/ |
-| Кодирование от алкоголизма | metro | Бутырская | butyrskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/butyrskaya/ |
-| Кодирование от алкоголизма | metro | Чеховская | chehovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/chehovskaya/ |
-| Кодирование от алкоголизма | metro | Черкизовская | cherkizovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/cherkizovskaya/ |
-| Кодирование от алкоголизма | metro | Чертановская | chertanovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/chertanovskaya/ |
-| Кодирование от алкоголизма | metro | Чистые пруды | chistye-prudy | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/chistye-prudy/ |
-| Кодирование от алкоголизма | metro | Чкаловская | chkalovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/chkalovskaya/ |
-| Кодирование от алкоголизма | metro | Царицыно | caricyno | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/caricyno/ |
-| Кодирование от алкоголизма | metro | ЦСКА | cska | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/cska/ |
-| Кодирование от алкоголизма | metro | Цветной бульвар | cvetnoj-bulvar | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/cvetnoj-bulvar/ |
-| Кодирование от алкоголизма | metro | Деловой центр | delovoj-centr | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/delovoj-centr/ |
-| Кодирование от алкоголизма | metro | Динамо | dinamo | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/dinamo/ |
-| Кодирование от алкоголизма | metro | Дмитровская | dmitrovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/dmitrovskaya/ |
-| Кодирование от алкоголизма | metro | Добрынинская | dobryninskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/dobryninskaya/ |
-| Кодирование от алкоголизма | metro | Домодедовская | domodedovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/domodedovskaya/ |
-| Кодирование от алкоголизма | metro | Достоевская | dostoevskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/dostoevskaya/ |
-| Кодирование от алкоголизма | metro | Электрозаводская | elektrozavodskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/elektrozavodskaya/ |
-| Кодирование от алкоголизма | metro | Филёвский парк | filevskij-park | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/filevskij-park/ |
-| Кодирование от алкоголизма | metro | Фили | fili | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/fili/ |
-| Кодирование от алкоголизма | metro | Фонвизинская | fonvizinskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/fonvizinskaya/ |
-| Кодирование от алкоголизма | metro | Фрунзенская | frunzenskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/frunzenskaya/ |
-| Кодирование от алкоголизма | metro | Хорошёвская | horoshevskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/horoshevskaya/ |
-| Кодирование от алкоголизма | metro | Ховрино | hovrino | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/hovrino/ |
-| Кодирование от алкоголизма | metro | Измайловская | izmajlovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/izmajlovskaya/ |
-| Кодирование от алкоголизма | metro | Каховская | kahovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/kahovskaya/ |
-| Кодирование от алкоголизма | metro | Калужская | kaluzhskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/kaluzhskaya/ |
-| Кодирование от алкоголизма | metro | Кантемировская | kantemirovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/kantemirovskaya/ |
-| Кодирование от алкоголизма | metro | Каширская | kashirskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/kashirskaya/ |
-| Кодирование от алкоголизма | metro | Киевская | kievskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/kievskaya/ |
-| Кодирование от алкоголизма | metro | Китай-город | kitaj-gorod | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/kitaj-gorod/ |
-| Кодирование от алкоголизма | metro | Коломенская | kolomenskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/kolomenskaya/ |
-| Кодирование от алкоголизма | metro | Комсомольская | komsomolskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/komsomolskaya/ |
-| Кодирование от алкоголизма | metro | Коньково | konkovo | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/konkovo/ |
-| Кодирование от алкоголизма | metro | Коптево | koptevo | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/koptevo/ |
-| Кодирование от алкоголизма | metro | Котельники | kotelniki | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/kotelniki/ |
-| Кодирование от алкоголизма | metro | Кожуховская | kozhuhovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/kozhuhovskaya/ |
-| Кодирование от алкоголизма | metro | Красногвардейская | krasnogvardejskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/krasnogvardejskaya/ |
-| Кодирование от алкоголизма | metro | Краснопресненская | krasnopresnenskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/krasnopresnenskaya/ |
-| Кодирование от алкоголизма | metro | Красносельская | krasnoselskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/krasnoselskaya/ |
-| Кодирование от алкоголизма | metro | Красные ворота | krasnye-vorota | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/krasnye-vorota/ |
-| Кодирование от алкоголизма | metro | Крестьянская застава | krestyanskaya-zastava | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/krestyanskaya-zastava/ |
-| Кодирование от алкоголизма | metro | Кропоткинская | kropotkinskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/kropotkinskaya/ |
-| Кодирование от алкоголизма | metro | Крылатское | krylatskoe | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/krylatskoe/ |
-| Кодирование от алкоголизма | metro | Крымская | krymskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/krymskaya/ |
-| Кодирование от алкоголизма | metro | Кунцевская | kuncevskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/kuncevskaya/ |
-| Кодирование от алкоголизма | metro | Курская | kurskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/kurskaya/ |
-| Кодирование от алкоголизма | metro | Кутузовская | kutuzovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/kutuzovskaya/ |
-| Кодирование от алкоголизма | metro | Кузьминки | kuzminki | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/kuzminki/ |
-| Кодирование от алкоголизма | metro | Кузнецкий мост | kuzneckij-most | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/kuzneckij-most/ |
-| Кодирование от алкоголизма | metro | Ленинский проспект | leninskij-prospekt | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/leninskij-prospekt/ |
-| Кодирование от алкоголизма | metro | Лермонтовский проспект | lermontovskij-prospekt | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/lermontovskij-prospekt/ |
-| Кодирование от алкоголизма | metro | Лесопарковая | lesoparkovaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/lesoparkovaya/ |
-| Кодирование от алкоголизма | metro | Лихоборы | lihobory | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/lihobory/ |
-| Кодирование от алкоголизма | metro | Локомотив | lokomotiv | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/lokomotiv/ |
-| Кодирование от алкоголизма | metro | Ломоносовский проспект | lomonosovskij-prospekt | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/lomonosovskij-prospekt/ |
-| Кодирование от алкоголизма | metro | Лубянка | lubyanka | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/lubyanka/ |
-| Кодирование от алкоголизма | metro | Лужники | luzhniki | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/luzhniki/ |
-| Кодирование от алкоголизма | metro | Люблино | lyublino | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/lyublino/ |
-| Кодирование от алкоголизма | metro | Марьино | marino | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/marino/ |
-| Кодирование от алкоголизма | metro | Марьина Роща | marina-roshcha | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/marina-roshcha/ |
-| Кодирование от алкоголизма | metro | Марксистская | marksistskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/marksistskaya/ |
-| Кодирование от алкоголизма | metro | Маяковская | mayakovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/mayakovskaya/ |
-| Кодирование от алкоголизма | metro | Медведково | medvedkovo | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/medvedkovo/ |
-| Кодирование от алкоголизма | metro | Менделеевская | mendeleevskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/mendeleevskaya/ |
-| Кодирование от алкоголизма | metro | Международная | mezhdunarodnaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/mezhdunarodnaya/ |
-| Кодирование от алкоголизма | metro | Минская | minskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/minskaya/ |
-| Кодирование от алкоголизма | metro | Молодёжная | molodezhnaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/molodezhnaya/ |
-| Кодирование от алкоголизма | metro | Мякинино | myakinino | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/myakinino/ |
-| Кодирование от алкоголизма | metro | Нагатинская | nagatinskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/nagatinskaya/ |
-| Кодирование от алкоголизма | metro | Нагорная | nagornaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/nagornaya/ |
-| Кодирование от алкоголизма | metro | Нахимовский проспект | nahimovskij-prospekt | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/nahimovskij-prospekt/ |
-| Кодирование от алкоголизма | metro | Нижегородская | nizhegorodskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/nizhegorodskaya/ |
-| Кодирование от алкоголизма | metro | Новогиреево | novogireevo | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/novogireevo/ |
-| Кодирование от алкоголизма | metro | Новохохловская | novohohlovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/novohohlovskaya/ |
-| Кодирование от алкоголизма | metro | Новокосино | novokosino | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/novokosino/ |
-| Кодирование от алкоголизма | metro | Новокузнецкая | novokuzneckaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/novokuzneckaya/ |
-| Кодирование от алкоголизма | metro | Новослободская | novoslobodskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/novoslobodskaya/ |
-| Кодирование от алкоголизма | metro | Новоясеневская | novoyasenevskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/novoyasenevskaya/ |
-| Кодирование от алкоголизма | metro | Новые Черёмушки | novye-cheremushki | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/novye-cheremushki/ |
-| Кодирование от алкоголизма | metro | Охотный Ряд | ohotnyj-ryad | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/ohotnyj-ryad/ |
-| Кодирование от алкоголизма | metro | Окружная | okruzhnaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/okruzhnaya/ |
-| Кодирование от алкоголизма | metro | Октябрьское Поле | oktyabrskoe-pole | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/oktyabrskoe-pole/ |
-| Кодирование от алкоголизма | metro | Октябрьская | oktyabrskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/oktyabrskaya/ |
-| Кодирование от алкоголизма | metro | Орехово | orehovo | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/orehovo/ |
-| Кодирование от алкоголизма | metro | Отрадное | otradnoe | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/otradnoe/ |
-| Кодирование от алкоголизма | metro | Панфиловская | panfilovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/panfilovskaya/ |
-| Кодирование от алкоголизма | metro | Парк культуры | park-kultury | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/park-kultury/ |
-| Кодирование от алкоголизма | metro | Парк Победы | park-pobedy | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/park-pobedy/ |
-| Кодирование от алкоголизма | metro | Партизанская | partizanskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/partizanskaya/ |
-| Кодирование от алкоголизма | metro | Павелецкая | paveleckaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/paveleckaya/ |
-| Кодирование от алкоголизма | metro | Печатники | pechatniki | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/pechatniki/ |
-| Кодирование от алкоголизма | metro | Перово | perovo | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/perovo/ |
-| Кодирование от алкоголизма | metro | Первомайская | pervomajskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/pervomajskaya/ |
-| Кодирование от алкоголизма | metro | Петровский парк | petrovskij-park | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/petrovskij-park/ |
-| Кодирование от алкоголизма | metro | Петровско-Разумовская | petrovsko-razumovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/petrovsko-razumovskaya/ |
-| Кодирование от алкоголизма | metro | Пионерская | pionerskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/pionerskaya/ |
-| Кодирование от алкоголизма | metro | Планерная | planernaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/planernaya/ |
-| Кодирование от алкоголизма | metro | Площадь Гагарина | ploshchad-gagarina | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/ploshchad-gagarina/ |
-| Кодирование от алкоголизма | metro | Площадь Ильича | ploshchad-ilicha | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/ploshchad-ilicha/ |
-| Кодирование от алкоголизма | metro | Площадь Революции | ploshchad-revolyucii | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/ploshchad-revolyucii/ |
-| Кодирование от алкоголизма | metro | Полежаевская | polezhaevskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/polezhaevskaya/ |
-| Кодирование от алкоголизма | metro | Полянка | polyanka | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/polyanka/ |
-| Кодирование от алкоголизма | metro | Пражская | prazhskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/prazhskaya/ |
-| Кодирование от алкоголизма | metro | Преображенская площадь | preobrazhenskaya-ploshchad | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/preobrazhenskaya-ploshchad/ |
-| Кодирование от алкоголизма | metro | Профсоюзная | profsoyuznaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/profsoyuznaya/ |
-| Кодирование от алкоголизма | metro | Пролетарская | proletarskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/proletarskaya/ |
-| Кодирование от алкоголизма | metro | Проспект Мира | prospekt-mira | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/prospekt-mira/ |
-| Кодирование от алкоголизма | metro | Проспект Вернадского | prospekt-vernadskogo | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/prospekt-vernadskogo/ |
-| Кодирование от алкоголизма | metro | Пушкинская | pushkinskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/pushkinskaya/ |
-| Кодирование от алкоголизма | metro | Пятницкое шоссе | pyatnickoe-shosse | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/pyatnickoe-shosse/ |
-| Кодирование от алкоголизма | metro | Раменки | ramenki | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/ramenki/ |
-| Кодирование от алкоголизма | metro | Речной вокзал | rechnoj-vokzal | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/rechnoj-vokzal/ |
-| Кодирование от алкоголизма | metro | Римская | rimskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/rimskaya/ |
-| Кодирование от алкоголизма | metro | Рижская | rizhskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/rizhskaya/ |
-| Кодирование от алкоголизма | metro | Ростокино | rostokino | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/rostokino/ |
-| Кодирование от алкоголизма | metro | Румянцево | rumyancevo | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/rumyancevo/ |
-| Кодирование от алкоголизма | metro | Рязанский проспект | ryazanskij-prospekt | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/ryazanskij-prospekt/ |
-| Кодирование от алкоголизма | metro | Саларьево | salarevo | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/salarevo/ |
-| Кодирование от алкоголизма | metro | Савёловская | savelovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/savelovskaya/ |
-| Кодирование от алкоголизма | metro | Селигерская | seligerskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/seligerskaya/ |
-| Кодирование от алкоголизма | metro | Семёновская | semenovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/semenovskaya/ |
-| Кодирование от алкоголизма | metro | Серпуховская | serpuhovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/serpuhovskaya/ |
-| Кодирование от алкоголизма | metro | Севастопольская | sevastopolskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/sevastopolskaya/ |
-| Кодирование от алкоголизма | metro | Шаболовская | shabolovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/shabolovskaya/ |
-| Кодирование от алкоголизма | metro | Шелепиха | shelepiha | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/shelepiha/ |
-| Кодирование от алкоголизма | metro | Щукинская | shchukinskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/shchukinskaya/ |
-| Кодирование от алкоголизма | metro | Щёлковская | shchelkovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/shchelkovskaya/ |
-| Кодирование от алкоголизма | metro | Шипиловская | shipilovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/shipilovskaya/ |
-| Кодирование от алкоголизма | metro | Сходненская | shodnenskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/shodnenskaya/ |
-| Кодирование от алкоголизма | metro | Шоссе Энтузиастов | shosse-entuziastov | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/shosse-entuziastov/ |
-| Кодирование от алкоголизма | metro | Улица Скобелевская | ulica-skobelevskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/ulica-skobelevskaya/ |
-| Кодирование от алкоголизма | metro | Славянский бульвар | slavyanskij-bulvar | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/slavyanskij-bulvar/ |
-| Кодирование от алкоголизма | metro | Смоленская | smolenskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/smolenskaya/ |
-| Кодирование от алкоголизма | metro | Сокол | sokol | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/sokol/ |
-| Кодирование от алкоголизма | metro | Соколиная гора | sokolinaya-gora | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/sokolinaya-gora/ |
-| Кодирование от алкоголизма | metro | Спартак | spartak | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/spartak/ |
-| Кодирование от алкоголизма | metro | Спортивная | sportivnaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/sportivnaya/ |
-| Кодирование от алкоголизма | metro | Сретенский бульвар | sretenskij-bulvar | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/sretenskij-bulvar/ |
-| Кодирование от алкоголизма | metro | Стрешнево | streshnevo | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/streshnevo/ |
-| Кодирование от алкоголизма | metro | Строгино | strogino | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/strogino/ |
-| Кодирование от алкоголизма | metro | Студенческая | studencheskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/studencheskaya/ |
-| Кодирование от алкоголизма | metro | Сухаревская | suharevskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/suharevskaya/ |
-| Кодирование от алкоголизма | metro | Свиблово | sviblovo | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/sviblovo/ |
-| Кодирование от алкоголизма | metro | Таганская | taganskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/taganskaya/ |
-| Кодирование от алкоголизма | metro | Театральная | teatralnaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/teatralnaya/ |
-| Кодирование от алкоголизма | metro | Технопарк | tehnopark | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/tehnopark/ |
-| Кодирование от алкоголизма | metro | Текстильщики | tekstilshchiki | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/tekstilshchiki/ |
-| Кодирование от алкоголизма | metro | Телецентр | telecentr | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/telecentr/ |
-| Кодирование от алкоголизма | metro | Тёплый Стан | teplyj-stan | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/teplyj-stan/ |
-| Кодирование от алкоголизма | metro | Тимирязевская | timiryazevskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/timiryazevskaya/ |
-| Кодирование от алкоголизма | metro | Третьяковская | tretyakovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/tretyakovskaya/ |
-| Кодирование от алкоголизма | metro | Тропарёво | troparevo | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/troparevo/ |
-| Кодирование от алкоголизма | metro | Трубная | trubnaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/trubnaya/ |
-| Кодирование от алкоголизма | metro | Тульская | tulskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/tulskaya/ |
-| Кодирование от алкоголизма | metro | Тургеневская | turgenevskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/turgenevskaya/ |
-| Кодирование от алкоголизма | metro | Тушинская | tushinskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/tushinskaya/ |
-| Кодирование от алкоголизма | metro | Тверская | tverskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/tverskaya/ |
-| Кодирование от алкоголизма | metro | Угрешская | ugreshskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/ugreshskaya/ |
-| Кодирование от алкоголизма | metro | Улица 1905 года | ulica-1905-goda | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/ulica-1905-goda/ |
-| Кодирование от алкоголизма | metro | Улица Академика Королёва | ulica-akademika-koroleva | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/ulica-akademika-koroleva/ |
-| Кодирование от алкоголизма | metro | Улица Академика Янгеля | ulica-akademika-yangelya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/ulica-akademika-yangelya/ |
-| Кодирование от алкоголизма | metro | Улица Горчакова | ulica-gorchakova | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/ulica-gorchakova/ |
-| Кодирование от алкоголизма | metro | Улица Милашенкова | ulica-milashenkova | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/ulica-milashenkova/ |
-| Кодирование от алкоголизма | metro | Улица Сергея Эйзенштейна | ulica-sergeya-ejzenshtejna | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/ulica-sergeya-ejzenshtejna/ |
-| Кодирование от алкоголизма | metro | Улица Старокачаловская | ulica-starokachalovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/ulica-starokachalovskaya/ |
-| Кодирование от алкоголизма | metro | Университет | universitet | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/universitet/ |
-| Кодирование от алкоголизма | metro | Варшавская | varshavskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/varshavskaya/ |
-| Кодирование от алкоголизма | metro | ВДНХ | vdnh | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/vdnh/ |
-| Кодирование от алкоголизма | metro | Верхние Котлы | verhnie-kotly | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/verhnie-kotly/ |
-| Кодирование от алкоголизма | metro | Верхние Лихоборы | verhnie-lihobory | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/verhnie-lihobory/ |
-| Кодирование от алкоголизма | metro | Владыкино | vladykino | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/vladykino/ |
-| Кодирование от алкоголизма | metro | Водный стадион | vodnyj-stadion | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/vodnyj-stadion/ |
-| Кодирование от алкоголизма | metro | Войковская | vojkovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/vojkovskaya/ |
-| Кодирование от алкоголизма | metro | Волгоградский проспект | volgogradskij-prospekt | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/volgogradskij-prospekt/ |
-| Кодирование от алкоголизма | metro | Волоколамская | volokolamskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/volokolamskaya/ |
-| Кодирование от алкоголизма | metro | Волжская | volzhskaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/volzhskaya/ |
-| Кодирование от алкоголизма | metro | Воробьёвы горы | vorobevy-gory | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/vorobevy-gory/ |
-| Кодирование от алкоголизма | metro | Выхино | vyhino | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/vyhino/ |
-| Кодирование от алкоголизма | metro | Выставочная | vystavochnaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/vystavochnaya/ |
-| Кодирование от алкоголизма | metro | Выставочный центр | vystavochnyj-centr | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/vystavochnyj-centr/ |
-| Кодирование от алкоголизма | metro | Ясенево | yasenevo | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/yasenevo/ |
-| Кодирование от алкоголизма | metro | Юго-Западная | yugo-zapadnaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/yugo-zapadnaya/ |
-| Кодирование от алкоголизма | metro | Южная | yuzhnaya | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/yuzhnaya/ |
-| Кодирование от алкоголизма | metro | Жулебино | zhulebino | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/zhulebino/ |
-| Кодирование от алкоголизма | metro | ЗИЛ | zil | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/zil/ |
-| Кодирование от алкоголизма | metro | Зорге | zorge | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/zorge/ |
-| Кодирование от алкоголизма | metro | Зябликово | zyablikovo | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/zyablikovo/ |
-| Кодирование от алкоголизма | okrug | ЦАО | cao | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/cao/ |
-| Кодирование от алкоголизма | okrug | САО | sao | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/sao/ |
-| Кодирование от алкоголизма | okrug | СВАО | svao | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/svao/ |
-| Кодирование от алкоголизма | okrug | ВАО | vao | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/vao/ |
-| Кодирование от алкоголизма | okrug | ЮВАО | yuvao | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/yuvao/ |
-| Кодирование от алкоголизма | okrug | ЮАО | yuao | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/yuao/ |
-| Кодирование от алкоголизма | okrug | ЮЗАО | yuzao | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/yuzao/ |
-| Кодирование от алкоголизма | okrug | ЗАО | zao | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/zao/ |
-| Кодирование от алкоголизма | okrug | СЗАО | szao | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/szao/ |
-| Кодирование от алкоголизма | okrug | ЗелАО | zelao | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/zelao/ |
-| Кодирование от алкоголизма | okrug | НАО | nao | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/nao/ |
-| Кодирование от алкоголизма | okrug | ТАО | tao | core | P0 | migrate/create | /uslugi/kodirovanie/moskva/tao/ |
+| Кодирование от алкоголизма | metro | Аэропорт | aeroport | core | P0 | migrate/create | /uslugi/kodirovanie/aeroport/ |
+| Кодирование от алкоголизма | metro | Александровский сад | aleksandrovskij-sad | core | P0 | migrate/create | /uslugi/kodirovanie/aleksandrovskij-sad/ |
+| Кодирование от алкоголизма | metro | Алексеевская | alekseevskaya | core | P0 | migrate/create | /uslugi/kodirovanie/alekseevskaya/ |
+| Кодирование от алкоголизма | metro | Алма-Атинская | alma-atinskaya | core | P0 | migrate/create | /uslugi/kodirovanie/alma-atinskaya/ |
+| Кодирование от алкоголизма | metro | Алтуфьево | altufevo | core | P0 | migrate/create | /uslugi/kodirovanie/altufevo/ |
+| Кодирование от алкоголизма | metro | Андроновка | andronovka | core | P0 | migrate/create | /uslugi/kodirovanie/andronovka/ |
+| Кодирование от алкоголизма | metro | Аннино | annino | core | P0 | migrate/create | /uslugi/kodirovanie/annino/ |
+| Кодирование от алкоголизма | metro | Арбатская | arbatskaya | core | P0 | migrate/create | /uslugi/kodirovanie/arbatskaya/ |
+| Кодирование от алкоголизма | metro | Авиамоторная | aviamotornaya | core | P0 | migrate/create | /uslugi/kodirovanie/aviamotornaya/ |
+| Кодирование от алкоголизма | metro | Автозаводская | avtozavodskaya | core | P0 | migrate/create | /uslugi/kodirovanie/avtozavodskaya/ |
+| Кодирование от алкоголизма | metro | Бабушкинская | babushkinskaya | core | P0 | migrate/create | /uslugi/kodirovanie/babushkinskaya/ |
+| Кодирование от алкоголизма | metro | Багратионовская | bagrationovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/bagrationovskaya/ |
+| Кодирование от алкоголизма | metro | Балтийская | baltijskaya | core | P0 | migrate/create | /uslugi/kodirovanie/baltijskaya/ |
+| Кодирование от алкоголизма | metro | Баррикадная | barrikadnaya | core | P0 | migrate/create | /uslugi/kodirovanie/barrikadnaya/ |
+| Кодирование от алкоголизма | metro | Бауманская | baumanskaya | core | P0 | migrate/create | /uslugi/kodirovanie/baumanskaya/ |
+| Кодирование от алкоголизма | metro | Беговая | begovaya | core | P0 | migrate/create | /uslugi/kodirovanie/begovaya/ |
+| Кодирование от алкоголизма | metro | Белокаменная | belokamennaya | core | P0 | migrate/create | /uslugi/kodirovanie/belokamennaya/ |
+| Кодирование от алкоголизма | metro | Белорусская | belorusskaya | core | P0 | migrate/create | /uslugi/kodirovanie/belorusskaya/ |
+| Кодирование от алкоголизма | metro | Беляево | belyaevo | core | P0 | migrate/create | /uslugi/kodirovanie/belyaevo/ |
+| Кодирование от алкоголизма | metro | Бибирево | bibirevo | core | P0 | migrate/create | /uslugi/kodirovanie/bibirevo/ |
+| Кодирование от алкоголизма | metro | Библиотека имени Ленина | biblioteka-imeni-lenina | core | P0 | migrate/create | /uslugi/kodirovanie/biblioteka-imeni-lenina/ |
+| Кодирование от алкоголизма | metro | Битцевский парк | bitcevskij-park | core | P0 | migrate/create | /uslugi/kodirovanie/bitcevskij-park/ |
+| Кодирование от алкоголизма | metro | Борисово | borisovo | core | P0 | migrate/create | /uslugi/kodirovanie/borisovo/ |
+| Кодирование от алкоголизма | metro | Боровицкая | borovickaya | core | P0 | migrate/create | /uslugi/kodirovanie/borovickaya/ |
+| Кодирование от алкоголизма | metro | Ботанический сад | botanicheskij-sad | core | P0 | migrate/create | /uslugi/kodirovanie/botanicheskij-sad/ |
+| Кодирование от алкоголизма | metro | Братиславская | bratislavskaya | core | P0 | migrate/create | /uslugi/kodirovanie/bratislavskaya/ |
+| Кодирование от алкоголизма | metro | Бульвар Адмирала Ушакова | bulvar-admirala-ushakova | core | P0 | migrate/create | /uslugi/kodirovanie/bulvar-admirala-ushakova/ |
+| Кодирование от алкоголизма | metro | Бульвар Рокоссовского | bulvar-rokossovskogo | core | P0 | migrate/create | /uslugi/kodirovanie/bulvar-rokossovskogo/ |
+| Кодирование от алкоголизма | metro | Бунинская аллея | buninskaya-alleya | core | P0 | migrate/create | /uslugi/kodirovanie/buninskaya-alleya/ |
+| Кодирование от алкоголизма | metro | Бутырская | butyrskaya | core | P0 | migrate/create | /uslugi/kodirovanie/butyrskaya/ |
+| Кодирование от алкоголизма | metro | Чеховская | chehovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/chehovskaya/ |
+| Кодирование от алкоголизма | metro | Черкизовская | cherkizovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/cherkizovskaya/ |
+| Кодирование от алкоголизма | metro | Чертановская | chertanovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/chertanovskaya/ |
+| Кодирование от алкоголизма | metro | Чистые пруды | chistye-prudy | core | P0 | migrate/create | /uslugi/kodirovanie/chistye-prudy/ |
+| Кодирование от алкоголизма | metro | Чкаловская | chkalovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/chkalovskaya/ |
+| Кодирование от алкоголизма | metro | Царицыно | caricyno | core | P0 | migrate/create | /uslugi/kodirovanie/caricyno/ |
+| Кодирование от алкоголизма | metro | ЦСКА | cska | core | P0 | migrate/create | /uslugi/kodirovanie/cska/ |
+| Кодирование от алкоголизма | metro | Цветной бульвар | cvetnoj-bulvar | core | P0 | migrate/create | /uslugi/kodirovanie/cvetnoj-bulvar/ |
+| Кодирование от алкоголизма | metro | Деловой центр | delovoj-centr | core | P0 | migrate/create | /uslugi/kodirovanie/delovoj-centr/ |
+| Кодирование от алкоголизма | metro | Динамо | dinamo | core | P0 | migrate/create | /uslugi/kodirovanie/dinamo/ |
+| Кодирование от алкоголизма | metro | Дмитровская | dmitrovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/dmitrovskaya/ |
+| Кодирование от алкоголизма | metro | Добрынинская | dobryninskaya | core | P0 | migrate/create | /uslugi/kodirovanie/dobryninskaya/ |
+| Кодирование от алкоголизма | metro | Домодедовская | domodedovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/domodedovskaya/ |
+| Кодирование от алкоголизма | metro | Достоевская | dostoevskaya | core | P0 | migrate/create | /uslugi/kodirovanie/dostoevskaya/ |
+| Кодирование от алкоголизма | metro | Электрозаводская | elektrozavodskaya | core | P0 | migrate/create | /uslugi/kodirovanie/elektrozavodskaya/ |
+| Кодирование от алкоголизма | metro | Филёвский парк | filevskij-park | core | P0 | migrate/create | /uslugi/kodirovanie/filevskij-park/ |
+| Кодирование от алкоголизма | metro | Фили | fili | core | P0 | migrate/create | /uslugi/kodirovanie/fili/ |
+| Кодирование от алкоголизма | metro | Фонвизинская | fonvizinskaya | core | P0 | migrate/create | /uslugi/kodirovanie/fonvizinskaya/ |
+| Кодирование от алкоголизма | metro | Фрунзенская | frunzenskaya | core | P0 | migrate/create | /uslugi/kodirovanie/frunzenskaya/ |
+| Кодирование от алкоголизма | metro | Хорошёвская | horoshevskaya | core | P0 | migrate/create | /uslugi/kodirovanie/horoshevskaya/ |
+| Кодирование от алкоголизма | metro | Ховрино | hovrino | core | P0 | migrate/create | /uslugi/kodirovanie/hovrino/ |
+| Кодирование от алкоголизма | metro | Измайловская | izmajlovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/izmajlovskaya/ |
+| Кодирование от алкоголизма | metro | Каховская | kahovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/kahovskaya/ |
+| Кодирование от алкоголизма | metro | Калужская | kaluzhskaya | core | P0 | migrate/create | /uslugi/kodirovanie/kaluzhskaya/ |
+| Кодирование от алкоголизма | metro | Кантемировская | kantemirovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/kantemirovskaya/ |
+| Кодирование от алкоголизма | metro | Каширская | kashirskaya | core | P0 | migrate/create | /uslugi/kodirovanie/kashirskaya/ |
+| Кодирование от алкоголизма | metro | Киевская | kievskaya | core | P0 | migrate/create | /uslugi/kodirovanie/kievskaya/ |
+| Кодирование от алкоголизма | metro | Китай-город | kitaj-gorod | core | P0 | migrate/create | /uslugi/kodirovanie/kitaj-gorod/ |
+| Кодирование от алкоголизма | metro | Коломенская | kolomenskaya | core | P0 | migrate/create | /uslugi/kodirovanie/kolomenskaya/ |
+| Кодирование от алкоголизма | metro | Комсомольская | komsomolskaya | core | P0 | migrate/create | /uslugi/kodirovanie/komsomolskaya/ |
+| Кодирование от алкоголизма | metro | Коньково | konkovo | core | P0 | migrate/create | /uslugi/kodirovanie/konkovo/ |
+| Кодирование от алкоголизма | metro | Коптево | koptevo | core | P0 | migrate/create | /uslugi/kodirovanie/koptevo/ |
+| Кодирование от алкоголизма | metro | Котельники | kotelniki | core | P0 | migrate/create | /uslugi/kodirovanie/kotelniki/ |
+| Кодирование от алкоголизма | metro | Кожуховская | kozhuhovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/kozhuhovskaya/ |
+| Кодирование от алкоголизма | metro | Красногвардейская | krasnogvardejskaya | core | P0 | migrate/create | /uslugi/kodirovanie/krasnogvardejskaya/ |
+| Кодирование от алкоголизма | metro | Краснопресненская | krasnopresnenskaya | core | P0 | migrate/create | /uslugi/kodirovanie/krasnopresnenskaya/ |
+| Кодирование от алкоголизма | metro | Красносельская | krasnoselskaya | core | P0 | migrate/create | /uslugi/kodirovanie/krasnoselskaya/ |
+| Кодирование от алкоголизма | metro | Красные ворота | krasnye-vorota | core | P0 | migrate/create | /uslugi/kodirovanie/krasnye-vorota/ |
+| Кодирование от алкоголизма | metro | Крестьянская застава | krestyanskaya-zastava | core | P0 | migrate/create | /uslugi/kodirovanie/krestyanskaya-zastava/ |
+| Кодирование от алкоголизма | metro | Кропоткинская | kropotkinskaya | core | P0 | migrate/create | /uslugi/kodirovanie/kropotkinskaya/ |
+| Кодирование от алкоголизма | metro | Крылатское | krylatskoe | core | P0 | migrate/create | /uslugi/kodirovanie/krylatskoe/ |
+| Кодирование от алкоголизма | metro | Крымская | krymskaya | core | P0 | migrate/create | /uslugi/kodirovanie/krymskaya/ |
+| Кодирование от алкоголизма | metro | Кунцевская | kuncevskaya | core | P0 | migrate/create | /uslugi/kodirovanie/kuncevskaya/ |
+| Кодирование от алкоголизма | metro | Курская | kurskaya | core | P0 | migrate/create | /uslugi/kodirovanie/kurskaya/ |
+| Кодирование от алкоголизма | metro | Кутузовская | kutuzovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/kutuzovskaya/ |
+| Кодирование от алкоголизма | metro | Кузьминки | kuzminki | core | P0 | migrate/create | /uslugi/kodirovanie/kuzminki/ |
+| Кодирование от алкоголизма | metro | Кузнецкий мост | kuzneckij-most | core | P0 | migrate/create | /uslugi/kodirovanie/kuzneckij-most/ |
+| Кодирование от алкоголизма | metro | Ленинский проспект | leninskij-prospekt | core | P0 | migrate/create | /uslugi/kodirovanie/leninskij-prospekt/ |
+| Кодирование от алкоголизма | metro | Лермонтовский проспект | lermontovskij-prospekt | core | P0 | migrate/create | /uslugi/kodirovanie/lermontovskij-prospekt/ |
+| Кодирование от алкоголизма | metro | Лесопарковая | lesoparkovaya | core | P0 | migrate/create | /uslugi/kodirovanie/lesoparkovaya/ |
+| Кодирование от алкоголизма | metro | Лихоборы | lihobory | core | P0 | migrate/create | /uslugi/kodirovanie/lihobory/ |
+| Кодирование от алкоголизма | metro | Локомотив | lokomotiv | core | P0 | migrate/create | /uslugi/kodirovanie/lokomotiv/ |
+| Кодирование от алкоголизма | metro | Ломоносовский проспект | lomonosovskij-prospekt | core | P0 | migrate/create | /uslugi/kodirovanie/lomonosovskij-prospekt/ |
+| Кодирование от алкоголизма | metro | Лубянка | lubyanka | core | P0 | migrate/create | /uslugi/kodirovanie/lubyanka/ |
+| Кодирование от алкоголизма | metro | Лужники | luzhniki | core | P0 | migrate/create | /uslugi/kodirovanie/luzhniki/ |
+| Кодирование от алкоголизма | metro | Люблино | lyublino | core | P0 | migrate/create | /uslugi/kodirovanie/lyublino/ |
+| Кодирование от алкоголизма | metro | Марьино | marino | core | P0 | migrate/create | /uslugi/kodirovanie/marino/ |
+| Кодирование от алкоголизма | metro | Марьина Роща | marina-roshcha | core | P0 | migrate/create | /uslugi/kodirovanie/marina-roshcha/ |
+| Кодирование от алкоголизма | metro | Марксистская | marksistskaya | core | P0 | migrate/create | /uslugi/kodirovanie/marksistskaya/ |
+| Кодирование от алкоголизма | metro | Маяковская | mayakovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/mayakovskaya/ |
+| Кодирование от алкоголизма | metro | Медведково | medvedkovo | core | P0 | migrate/create | /uslugi/kodirovanie/medvedkovo/ |
+| Кодирование от алкоголизма | metro | Менделеевская | mendeleevskaya | core | P0 | migrate/create | /uslugi/kodirovanie/mendeleevskaya/ |
+| Кодирование от алкоголизма | metro | Международная | mezhdunarodnaya | core | P0 | migrate/create | /uslugi/kodirovanie/mezhdunarodnaya/ |
+| Кодирование от алкоголизма | metro | Минская | minskaya | core | P0 | migrate/create | /uslugi/kodirovanie/minskaya/ |
+| Кодирование от алкоголизма | metro | Молодёжная | molodezhnaya | core | P0 | migrate/create | /uslugi/kodirovanie/molodezhnaya/ |
+| Кодирование от алкоголизма | metro | Мякинино | myakinino | core | P0 | migrate/create | /uslugi/kodirovanie/myakinino/ |
+| Кодирование от алкоголизма | metro | Нагатинская | nagatinskaya | core | P0 | migrate/create | /uslugi/kodirovanie/nagatinskaya/ |
+| Кодирование от алкоголизма | metro | Нагорная | nagornaya | core | P0 | migrate/create | /uslugi/kodirovanie/nagornaya/ |
+| Кодирование от алкоголизма | metro | Нахимовский проспект | nahimovskij-prospekt | core | P0 | migrate/create | /uslugi/kodirovanie/nahimovskij-prospekt/ |
+| Кодирование от алкоголизма | metro | Нижегородская | nizhegorodskaya | core | P0 | migrate/create | /uslugi/kodirovanie/nizhegorodskaya/ |
+| Кодирование от алкоголизма | metro | Новогиреево | novogireevo | core | P0 | migrate/create | /uslugi/kodirovanie/novogireevo/ |
+| Кодирование от алкоголизма | metro | Новохохловская | novohohlovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/novohohlovskaya/ |
+| Кодирование от алкоголизма | metro | Новокосино | novokosino | core | P0 | migrate/create | /uslugi/kodirovanie/novokosino/ |
+| Кодирование от алкоголизма | metro | Новокузнецкая | novokuzneckaya | core | P0 | migrate/create | /uslugi/kodirovanie/novokuzneckaya/ |
+| Кодирование от алкоголизма | metro | Новослободская | novoslobodskaya | core | P0 | migrate/create | /uslugi/kodirovanie/novoslobodskaya/ |
+| Кодирование от алкоголизма | metro | Новоясеневская | novoyasenevskaya | core | P0 | migrate/create | /uslugi/kodirovanie/novoyasenevskaya/ |
+| Кодирование от алкоголизма | metro | Новые Черёмушки | novye-cheremushki | core | P0 | migrate/create | /uslugi/kodirovanie/novye-cheremushki/ |
+| Кодирование от алкоголизма | metro | Охотный Ряд | ohotnyj-ryad | core | P0 | migrate/create | /uslugi/kodirovanie/ohotnyj-ryad/ |
+| Кодирование от алкоголизма | metro | Окружная | okruzhnaya | core | P0 | migrate/create | /uslugi/kodirovanie/okruzhnaya/ |
+| Кодирование от алкоголизма | metro | Октябрьское Поле | oktyabrskoe-pole | core | P0 | migrate/create | /uslugi/kodirovanie/oktyabrskoe-pole/ |
+| Кодирование от алкоголизма | metro | Октябрьская | oktyabrskaya | core | P0 | migrate/create | /uslugi/kodirovanie/oktyabrskaya/ |
+| Кодирование от алкоголизма | metro | Орехово | orehovo | core | P0 | migrate/create | /uslugi/kodirovanie/orehovo/ |
+| Кодирование от алкоголизма | metro | Отрадное | otradnoe | core | P0 | migrate/create | /uslugi/kodirovanie/otradnoe/ |
+| Кодирование от алкоголизма | metro | Панфиловская | panfilovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/panfilovskaya/ |
+| Кодирование от алкоголизма | metro | Парк культуры | park-kultury | core | P0 | migrate/create | /uslugi/kodirovanie/park-kultury/ |
+| Кодирование от алкоголизма | metro | Парк Победы | park-pobedy | core | P0 | migrate/create | /uslugi/kodirovanie/park-pobedy/ |
+| Кодирование от алкоголизма | metro | Партизанская | partizanskaya | core | P0 | migrate/create | /uslugi/kodirovanie/partizanskaya/ |
+| Кодирование от алкоголизма | metro | Павелецкая | paveleckaya | core | P0 | migrate/create | /uslugi/kodirovanie/paveleckaya/ |
+| Кодирование от алкоголизма | metro | Печатники | pechatniki | core | P0 | migrate/create | /uslugi/kodirovanie/pechatniki/ |
+| Кодирование от алкоголизма | metro | Перово | perovo | core | P0 | migrate/create | /uslugi/kodirovanie/perovo/ |
+| Кодирование от алкоголизма | metro | Первомайская | pervomajskaya | core | P0 | migrate/create | /uslugi/kodirovanie/pervomajskaya/ |
+| Кодирование от алкоголизма | metro | Петровский парк | petrovskij-park | core | P0 | migrate/create | /uslugi/kodirovanie/petrovskij-park/ |
+| Кодирование от алкоголизма | metro | Петровско-Разумовская | petrovsko-razumovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/petrovsko-razumovskaya/ |
+| Кодирование от алкоголизма | metro | Пионерская | pionerskaya | core | P0 | migrate/create | /uslugi/kodirovanie/pionerskaya/ |
+| Кодирование от алкоголизма | metro | Планерная | planernaya | core | P0 | migrate/create | /uslugi/kodirovanie/planernaya/ |
+| Кодирование от алкоголизма | metro | Площадь Гагарина | ploshchad-gagarina | core | P0 | migrate/create | /uslugi/kodirovanie/ploshchad-gagarina/ |
+| Кодирование от алкоголизма | metro | Площадь Ильича | ploshchad-ilicha | core | P0 | migrate/create | /uslugi/kodirovanie/ploshchad-ilicha/ |
+| Кодирование от алкоголизма | metro | Площадь Революции | ploshchad-revolyucii | core | P0 | migrate/create | /uslugi/kodirovanie/ploshchad-revolyucii/ |
+| Кодирование от алкоголизма | metro | Полежаевская | polezhaevskaya | core | P0 | migrate/create | /uslugi/kodirovanie/polezhaevskaya/ |
+| Кодирование от алкоголизма | metro | Полянка | polyanka | core | P0 | migrate/create | /uslugi/kodirovanie/polyanka/ |
+| Кодирование от алкоголизма | metro | Пражская | prazhskaya | core | P0 | migrate/create | /uslugi/kodirovanie/prazhskaya/ |
+| Кодирование от алкоголизма | metro | Преображенская площадь | preobrazhenskaya-ploshchad | core | P0 | migrate/create | /uslugi/kodirovanie/preobrazhenskaya-ploshchad/ |
+| Кодирование от алкоголизма | metro | Профсоюзная | profsoyuznaya | core | P0 | migrate/create | /uslugi/kodirovanie/profsoyuznaya/ |
+| Кодирование от алкоголизма | metro | Пролетарская | proletarskaya | core | P0 | migrate/create | /uslugi/kodirovanie/proletarskaya/ |
+| Кодирование от алкоголизма | metro | Проспект Мира | prospekt-mira | core | P0 | migrate/create | /uslugi/kodirovanie/prospekt-mira/ |
+| Кодирование от алкоголизма | metro | Проспект Вернадского | prospekt-vernadskogo | core | P0 | migrate/create | /uslugi/kodirovanie/prospekt-vernadskogo/ |
+| Кодирование от алкоголизма | metro | Пушкинская | pushkinskaya | core | P0 | migrate/create | /uslugi/kodirovanie/pushkinskaya/ |
+| Кодирование от алкоголизма | metro | Пятницкое шоссе | pyatnickoe-shosse | core | P0 | migrate/create | /uslugi/kodirovanie/pyatnickoe-shosse/ |
+| Кодирование от алкоголизма | metro | Раменки | ramenki | core | P0 | migrate/create | /uslugi/kodirovanie/ramenki/ |
+| Кодирование от алкоголизма | metro | Речной вокзал | rechnoj-vokzal | core | P0 | migrate/create | /uslugi/kodirovanie/rechnoj-vokzal/ |
+| Кодирование от алкоголизма | metro | Римская | rimskaya | core | P0 | migrate/create | /uslugi/kodirovanie/rimskaya/ |
+| Кодирование от алкоголизма | metro | Рижская | rizhskaya | core | P0 | migrate/create | /uslugi/kodirovanie/rizhskaya/ |
+| Кодирование от алкоголизма | metro | Ростокино | rostokino | core | P0 | migrate/create | /uslugi/kodirovanie/rostokino/ |
+| Кодирование от алкоголизма | metro | Румянцево | rumyancevo | core | P0 | migrate/create | /uslugi/kodirovanie/rumyancevo/ |
+| Кодирование от алкоголизма | metro | Рязанский проспект | ryazanskij-prospekt | core | P0 | migrate/create | /uslugi/kodirovanie/ryazanskij-prospekt/ |
+| Кодирование от алкоголизма | metro | Саларьево | salarevo | core | P0 | migrate/create | /uslugi/kodirovanie/salarevo/ |
+| Кодирование от алкоголизма | metro | Савёловская | savelovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/savelovskaya/ |
+| Кодирование от алкоголизма | metro | Селигерская | seligerskaya | core | P0 | migrate/create | /uslugi/kodirovanie/seligerskaya/ |
+| Кодирование от алкоголизма | metro | Семёновская | semenovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/semenovskaya/ |
+| Кодирование от алкоголизма | metro | Серпуховская | serpuhovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/serpuhovskaya/ |
+| Кодирование от алкоголизма | metro | Севастопольская | sevastopolskaya | core | P0 | migrate/create | /uslugi/kodirovanie/sevastopolskaya/ |
+| Кодирование от алкоголизма | metro | Шаболовская | shabolovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/shabolovskaya/ |
+| Кодирование от алкоголизма | metro | Шелепиха | shelepiha | core | P0 | migrate/create | /uslugi/kodirovanie/shelepiha/ |
+| Кодирование от алкоголизма | metro | Щукинская | shchukinskaya | core | P0 | migrate/create | /uslugi/kodirovanie/shchukinskaya/ |
+| Кодирование от алкоголизма | metro | Щёлковская | shchelkovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/shchelkovskaya/ |
+| Кодирование от алкоголизма | metro | Шипиловская | shipilovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/shipilovskaya/ |
+| Кодирование от алкоголизма | metro | Сходненская | shodnenskaya | core | P0 | migrate/create | /uslugi/kodirovanie/shodnenskaya/ |
+| Кодирование от алкоголизма | metro | Шоссе Энтузиастов | shosse-entuziastov | core | P0 | migrate/create | /uslugi/kodirovanie/shosse-entuziastov/ |
+| Кодирование от алкоголизма | metro | Улица Скобелевская | ulica-skobelevskaya | core | P0 | migrate/create | /uslugi/kodirovanie/ulica-skobelevskaya/ |
+| Кодирование от алкоголизма | metro | Славянский бульвар | slavyanskij-bulvar | core | P0 | migrate/create | /uslugi/kodirovanie/slavyanskij-bulvar/ |
+| Кодирование от алкоголизма | metro | Смоленская | smolenskaya | core | P0 | migrate/create | /uslugi/kodirovanie/smolenskaya/ |
+| Кодирование от алкоголизма | metro | Сокол | sokol | core | P0 | migrate/create | /uslugi/kodirovanie/sokol/ |
+| Кодирование от алкоголизма | metro | Соколиная гора | sokolinaya-gora | core | P0 | migrate/create | /uslugi/kodirovanie/sokolinaya-gora/ |
+| Кодирование от алкоголизма | metro | Спартак | spartak | core | P0 | migrate/create | /uslugi/kodirovanie/spartak/ |
+| Кодирование от алкоголизма | metro | Спортивная | sportivnaya | core | P0 | migrate/create | /uslugi/kodirovanie/sportivnaya/ |
+| Кодирование от алкоголизма | metro | Сретенский бульвар | sretenskij-bulvar | core | P0 | migrate/create | /uslugi/kodirovanie/sretenskij-bulvar/ |
+| Кодирование от алкоголизма | metro | Стрешнево | streshnevo | core | P0 | migrate/create | /uslugi/kodirovanie/streshnevo/ |
+| Кодирование от алкоголизма | metro | Строгино | strogino | core | P0 | migrate/create | /uslugi/kodirovanie/strogino/ |
+| Кодирование от алкоголизма | metro | Студенческая | studencheskaya | core | P0 | migrate/create | /uslugi/kodirovanie/studencheskaya/ |
+| Кодирование от алкоголизма | metro | Сухаревская | suharevskaya | core | P0 | migrate/create | /uslugi/kodirovanie/suharevskaya/ |
+| Кодирование от алкоголизма | metro | Свиблово | sviblovo | core | P0 | migrate/create | /uslugi/kodirovanie/sviblovo/ |
+| Кодирование от алкоголизма | metro | Таганская | taganskaya | core | P0 | migrate/create | /uslugi/kodirovanie/taganskaya/ |
+| Кодирование от алкоголизма | metro | Театральная | teatralnaya | core | P0 | migrate/create | /uslugi/kodirovanie/teatralnaya/ |
+| Кодирование от алкоголизма | metro | Технопарк | tehnopark | core | P0 | migrate/create | /uslugi/kodirovanie/tehnopark/ |
+| Кодирование от алкоголизма | metro | Текстильщики | tekstilshchiki | core | P0 | migrate/create | /uslugi/kodirovanie/tekstilshchiki/ |
+| Кодирование от алкоголизма | metro | Телецентр | telecentr | core | P0 | migrate/create | /uslugi/kodirovanie/telecentr/ |
+| Кодирование от алкоголизма | metro | Тёплый Стан | teplyj-stan | core | P0 | migrate/create | /uslugi/kodirovanie/teplyj-stan/ |
+| Кодирование от алкоголизма | metro | Тимирязевская | timiryazevskaya | core | P0 | migrate/create | /uslugi/kodirovanie/timiryazevskaya/ |
+| Кодирование от алкоголизма | metro | Третьяковская | tretyakovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/tretyakovskaya/ |
+| Кодирование от алкоголизма | metro | Тропарёво | troparevo | core | P0 | migrate/create | /uslugi/kodirovanie/troparevo/ |
+| Кодирование от алкоголизма | metro | Трубная | trubnaya | core | P0 | migrate/create | /uslugi/kodirovanie/trubnaya/ |
+| Кодирование от алкоголизма | metro | Тульская | tulskaya | core | P0 | migrate/create | /uslugi/kodirovanie/tulskaya/ |
+| Кодирование от алкоголизма | metro | Тургеневская | turgenevskaya | core | P0 | migrate/create | /uslugi/kodirovanie/turgenevskaya/ |
+| Кодирование от алкоголизма | metro | Тушинская | tushinskaya | core | P0 | migrate/create | /uslugi/kodirovanie/tushinskaya/ |
+| Кодирование от алкоголизма | metro | Тверская | tverskaya | core | P0 | migrate/create | /uslugi/kodirovanie/tverskaya/ |
+| Кодирование от алкоголизма | metro | Угрешская | ugreshskaya | core | P0 | migrate/create | /uslugi/kodirovanie/ugreshskaya/ |
+| Кодирование от алкоголизма | metro | Улица 1905 года | ulica-1905-goda | core | P0 | migrate/create | /uslugi/kodirovanie/ulica-1905-goda/ |
+| Кодирование от алкоголизма | metro | Улица Академика Королёва | ulica-akademika-koroleva | core | P0 | migrate/create | /uslugi/kodirovanie/ulica-akademika-koroleva/ |
+| Кодирование от алкоголизма | metro | Улица Академика Янгеля | ulica-akademika-yangelya | core | P0 | migrate/create | /uslugi/kodirovanie/ulica-akademika-yangelya/ |
+| Кодирование от алкоголизма | metro | Улица Горчакова | ulica-gorchakova | core | P0 | migrate/create | /uslugi/kodirovanie/ulica-gorchakova/ |
+| Кодирование от алкоголизма | metro | Улица Милашенкова | ulica-milashenkova | core | P0 | migrate/create | /uslugi/kodirovanie/ulica-milashenkova/ |
+| Кодирование от алкоголизма | metro | Улица Сергея Эйзенштейна | ulica-sergeya-ejzenshtejna | core | P0 | migrate/create | /uslugi/kodirovanie/ulica-sergeya-ejzenshtejna/ |
+| Кодирование от алкоголизма | metro | Улица Старокачаловская | ulica-starokachalovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/ulica-starokachalovskaya/ |
+| Кодирование от алкоголизма | metro | Университет | universitet | core | P0 | migrate/create | /uslugi/kodirovanie/universitet/ |
+| Кодирование от алкоголизма | metro | Варшавская | varshavskaya | core | P0 | migrate/create | /uslugi/kodirovanie/varshavskaya/ |
+| Кодирование от алкоголизма | metro | ВДНХ | vdnh | core | P0 | migrate/create | /uslugi/kodirovanie/vdnh/ |
+| Кодирование от алкоголизма | metro | Верхние Котлы | verhnie-kotly | core | P0 | migrate/create | /uslugi/kodirovanie/verhnie-kotly/ |
+| Кодирование от алкоголизма | metro | Верхние Лихоборы | verhnie-lihobory | core | P0 | migrate/create | /uslugi/kodirovanie/verhnie-lihobory/ |
+| Кодирование от алкоголизма | metro | Владыкино | vladykino | core | P0 | migrate/create | /uslugi/kodirovanie/vladykino/ |
+| Кодирование от алкоголизма | metro | Водный стадион | vodnyj-stadion | core | P0 | migrate/create | /uslugi/kodirovanie/vodnyj-stadion/ |
+| Кодирование от алкоголизма | metro | Войковская | vojkovskaya | core | P0 | migrate/create | /uslugi/kodirovanie/vojkovskaya/ |
+| Кодирование от алкоголизма | metro | Волгоградский проспект | volgogradskij-prospekt | core | P0 | migrate/create | /uslugi/kodirovanie/volgogradskij-prospekt/ |
+| Кодирование от алкоголизма | metro | Волоколамская | volokolamskaya | core | P0 | migrate/create | /uslugi/kodirovanie/volokolamskaya/ |
+| Кодирование от алкоголизма | metro | Волжская | volzhskaya | core | P0 | migrate/create | /uslugi/kodirovanie/volzhskaya/ |
+| Кодирование от алкоголизма | metro | Воробьёвы горы | vorobevy-gory | core | P0 | migrate/create | /uslugi/kodirovanie/vorobevy-gory/ |
+| Кодирование от алкоголизма | metro | Выхино | vyhino | core | P0 | migrate/create | /uslugi/kodirovanie/vyhino/ |
+| Кодирование от алкоголизма | metro | Выставочная | vystavochnaya | core | P0 | migrate/create | /uslugi/kodirovanie/vystavochnaya/ |
+| Кодирование от алкоголизма | metro | Выставочный центр | vystavochnyj-centr | core | P0 | migrate/create | /uslugi/kodirovanie/vystavochnyj-centr/ |
+| Кодирование от алкоголизма | metro | Ясенево | yasenevo | core | P0 | migrate/create | /uslugi/kodirovanie/yasenevo/ |
+| Кодирование от алкоголизма | metro | Юго-Западная | yugo-zapadnaya | core | P0 | migrate/create | /uslugi/kodirovanie/yugo-zapadnaya/ |
+| Кодирование от алкоголизма | metro | Южная | yuzhnaya | core | P0 | migrate/create | /uslugi/kodirovanie/yuzhnaya/ |
+| Кодирование от алкоголизма | metro | Жулебино | zhulebino | core | P0 | migrate/create | /uslugi/kodirovanie/zhulebino/ |
+| Кодирование от алкоголизма | metro | ЗИЛ | zil | core | P0 | migrate/create | /uslugi/kodirovanie/zil/ |
+| Кодирование от алкоголизма | metro | Зорге | zorge | core | P0 | migrate/create | /uslugi/kodirovanie/zorge/ |
+| Кодирование от алкоголизма | metro | Зябликово | zyablikovo | core | P0 | migrate/create | /uslugi/kodirovanie/zyablikovo/ |
+| Кодирование от алкоголизма | okrug | ЦАО | cao | core | P0 | migrate/create | /uslugi/kodirovanie/cao/ |
+| Кодирование от алкоголизма | okrug | САО | sao | core | P0 | migrate/create | /uslugi/kodirovanie/sao/ |
+| Кодирование от алкоголизма | okrug | СВАО | svao | core | P0 | migrate/create | /uslugi/kodirovanie/svao/ |
+| Кодирование от алкоголизма | okrug | ВАО | vao | core | P0 | migrate/create | /uslugi/kodirovanie/vao/ |
+| Кодирование от алкоголизма | okrug | ЮВАО | yuvao | core | P0 | migrate/create | /uslugi/kodirovanie/yuvao/ |
+| Кодирование от алкоголизма | okrug | ЮАО | yuao | core | P0 | migrate/create | /uslugi/kodirovanie/yuao/ |
+| Кодирование от алкоголизма | okrug | ЮЗАО | yuzao | core | P0 | migrate/create | /uslugi/kodirovanie/yuzao/ |
+| Кодирование от алкоголизма | okrug | ЗАО | zao | core | P0 | migrate/create | /uslugi/kodirovanie/zao/ |
+| Кодирование от алкоголизма | okrug | СЗАО | szao | core | P0 | migrate/create | /uslugi/kodirovanie/szao/ |
+| Кодирование от алкоголизма | okrug | ЗелАО | zelao | core | P0 | migrate/create | /uslugi/kodirovanie/zelao/ |
+| Кодирование от алкоголизма | okrug | НАО | nao | core | P0 | migrate/create | /uslugi/kodirovanie/nao/ |
+| Кодирование от алкоголизма | okrug | ТАО | tao | core | P0 | migrate/create | /uslugi/kodirovanie/tao/ |
 | Кодирование от алкоголизма | mo | Балашиха | balashiha | tier-1 | P0 | migrate/create | /uslugi/kodirovanie/moskovskaya-oblast/balashiha/ |
 | Кодирование от алкоголизма | mo | Подольск | podolsk | tier-1 | P0 | migrate/create | /uslugi/kodirovanie/moskovskaya-oblast/podolsk/ |
 | Кодирование от алкоголизма | mo | Химки | himki | tier-1 | P0 | migrate/create | /uslugi/kodirovanie/moskovskaya-oblast/himki/ |
@@ -2653,18 +2657,18 @@ SILO-хаб
 | Кодирование от алкоголизма | mo | Дубна | dubna | tier-2 | P1 | migrate/create | /uslugi/kodirovanie/moskovskaya-oblast/dubna/ |
 | Кодирование от алкоголизма | mo | Черноголовка | chernogolovka | tier-2 | P1 | migrate/create | /uslugi/kodirovanie/moskovskaya-oblast/chernogolovka/ |
 | Кодирование от алкоголизма | mo | Волоколамск | volokolamsk | tier-2 | P1 | migrate/create | /uslugi/kodirovanie/moskovskaya-oblast/volokolamsk/ |
-| Психиатр на дом | okrug | ЦАО | cao | core | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/moskva/cao/ |
-| Психиатр на дом | okrug | САО | sao | core | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/moskva/sao/ |
-| Психиатр на дом | okrug | СВАО | svao | core | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/moskva/svao/ |
-| Психиатр на дом | okrug | ВАО | vao | core | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/moskva/vao/ |
-| Психиатр на дом | okrug | ЮВАО | yuvao | core | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/moskva/yuvao/ |
-| Психиатр на дом | okrug | ЮАО | yuao | core | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/moskva/yuao/ |
-| Психиатр на дом | okrug | ЮЗАО | yuzao | core | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/moskva/yuzao/ |
-| Психиатр на дом | okrug | ЗАО | zao | core | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/moskva/zao/ |
-| Психиатр на дом | okrug | СЗАО | szao | core | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/moskva/szao/ |
-| Психиатр на дом | okrug | ЗелАО | zelao | core | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/moskva/zelao/ |
-| Психиатр на дом | okrug | НАО | nao | core | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/moskva/nao/ |
-| Психиатр на дом | okrug | ТАО | tao | core | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/moskva/tao/ |
+| Психиатр на дом | okrug | ЦАО | cao | core | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/cao/ |
+| Психиатр на дом | okrug | САО | sao | core | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/sao/ |
+| Психиатр на дом | okrug | СВАО | svao | core | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/svao/ |
+| Психиатр на дом | okrug | ВАО | vao | core | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/vao/ |
+| Психиатр на дом | okrug | ЮВАО | yuvao | core | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/yuvao/ |
+| Психиатр на дом | okrug | ЮАО | yuao | core | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/yuao/ |
+| Психиатр на дом | okrug | ЮЗАО | yuzao | core | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/yuzao/ |
+| Психиатр на дом | okrug | ЗАО | zao | core | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/zao/ |
+| Психиатр на дом | okrug | СЗАО | szao | core | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/szao/ |
+| Психиатр на дом | okrug | ЗелАО | zelao | core | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/zelao/ |
+| Психиатр на дом | okrug | НАО | nao | core | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/nao/ |
+| Психиатр на дом | okrug | ТАО | tao | core | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/tao/ |
 | Психиатр на дом | mo | Балашиха | balashiha | tier-1 | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/moskovskaya-oblast/balashiha/ |
 | Психиатр на дом | mo | Подольск | podolsk | tier-1 | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/moskovskaya-oblast/podolsk/ |
 | Психиатр на дом | mo | Химки | himki | tier-1 | P1 | create | /uslugi/psihiatriya/psihiatr-na-dom/moskovskaya-oblast/himki/ |
