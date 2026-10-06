@@ -23,6 +23,10 @@
 - `profilactica_final_architecture.csv`
 - `profilactica_geo_pages.csv`
 - `profilactica_geo_master_lists.csv`
+- `profilactica_geo_relationships.csv`
+- `profilactica_geo_okrug_neighbors.csv`
+- `profilactica_url_rearchitecture_map.csv`
+- `profilactica_canonical_urls.csv`
 - `profilactica_interlinking.md`
 - `profilactica_report_data.json`
 
@@ -97,7 +101,7 @@ H1: `Конкурентный анализ и финальная архитек�
 - ~143 270 URL конкурентов;
 - 1004 URL текущего сайта;
 - 763 текущих ГЕО URL;
-- 175 страниц в финальной архитектуре;
+- 189 страниц в финальной архитектуре;
 - 1260 URL в основной планируемой ГЕО-матрице.
 
 KPI брать из JSON/CSV, а не дублировать в JS вручную.
@@ -239,6 +243,8 @@ Stacked bar:
 ## ГЕО
 
 Источник: `geo-pages.csv` и `geo-master.csv`.
+
+Публичный URL не содержит каталогов metro, okrug и mo. Станции и округа: `{услуга}/moskva/{slug}/`. Города: `{услуга}/moskovskaya-oblast/{slug}/`. Связь станции с округом берётся из `profilactica_geo_relationships.csv`. `profilactica_url_rearchitecture_map.csv` — карта переноса конфигурации, не таблица 301.
 
 ### KPI
 
@@ -393,7 +399,7 @@ Description: `Конкурентный анализ profilactica.clinic: лид�
 
 1. Старого плана на странице нет вообще.
 2. Нет упоминаний «Неделя 1/2/3…» из старой заглушки.
-3. Все 175 строк архитектуры загружаются.
+3. Все 189 строк архитектуры загружаются.
 4. Все 1260 ГЕО URL читаются из CSV.
 5. Фильтры не ломают кириллицу.
 6. Каждый график строится из data-файлов.

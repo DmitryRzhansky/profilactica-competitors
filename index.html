@@ -304,10 +304,12 @@
         <h3>Плоская <code>/uslugi/</code></h3>
         <p>Большинство услуг лежат на одной глубине. Алкоголизм, методы кодирования, вещества, психиатрия и узкие расстройства не образуют понятных тематических веток.</p>
         <p>Правильная модель:</p>
-        <pre class="panel"><code>/uslugi/lechenie-alkogolizma/
-/uslugi/lechenie-alkogolizma/kodirovanie/
-/uslugi/lechenie-alkogolizma/kodirovanie/metod-dovzhenko/</code></pre>
-        <p>а не десятки независимых URL непосредственно в <code>/uslugi/</code>.</p>
+        <pre class="panel"><code>/uslugi/vyvod-iz-zapoya/
+/uslugi/vyvod-iz-zapoya/na-domu/
+/uslugi/kodirovanie/
+/uslugi/kodirovanie/ukol/
+/uslugi/lechenie-alkogolizma/zhenskij-alkogolizm/</code></pre>
+        <p>Самостоятельная задача пользователя стоит на первом уровне <code>/uslugi/</code>. Метод, препарат и сегмент остаются внутри своего SILO. Каталог при этом не становится плоским списком.</p>
         <h3>Цена используется слишком агрессивно</h3>
         <p>В выгрузке цена встречается примерно в 79% Title. При этом по сайту одновременно используются разные значения. Это не просто редакционная проблема: противоречия уже попадают в сниппеты и видны поисковикам.</p>
         <p>Нужен единый источник цены и явное разделение:</p>
@@ -366,66 +368,57 @@
         <h3>Базовый каркас</h3>
         <pre class="panel"><code>/uslugi/
 ├── narkologicheskaya-pomosh/
-│   ├── narkolog-na-dom/
 │   ├── konsultaciya-narkologa/
 │   ├── psihiatr-narkolog/
 │   ├── stacionar/
 │   ├── gospitalizaciya/
 │   └── chastnyj-vytrezvitel/
 │
+├── narkolog-na-dom/
+│   ├── moskva/
+│   └── moskovskaya-oblast/
+│
+├── vyvod-iz-zapoya/
+│   ├── na-domu/
+│   │   ├── moskva/
+│   │   └── moskovskaya-oblast/
+│   └── v-stacionare/
+│
+├── kapelnitsy/
+│   ├── ot-zapoya-i-alkogolya/
+│   │   ├── moskva/
+│   │   └── moskovskaya-oblast/
+│   ├── ot-pohmelya/
+│   └── abstinentnyj-sindrom/
+│
+├── kodirovanie/
+│   ├── moskva/
+│   ├── moskovskaya-oblast/
+│   ├── na-domu/
+│   ├── metod-dovzhenko/
+│   ├── ukol/
+│   ├── preparaty/
+│   └── raskodirovanie/
+│
 ├── lechenie-alkogolizma/
-│   ├── vyvod-iz-zapoya/
-│   │   ├── na-domu/
-│   │   └── v-stacionare/
-│   ├── kapelnitsy/
-│   │   ├── ot-zapoya-i-alkogolya/
-│   │   ├── ot-pohmelya/
-│   │   └── abstinentnyj-sindrom/
-│   ├── kodirovanie/
-│   │   ├── na-domu/
-│   │   ├── metod-dovzhenko/
-│   │   ├── gipnoz/
-│   │   ├── ukol/
-│   │   ├── vshivanie/
-│   │   ├── dvojnoj-blok/
-│   │   ├── preparaty/
-│   │   └── raskodirovanie/
-│   │       ├── esperal/
-│   │       ├── akvilong/
-│   │       ├── algominal/
-│   │       ├── disulfiram/
-│   │       ├── naltrekson/
-│   │       ├── vivitrol/
-│   │       └── torpedo/
+│   ├── na-domu/
+│   │   └── moskovskaya-oblast/
 │   ├── v-stacionare/
 │   ├── ambulatorno/
 │   ├── zhenskij-alkogolizm/
-│   ├── muzhskoj-alkogolizm/
 │   ├── pivnoj-alkogolizm/
-│   ├── hronicheskij-alkogolizm/
-│   ├── u-pozhilyh/
 │   └── bez-kodirovaniya/
 │
+├── snyatie-lomki/
+│   ├── na-domu/
+│   └── v-stacionare/
+│
 ├── lechenie-narkomanii/
-│   ├── snyatie-lomki/
-│   │   ├── na-domu/
-│   │   └── v-stacionare/
+│   ├── moskovskaya-oblast/
 │   ├── detoksikaciya/
 │   │   └── ubod/
 │   ├── v-stacionare/
-│   ├── ambulatorno/
-│   ├── geroin/
-│   ├── metadon/
-│   ├── mefedron/
-│   ├── kokain/
-│   ├── amfetamin/
-│   ├── metamfetamin/
-│   ├── spajs/
-│   ├── gashish/
-│   ├── marihuana/
-│   ├── soli/
-│   ├── alfa-pvp/
-│   └── butirat/
+│   └── geroin/
 │
 ├── drugie-zavisimosti/
 │   ├── igromaniya/
@@ -443,6 +436,7 @@
 │       └── antidepressanty/
 │
 ├── reabilitaciya/
+│   ├── moskovskaya-oblast/
 │   ├── alkogolizm/
 │   ├── narkomaniya/
 │   ├── igromaniya/
@@ -452,6 +446,8 @@
 ├── psihiatriya/
 │   ├── konsultaciya/
 │   ├── psihiatr-na-dom/
+│   │   ├── moskva/
+│   │   └── moskovskaya-oblast/
 │   ├── stacionar/
 │   ├── trevozhnye-i-stressovye-rasstrojstva/
 │   ├── rasstrojstva-nastroeniya/
@@ -512,11 +508,16 @@
       <section class="report-section" id="geo" aria-labelledby="geo-title">
         <h2 id="geo-title">Финальная ГЕО-модель</h2>
         <p>ГЕО - не отдельный верхний раздел, а дочерний слой конкретной услуги.</p>
-        <pre class="panel"><code>/uslugi/narkologicheskaya-pomosh/narkolog-na-dom/metro/belorusskaya/
-/uslugi/narkologicheskaya-pomosh/narkolog-na-dom/okrug/cao/
-/uslugi/narkologicheskaya-pomosh/narkolog-na-dom/mo/korolev/</code></pre>
+        <pre class="panel"><code>/uslugi/vyvod-iz-zapoya/na-domu/
+/uslugi/vyvod-iz-zapoya/na-domu/moskva/
+/uslugi/vyvod-iz-zapoya/na-domu/moskva/belorusskaya/
+/uslugi/vyvod-iz-zapoya/na-domu/moskva/vao/
+/uslugi/vyvod-iz-zapoya/na-domu/moskovskaya-oblast/
+/uslugi/vyvod-iz-zapoya/na-domu/moskovskaya-oblast/himki/</code></pre>
         <div class="kpi-grid" id="geo-kpi" aria-label="Показатели ГЕО-матрицы"></div>
-        <h3>Основная матрица - 4 услуги</h3>
+        Станция метро и административный округ стоят непосредственно под хабом Москвы. Город Московской области стоит под хабом области. В хлебных крошках нет пунктов «Метро», «Округа» и «Города». Хаб Москвы создаётся только если у услуги есть станции или округа. У лечения алкоголизма на дому, лечения наркомании и реабилитации есть только хаб Московской области.
+
+<h3>Основная матрица - 4 услуги</h3>
         <p>Каждая из четырех услуг получает 215 текущих станций/транспортных узлов, 12 административных округов Москвы и 50 основных городов Московской области. То есть <strong>277 ГЕО на одну услугу</strong>.</p>
         <div class="table-wrap matrix">
           <table class="data">
@@ -536,7 +537,7 @@
         <h3>Вторая матрица</h3>
         <ul>
           <li>Психиатр на дом: 12 округов + 50 городов МО = 62 страницы.</li>
-          <li>Лечение алкоголизма: 30 основных городов МО = 30 страниц.</li>
+          <li>Лечение алкоголизма на дому: 30 основных городов МО = 30 страниц. У общего хаба лечения алкоголизма своей GEO-матрицы нет.</li>
           <li>Лечение наркомании: 30 основных городов МО = 30 страниц.</li>
           <li>Реабилитация: 30 основных городов МО = 30 страниц.</li>
         </ul>

@@ -155,12 +155,14 @@ AlcoMed опасен не размером сайта, а тем, что сое�
 Правильная модель:
 
 ```text
-/uslugi/lechenie-alkogolizma/
-/uslugi/lechenie-alkogolizma/kodirovanie/
-/uslugi/lechenie-alkogolizma/kodirovanie/metod-dovzhenko/
+/uslugi/vyvod-iz-zapoya/
+/uslugi/vyvod-iz-zapoya/na-domu/
+/uslugi/kodirovanie/
+/uslugi/kodirovanie/ukol/
+/uslugi/lechenie-alkogolizma/zhenskij-alkogolizm/
 ```
 
-а не десятки независимых URL непосредственно в `/uslugi/`.
+Самостоятельная задача пользователя стоит на первом уровне `/uslugi/`. Метод, препарат и сегмент остаются внутри своего SILO. Каталог при этом не становится плоским списком.
 
 ## 4.3. Цена используется слишком агрессивно
 
@@ -226,7 +228,7 @@ AlcoMed опасен не размером сайта, а тем, что сое�
 
 # 6. Финальная SILO-архитектура
 
-Полная таблица содержит **175 страниц**: 79 P0, 84 P1 и 12 условных P2. Она приложена отдельным CSV и должна быть показана на сайте как интерактивное дерево и фильтруемая таблица.
+Полная таблица содержит **189 страниц**: 86 P0, 91 P1 и 12 условных P2. Она приложена отдельным CSV и должна быть показана на сайте как интерактивное дерево и фильтруемая таблица.
 
 <!-- PH:SILO-TREE id="final-silo" source="profilactica_final_architecture.csv" -->
 <!-- PH:TABLE id="architecture-table" source="profilactica_final_architecture.csv" filters="silo,priority,status,geo_policy" searchable="true" -->
@@ -236,66 +238,57 @@ AlcoMed опасен не размером сайта, а тем, что сое�
 ```text
 /uslugi/
 ├── narkologicheskaya-pomosh/
-│   ├── narkolog-na-dom/
 │   ├── konsultaciya-narkologa/
 │   ├── psihiatr-narkolog/
 │   ├── stacionar/
 │   ├── gospitalizaciya/
 │   └── chastnyj-vytrezvitel/
 │
+├── narkolog-na-dom/
+│   ├── moskva/
+│   └── moskovskaya-oblast/
+│
+├── vyvod-iz-zapoya/
+│   ├── na-domu/
+│   │   ├── moskva/
+│   │   └── moskovskaya-oblast/
+│   └── v-stacionare/
+│
+├── kapelnitsy/
+│   ├── ot-zapoya-i-alkogolya/
+│   │   ├── moskva/
+│   │   └── moskovskaya-oblast/
+│   ├── ot-pohmelya/
+│   └── abstinentnyj-sindrom/
+│
+├── kodirovanie/
+│   ├── moskva/
+│   ├── moskovskaya-oblast/
+│   ├── na-domu/
+│   ├── metod-dovzhenko/
+│   ├── ukol/
+│   ├── preparaty/
+│   └── raskodirovanie/
+│
 ├── lechenie-alkogolizma/
-│   ├── vyvod-iz-zapoya/
-│   │   ├── na-domu/
-│   │   └── v-stacionare/
-│   ├── kapelnitsy/
-│   │   ├── ot-zapoya-i-alkogolya/
-│   │   ├── ot-pohmelya/
-│   │   └── abstinentnyj-sindrom/
-│   ├── kodirovanie/
-│   │   ├── na-domu/
-│   │   ├── metod-dovzhenko/
-│   │   ├── gipnoz/
-│   │   ├── ukol/
-│   │   ├── vshivanie/
-│   │   ├── dvojnoj-blok/
-│   │   ├── preparaty/
-│   │   └── raskodirovanie/
-│   │       ├── esperal/
-│   │       ├── akvilong/
-│   │       ├── algominal/
-│   │       ├── disulfiram/
-│   │       ├── naltrekson/
-│   │       ├── vivitrol/
-│   │       └── torpedo/
+│   ├── na-domu/
+│   │   └── moskovskaya-oblast/
 │   ├── v-stacionare/
 │   ├── ambulatorno/
 │   ├── zhenskij-alkogolizm/
-│   ├── muzhskoj-alkogolizm/
 │   ├── pivnoj-alkogolizm/
-│   ├── hronicheskij-alkogolizm/
-│   ├── u-pozhilyh/
 │   └── bez-kodirovaniya/
 │
+├── snyatie-lomki/
+│   ├── na-domu/
+│   └── v-stacionare/
+│
 ├── lechenie-narkomanii/
-│   ├── snyatie-lomki/
-│   │   ├── na-domu/
-│   │   └── v-stacionare/
+│   ├── moskovskaya-oblast/
 │   ├── detoksikaciya/
 │   │   └── ubod/
 │   ├── v-stacionare/
-│   ├── ambulatorno/
-│   ├── geroin/
-│   ├── metadon/
-│   ├── mefedron/
-│   ├── kokain/
-│   ├── amfetamin/
-│   ├── metamfetamin/
-│   ├── spajs/
-│   ├── gashish/
-│   ├── marihuana/
-│   ├── soli/
-│   ├── alfa-pvp/
-│   └── butirat/
+│   └── geroin/
 │
 ├── drugie-zavisimosti/
 │   ├── igromaniya/
@@ -313,6 +306,7 @@ AlcoMed опасен не размером сайта, а тем, что сое�
 │       └── antidepressanty/
 │
 ├── reabilitaciya/
+│   ├── moskovskaya-oblast/
 │   ├── alkogolizm/
 │   ├── narkomaniya/
 │   ├── igromaniya/
@@ -322,6 +316,8 @@ AlcoMed опасен не размером сайта, а тем, что сое�
 ├── psihiatriya/
 │   ├── konsultaciya/
 │   ├── psihiatr-na-dom/
+│   │   ├── moskva/
+│   │   └── moskovskaya-oblast/
 │   ├── stacionar/
 │   ├── trevozhnye-i-stressovye-rasstrojstva/
 │   ├── rasstrojstva-nastroeniya/
@@ -339,7 +335,7 @@ AlcoMed опасен не размером сайта, а тем, что сое�
 
 ### Главный принцип
 
-Один запрос — один основной URL. Синонимы и модификаторы не являются основанием для второй страницы. Новая страница появляется, когда меняется сама услуга, формат, метод, группа пациентов, вещество или самостоятельная задача пользователя.
+Один запрос — один основной URL. Самостоятельная коммерческая задача — отдельный SILO первого уровня. Метод, формат, препарат, сегмент и диагноз остаются дочерними страницами своего SILO. Синонимы и модификаторы не являются основанием для второй страницы. Новая страница появляется, когда меняется сама услуга, формат, метод, группа пациентов, вещество или самостоятельная задача пользователя.
 
 ---
 
@@ -405,10 +401,15 @@ AlcoMed опасен не размером сайта, а тем, что сое�
 Пример:
 
 ```text
-/uslugi/narkologicheskaya-pomosh/narkolog-na-dom/metro/belorusskaya/
-/uslugi/narkologicheskaya-pomosh/narkolog-na-dom/okrug/cao/
-/uslugi/narkologicheskaya-pomosh/narkolog-na-dom/mo/korolev/
+/uslugi/vyvod-iz-zapoya/na-domu/
+/uslugi/vyvod-iz-zapoya/na-domu/moskva/
+/uslugi/vyvod-iz-zapoya/na-domu/moskva/belorusskaya/
+/uslugi/vyvod-iz-zapoya/na-domu/moskva/vao/
+/uslugi/vyvod-iz-zapoya/na-domu/moskovskaya-oblast/
+/uslugi/vyvod-iz-zapoya/na-domu/moskovskaya-oblast/himki/
 ```
+
+Станция метро и административный округ стоят непосредственно под хабом Москвы. Город Московской области стоит под хабом области. В хлебных крошках нет пунктов «Метро», «Округа» и «Города». Хаб Москвы создаётся только если у услуги есть станции или округа. У лечения алкоголизма на дому, лечения наркомании и реабилитации есть только хаб Московской области.
 
 ## Основная матрица — 4 услуги
 
@@ -432,7 +433,7 @@ AlcoMed опасен не размером сайта, а тем, что сое�
 ## Вторая матрица
 
 - Психиатр на дом: 12 округов + 50 городов МО = 62 страницы.
-- Лечение алкоголизма: 30 основных городов МО = 30 страниц.
+- Лечение алкоголизма на дому: 30 основных городов МО = 30 страниц. У общего хаба лечения алкоголизма своей GEO-матрицы нет.
 - Лечение наркомании: 30 основных городов МО = 30 страниц.
 - Реабилитация: 30 основных городов МО = 30 страниц.
 
@@ -646,6 +647,10 @@ SILO-хаб
 - `profilactica_final_architecture.csv` — финальная коммерческая и служебная архитектура.
 - `profilactica_geo_pages.csv` — все 1260 запланированных ГЕО URL.
 - `profilactica_geo_master_lists.csv` — 215 метро/узлов, 12 округов, 50 городов МО.
+- `profilactica_geo_relationships.csv` — станция метро → один канонический округ Москвы.
+- `profilactica_geo_okrug_neighbors.csv` — соседние округа для перелинковки.
+- `profilactica_url_rearchitecture_map.csv` — old plan URL → canonical URL для переноса конфигурации. Это не таблица 301.
+- `profilactica_canonical_urls.csv` — все canonical URL новой архитектуры.
 - `profilactica_interlinking.md` — правила полной перелинковки.
 - `profilactica_report_data.json` — готовые данные для Chart.js.
 
