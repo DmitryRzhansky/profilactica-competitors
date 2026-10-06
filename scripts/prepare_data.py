@@ -42,43 +42,22 @@ for name, counts in matrix.items():
 
 print("master", len(master), Counter(r["geo_type"] for r in master), Counter(r["tier"] for r in master))
 
-wb = openpyxl.load_workbook(ROOT / "result.xlsx", read_only=True, data_only=True)
-pages = []
-for i, row in enumerate(wb["_summary"].iter_rows(values_only=True)):
-    if i == 0:
-        continue
-    if row and row[1] is not None:
-        pages.append(int(row[1]))
-print("competitor domains", len(pages), "urls", sum(pages))
-import statistics
-
-print("median", statistics.median(pages), "mean", round(statistics.mean(pages), 1))
-
-
-def dump(sheet, needles, n=25):
-    ws = wb[sheet]
-    print("\n===", sheet)
-    hits = []
-    for i, row in enumerate(ws.iter_rows(values_only=True)):
+workbook = ROOT / "result.xlsx"
+if workbook.exists():
+    wb = openpyxl.load_workbook(workbook, read_only=True, data_only=True)
+    pages = []
+    for i, row in enumerate(wb["_summary"].iter_rows(values_only=True)):
         if i == 0:
             continue
-        url = (row[4] or "") if row and len(row) > 4 else ""
-        title = (row[2] or "") if row and len(row) > 2 else ""
-        blob = (str(url) + " " + str(title)).lower()
-        if any(x.lower() in blob for x in needles):
-            hits.append((url, str(title)[:110]))
-    for h in hits[:n]:
-        print(h[0], "|", h[1])
-    print("hits", len(hits))
+        if row and row[1] is not None:
+            pages.append(int(row[1]))
+    print("competitor domains", len(pages), "urls", sum(pages))
+    import statistics
 
-
-dump("alcomed.ru", ["/vyvod-iz-zapoya", "/ceny", "/vrachi", "/stacionar", "лечение алкоголизма"])
-dump("klinika-korsakov.ru", ["psihiatr", "психиатр", "stacionar", "uslugi", "depress", "психиатр"])
-dump("narkolog24.clinic", ["/ceny", "tarif", "narkolog-na-dom", "/price", "/service/"])
-dump("ne-zavisimost.ru", ["semya", "rodstven", "motivac", "posle-lechen", "sozavis"])
-dump("verimed.ru", ["narkologicheskaya-pomosh", "/uslugi/narkologiya"])
-dump("alcoclinic.ru", ["/uslugi/kodirovanie-ot-alkogolizma"])
-wb.close()
+    print("median", statistics.median(pages), "mean", round(statistics.mean(pages), 1))
+    wb.close()
+else:
+    print("result.xlsx is not in the project; competitor crawl stats stay in profilactica_report_data.json")
 
 # Copy CSVs into assets/data
 shutil.copy2(ROOT / "profilactica_final_architecture.csv", DATA / "architecture.csv")

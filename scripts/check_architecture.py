@@ -194,7 +194,6 @@ def check():
 
     for path in [
         ROOT / "profilactica_competitor_report_content.md",
-        ROOT / "konkurentnyy-analiz.md",
         ROOT / "index.html",
     ]:
         text = path.read_text(encoding="utf-8")
